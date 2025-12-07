@@ -1,0 +1,143 @@
+:root {
+  /* Primary Colors */
+  --clr-primary: hsl(185, 75%, 39%);
+  --clr-primary-light: hsl(185, 75%, 60%);
+  --clr-primary-dark: hsl(185, 75%, 30%);
+
+  /* Neutral Colors */
+  --clr-card-bg: #fefefe;
+  --clr-bg: var(--clr-primary);
+  --clr-text-dark: hsl(229, 23%, 23%);
+  --clr-text-light: hsl(227, 10%, 46%);
+  --clr-border: #d8d9df;
+
+  /* Shadows */
+  --shadow-light: rgba(100, 100, 111, 0.15) 0px 5px 15px 0px;
+  --shadow-medium: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  --shadow-heavy: rgba(100, 100, 111, 0.3) 0px 10px 40px 0px;
+
+  /* Typography */
+  --font-primary: 'Kumbh Sans', sans-serif;
+  --fs-large: 1.5rem;
+  --fs-medium: 1rem;
+  --fs-small: 0.7rem;
+
+  /* Spacing */
+  --spacing-xs: 5px;
+  --spacing-sm: 10px;
+  --spacing-md: 20px;
+  --spacing-lg: 40px;
+
+  /* Border radius */
+  --radius-small: 5px;
+  --radius-medium: 10px;
+  --radius-large: 20px;
+}
+
+/* Reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  height: 100vh;
+  font-family: var(--font-primary);
+  background: 
+    url(../images/bg-pattern-bottom.svg) bottom -600px right -150px no-repeat,
+    url(../images/bg-pattern-top.svg) top -500px left -200px no-repeat;
+  background-color: var(--clr-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Card */
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 450px;
+  background: var(--clr-card-bg);
+  border-radius: var(--radius-large);
+  overflow: hidden;
+  box-shadow: var(--shadow-medium);
+}
+
+.card-header img {
+  width: 100%;
+}
+
+/* Card Content */
+.card-content {
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-content img {
+  border-radius: 50%;
+  transform: translateY(-50%);
+  border: 7px solid var(--clr-card-bg);
+}
+
+.card-content p:first-of-type {
+  font-weight: bold;
+  font-size: 24px;
+  color: var(--clr-text-dark);
+}
+
+.card-content p:first-of-type span {
+  font-weight: normal;
+  color: var(--clr-text-light);
+}
+
+.card-content p:last-of-type {
+  font-size: 18px;
+  color: var(--clr-text-light);
+}
+
+/* Card Footer */
+.card-footer {
+  flex: 0.2;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-top: 2px solid var(--clr-border);
+  color: var(--clr-text-dark);
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-item .status {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.footer-item .item-name {
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-top: 10px;
+  color: var(--clr-text-light);
+}
+
+/* Attribution */
+.attribution {
+  line-height: 3rem;
+  font-size: 1rem;
+  color: var(--clr-text-dark);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

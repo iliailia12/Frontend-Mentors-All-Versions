@@ -1,0 +1,236 @@
+:root {
+  /*  ფერები */
+  --color-bg: #f9fafc;
+  --color-primary: #1a1f2e;
+  --color-secondary: #a3a9b8;
+  --color-text: #5a5f7d;
+  --color-accent: #ff5a5f;
+  --color-accent-hover: #e14b4f;
+  --color-dark: #10131b;
+  --color-light: #ffffff;
+
+  /*  ჩრდილები */
+  --shadow-light: 0 2px 6px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --shadow-heavy: 0 6px 24px rgba(0, 0, 0, 0.18);
+
+  /*  საზომები */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 32px;
+  --spacing-lg: 64px;
+
+  /*  ტრანზიციები */
+  --transition-fast: 0.2s ease;
+  --transition-smooth: 0.35s ease;
+
+  /*  ფონტები */
+  --font-main: 'Open Sans', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+}
+
+/* ======= ძირითადი სტილები ======= */
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* ======= Header ======= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md) var(--spacing-md) var(--spacing-sm);
+}
+
+.logo img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  transition: transform var(--transition-smooth);
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  color: var(--color-primary);
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--color-primary);
+  transition: color var(--transition-fast);
+}
+
+.nav a:hover {
+  color: var(--color-accent);
+}
+
+.nav .login,
+.nav .dot {
+  color: var(--color-secondary);
+  cursor: default;
+}
+
+/* ======= Hero Section ======= */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-sm) var(--spacing-md);
+  flex-grow: 1;
+  gap: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+  .main {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+}
+
+.intro {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.new {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  font-size: 10px;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.label {
+  color: var(--color-secondary);
+  font-size: 11px;
+  font-family: var(--font-heading);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 40px;
+  line-height: 1.2;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 50px;
+  }
+}
+
+.description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-text);
+  max-width: 350px;
+  opacity: 0.95;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-top: 16px;
+}
+
+.demo-btn {
+  background-color: var(--color-accent);
+  color: var(--color-light);
+  border: none;
+  padding: 12px 28px;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  box-shadow: var(--shadow-light);
+  transition: all var(--transition-smooth);
+}
+
+.demo-btn:hover {
+  background-color: var(--color-accent-hover);
+  box-shadow: var(--shadow-medium);
+  transform: translateY(-2px);
+}
+
+.preview-label {
+  font-family: var(--font-heading);
+  font-size: 11px;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.images {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.desktop-img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-medium);
+  transition: transform var(--transition-smooth);
+}
+
+.desktop-img:hover {
+  transform: scale(1.02);
+}
+
+/* ======= Footer ======= */
+footer {
+  text-align: center;
+  padding: var(--spacing-md);
+  font-size: 13px;
+  color: var(--color-secondary);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}

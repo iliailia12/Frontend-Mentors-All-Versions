@@ -1,0 +1,489 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-white: #FFFFFF;
+    --bg-green: #2AB3B1;
+    --bg-button: #C0DF33;
+    --bg-light-green: #9AA7BE;
+}
+
+body {
+    background-color: hsl(194, 54%, 92%);
+    font-family: 'Karla',sans-serif;
+    font-size: 1rem;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+   width: 635px;
+   margin: 0rem 1rem;
+}
+
+.card-overview {
+    background-color: var(--bg-white);
+    display: grid;
+    grid-template: 259px 259px / 1fr 1fr;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+.header {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 15px 40px;
+}
+
+.header h1 {
+    color: var(--bg-green);
+    font-weight: 700;
+}
+
+p.refund-text {
+    color: var(--bg-button);
+    font-size: 18px;
+}
+
+p.gain-access-text {
+    color: var(--bg-light-green);
+    line-height: 26px;
+}
+
+
+.month-section {
+    background-color: var(--bg-green);
+    color: var(--bg-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 30px 40px;
+}
+
+.month-section h2 {
+    font-size: 22px;
+}
+
+
+.price-container {
+    display: flex;
+    align-items: center;
+}
+
+.sub-price {
+    font-size: 32px;
+    font-weight: 700;
+    padding-right: 11px;
+}
+
+.sub-time {
+    color: hsl(165, 53%, 65%);
+}
+
+
+.signup-btn {
+    background-color: var(--bg-button);
+    color: var(--bg-white);
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    padding: 15px 0;
+    box-shadow: 3px 7px 9px hsl(166, 32%, 45%);
+    transition: background-color 0.4s ease;
+}
+
+.signup-btn:hover {
+    background-color: hsl(165, 53%, 65%);
+    cursor: pointer;
+}
+
+
+.whyus-section {
+    background-color: var(--bg-light-green);
+    color: var(--bg-white);
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.whyus-section h2 {
+    font-size: 18px;
+    font-weight: 700;
+    padding-bottom: px;
+}
+
+
+.whyus-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.whyus-list li {
+    color: hsl(165, 90%, 81%);
+    transition: background-color 0.4s ease, 
+    color 0.4s ease,
+    padding 0.4s ease;
+}
+
+.whyus-list li:hover {
+    background-color: var(--bg-green);
+    color: var(--bg-white);
+    border-radius: 5px;
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+
+.name a {
+    text-decoration: none;
+    color: blue;
+}
+
+.attribution img {
+    width: 14px;
+}
+
+.attribution a {
+    text-decoration: none;
+    color: blue;
+}
+
+.attribution a:hover {
+    color: hsl(212, 7%, 52%);
+}
+
+
+@media (max-width: 650px) {
+    .container {
+        width: 100%;
+    }
+
+    .card-overview {
+        grid-template: 259px 259px / 1fr;
+    }
+
+    .header {
+        grid-column: span 1;
+        padding: 15px 20px;
+    }
+
+    .month-section, .whyus-section {
+        padding: 30px 20px;
+    }
+    .price-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .sub-price {
+        font-size: 28px;
+    }
+    .sub-time {
+        font-size: 14px;
+    }
+    .signup-btn {
+        padding: 10px 0;
+    }
+    .whyus-section h2 {
+        font-size: 16px;
+    }
+    .whyus-list li {
+        font-size: 14px;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+    p.refund-text {
+        font-size: 16px;
+    }
+    p.gain-access-text {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+@media (max-width: 400px) {
+    .header h1 {
+        font-size: 20px;
+    }
+    p.refund-text {
+        font-size: 14px;
+    }
+    p.gain-access-text {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .month-section h2 {
+        font-size: 20px;
+    }
+    .sub-price {
+        font-size: 24px;
+    }
+    .sub-time {
+        font-size: 12px;
+    }
+    .signup-btn {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+    .whyus-section h2 {
+        font-size: 16px;
+    }
+    .whyus-list li {
+        font-size: 12px;
+    }
+}
+
+
+@media (max-width: 350px) {
+    .header h1 {
+        font-size: 18px;
+    }
+    p.refund-text {
+        font-size: 12px;
+    }
+    p.gain-access-text {
+        font-size: 10px;
+        line-height: 18px;
+    }
+    .month-section h2 {
+        font-size: 18px;
+    }
+    .sub-price {
+        font-size: 20px;
+    }
+    .sub-time {
+        font-size: 10px;
+    }
+    .signup-btn {
+        font-size: 12px;
+        padding: 6px 0;
+    }
+    .whyus-section h2 {
+        font-size: 14px;
+    }
+    .whyus-list li {
+        font-size: 10px;
+    }
+    
+}
+
+
+
+
+
+@media (max-width: 300px) {
+    .header h1 {
+        font-size: 16px;
+    }
+    p.refund-text {
+        font-size: 10px;
+    }
+    p.gain-access-text {
+        font-size: 8px;
+        line-height: 16px;
+    }
+    .month-section h2 {
+        font-size: 16px;
+    }
+    .sub-price {
+        font-size: 18px;
+    }
+    .sub-time {
+        font-size: 8px;
+    }
+    .signup-btn {
+        font-size: 10px;
+        padding: 4px 0;
+    }
+    .whyus-section h2 {
+        font-size: 12px;
+    }
+    .whyus-list li {
+        font-size: 8px;
+    }
+    
+}
+
+
+
+@media (max-width: 250px) {
+    .header h1 {
+        font-size: 14px;
+    }
+    p.refund-text {
+        font-size: 8px;
+    }
+    p.gain-access-text {
+        font-size: 6px;
+        line-height: 14px;
+    }
+    .month-section h2 {
+        font-size: 14px;
+    }
+    .sub-price {
+        font-size: 16px;
+    }
+    .sub-time {
+        font-size: 6px;
+    }
+    .signup-btn {
+        font-size: 8px;
+        padding: 2px 0;
+    }
+    .whyus-section h2 {
+        font-size: 10px;
+    }
+    .whyus-list li {
+        font-size: 6px;
+    }
+    
+}
+
+
+
+@media (max-width: 200px) {
+    .header h1 {
+        font-size: 12px;
+    }
+    p.refund-text {
+        font-size: 6px;
+    }
+    p.gain-access-text {
+        font-size: 4px;
+        line-height: 12px;
+    }
+    .month-section h2 {
+        font-size: 12px;
+    }
+    .sub-price {
+        font-size: 14px;
+    }
+    .sub-time {
+        font-size: 4px;
+    }
+    .signup-btn {
+        font-size: 6px;
+        padding: 1px 0;
+    }
+    .whyus-section h2 {
+        font-size: 8px;
+    }
+    .whyus-list li {
+        font-size: 4px;
+    }
+    
+}
+
+
+@media (max-width: 150px) {
+    .header h1 {
+        font-size: 10px;
+    }
+    p.refund-text {
+        font-size: 4px;
+    }
+    p.gain-access-text {
+        font-size: 2px;
+        line-height: 10px;
+    }
+    .month-section h2 {
+        font-size: 10px;
+    }
+    .sub-price {
+        font-size: 12px;
+    }
+    .sub-time {
+        font-size: 2px;
+    }
+    .signup-btn {
+        font-size: 4px;
+        padding: 1px 0;
+    }
+    .whyus-section h2 {
+        font-size: 6px;
+    }
+    .whyus-list li {
+        font-size: 2px;
+    }
+    
+}
+
+@media (max-width: 100px) {
+    .header h1 {
+        font-size: 8px;
+    }
+    p.refund-text {
+        font-size: 2px;
+    }
+    p.gain-access-text {
+        font-size: 1px;
+        line-height: 8px;
+    }
+    .month-section h2 {
+        font-size: 8px;
+    }
+    .sub-price {
+        font-size: 10px;
+    }
+    .sub-time {
+        font-size: 1px;
+    }
+    .signup-btn {
+        font-size: 2px;
+        padding: 1px 0;
+    }
+    .whyus-section h2 {
+        font-size: 4px;
+    }
+    .whyus-list li {
+        font-size: 1px;
+    }
+    
+}
+
+
+
+@media (max-width: 50px) {
+    .header h1 {
+        font-size: 6px;
+    }
+    p.refund-text {
+        font-size: 1px;
+    }
+    p.gain-access-text {
+        font-size: 0.5px;
+        line-height: 6px;
+    }
+    .month-section h2 {
+        font-size: 6px;
+    }
+    .sub-price {
+        font-size: 8px;
+    }
+    .sub-time {
+        font-size: 0.5px;
+    }
+    .signup-btn {
+        font-size: 1px;
+        padding: 1px 0;
+    }
+    .whyus-section h2 {
+        font-size: 2px;
+    }
+    .whyus-list li {
+        font-size: 0.5px;
+    }
+    
+}

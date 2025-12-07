@@ -1,0 +1,120 @@
+:root {
+  /* ფერები */
+  --color-bg: #f0f1f4;
+  --color-accent: #f76c6c;
+  --color-primary: #4b55b2;
+  --color-success: #3ac47d;
+  --color-success-hover: #34a66a;
+  --color-text-dark: #333;
+  --color-text-light: #666;
+  --color-white: #ffffff;
+}
+
+/* === სტილები === */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  max-width: 960px;
+  width: 100%;
+  background-color: var(--color-accent);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#left-panel {
+  width: 50%;
+  color: var(--color-white);
+  padding: 60px 40px;
+  box-sizing: border-box;
+}
+
+#left-panel h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#left-panel p {
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 300px;
+}
+
+#right-panel {
+  width: 50%;
+  background-color: var(--color-white);
+  padding: 50px 30px;
+  box-sizing: border-box;
+}
+
+#trial-banner {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 25px;
+}
+
+#signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#signup-form input {
+  padding: 12px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+#signup-form input:focus {
+  border: 1px solid var(--color-primary);
+}
+
+#signup-form button {
+  background-color: var(--color-success);
+  color: var(--color-white);
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#signup-form button:hover {
+  background-color: var(--color-success-hover);
+}
+
+#terms {
+  font-size: 10px;
+  color: var(--color-text-light);
+  text-align: center;
+  margin-top: 15px;
+}
+
+#terms a {
+  color: var(--color-accent);
+  font-weight: bold;
+  text-decoration: none;
+}

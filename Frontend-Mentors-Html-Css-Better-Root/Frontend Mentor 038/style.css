@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ===========================
+   Root Variables
+=========================== */
+:root {
+    /* 🎨 Colors */
+    --red: hsl(4, 100%, 67%);
+    --red-transparent: hsl(4, 100%, 67%, 0.15);
+
+    --blue-800: hsl(234, 29%, 20%);
+    --blue-700: hsl(235, 18%, 26%);
+    --grey: hsl(0, 0%, 58%);
+    --white: hsl(0, 0%, 100%);
+
+    /* ✨ Shadows */
+    --shadow-1: hsla(240, 30%, 28%, 0.25);
+    --shadow-2: hsla(0, 0%, 0%, 0.3);
+
+    /* 🖋 Typography */
+    --font-main: "Roboto", sans-serif;
+
+    /* ⏱ Transition */
+    --transition-fast: 0.25s ease;
+}
+
+/* ===========================
+   Global Styles
+=========================== */
+body {
+    display: flex;
+    position: relative;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    color: var(--blue-800);
+}
+
+.content {
+    box-shadow: var(--shadow-1) 0px 13px 27px -5px,
+                var(--shadow-2) 0px 8px 16px -8px;
+}
+
+/* ===========================
+   Info Section
+=========================== */
+.info-signup {
+    margin-inline: 1.5rem;
+    margin-block-start: 1.7rem;
+}
+
+.info > * {
+    margin-block: 1.5rem;
+}
+
+.info > h1 {
+    font-size: 2.5rem;
+}
+
+.info > p,
+.info ul li {
+    line-height: 1.5rem;
+}
+
+.info ul li {
+    display: flex;
+    align-items: flex-start;
+    margin-block-end: .7rem;
+}
+
+.info ul li > img {
+    margin-inline-end: 1rem;
+}
+
+/* ===========================
+   Form Section
+=========================== */
+.form-info {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.form-info div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-info div > label,
+.form-info div > span {
+    font-size: .75rem;
+    font-weight: 700;
+}
+
+.form-info div > span {
+    display: none;
+    color: var(--red);
+}
+
+.form-info div > span.active {
+    display: inline;
+}
+
+.form-info > input {
+    height: 3.5rem;
+    border: .1rem solid var(--grey);
+    border-radius: .5rem;
+    font-size: 1rem;
+    padding-inline-start: 1.4rem;
+    transition: border var(--transition-fast), background var(--transition-fast);
+}
+
+.form-info > input::placeholder {
+    color: var(--grey);
+}
+
+.form-info > input.active {
+    border: .1rem solid var(--red);
+    background-color: var(--red-transparent);
+}
+
+.form-info > input.active::placeholder {
+    color: var(--red);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+    margin-block-start: 2rem;
+}
+
+.form button {
+    width: inherit;
+}
+
+/* ===========================
+   Button Style
+=========================== */
+.button-style {
+    height: 3.5rem;
+    font-size: .96rem;
+    font-weight: 700;
+    color: var(--white);
+    border-radius: .5rem;
+    border: none;
+    background-color: var(--blue-800);
+    cursor: pointer;
+    transition: background var(--transition-fast);
+}
+
+/* ===========================
+   Media Queries
+=========================== */
+@media (min-width: 23.5rem) {
+    body {
+        display: flex;
+        justify-content: center;
+        background-color: var(--blue-700);
+    }
+
+    .content {
+        width: 92%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-block: 1.5rem;
+        padding-block: 1.5rem;
+        background-color: var(--white);
+        border-radius: .5rem;
+    }
+
+    .content > img {
+        content: url("../assets/images/illustration-sign-up-tablet.svg");
+        width: inherit;
+    }
+
+    .info-signup {
+        width: inherit;
+    }
+}
+
+@media (min-width: 48rem) {
+    .info > h1 {
+        font-size: 3rem;
+    }
+
+    .form-info > label {
+        font-size: .70rem;
+        font-weight: 700;
+    }
+}
+
+@media (min-width: 64rem) {
+    body {
+        height: 100vh;
+        align-items: center;
+        font-size: .85rem;
+    }
+
+    .content {
+        width: 49.5rem;
+        height: 34rem;
+        flex-direction: row-reverse;
+        padding-inline: 1.3rem;
+        padding-block: 0;
+        border-radius: 2rem;
+    }
+
+    .content > img {
+        content: url("../assets/images/illustration-sign-up-desktop.svg");
+        width: 21.4rem;
+    }
+
+    .info-signup {
+        padding-block-end: 4rem;
+        padding-inline-end: 1.5rem;
+    }
+
+    .info > * {
+        margin-block: 1rem;
+    }
+
+    .info ul li {
+        line-height: 1rem;
+    }
+
+    .info ul li > img {
+        margin-inline-end: .8rem;
+    }
+
+    .form-info > input {
+        height: 3rem;
+        font-size: .85rem;
+    }
+
+    .form button {
+        height: 3rem;
+        font-size: .8rem;
+    }
+
+    footer {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        color: var(--white);
+    }
+
+    footer a {
+        color: var(--red);
+    }
+}

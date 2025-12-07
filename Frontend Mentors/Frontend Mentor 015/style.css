@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    --Grey-500: hsl(234, 12%, 34%);
+    --Grey-400: hsl(212, 6%, 44%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    margin: 0;
+    font-size: 15px;
+    font-family: 'Poppins';
+    color: var(--Grey-400)
+}
+
+ 
+
+#head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+#head :first-child {
+    font-weight: 200;
+    margin-bottom: 0;
+}
+#head :nth-child(2) {
+    color: var(--Grey-500);
+    margin-top: 0;
+    font-weight: 600;
+}
+
+#head p {
+    text-align: center;
+    margin-bottom: 0;
+    max-width: 500px;
+}
+
+
+
+.container {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
+}
+
+#mid-box {
+    margin: 0 -20px;
+}
+
+.box {
+    margin: 5vh;
+    min-height: 250px;
+    padding: 30px;
+    box-shadow: 0 10px 30px #dfdddd;
+    border-radius: 2%;
+    border-top: 5px var(--Blue) solid;
+    box-sizing: border-box;
+    max-width: 380px;
+}
+.box h2 {
+    margin: 0;
+    font-weight: 500;
+    color: var(--Grey-500);
+}
+
+.box p {
+    margin-top: 0;
+}
+
+.box img {
+    margin-left: calc(100% - 72px);
+    margin-top: 10px;
+}
+
+    
+
+@media (min-width: 700px) {
+    .container {
+        margin-bottom: 200px;
+    }
+
+    .container > div {
+        max-width: 32%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

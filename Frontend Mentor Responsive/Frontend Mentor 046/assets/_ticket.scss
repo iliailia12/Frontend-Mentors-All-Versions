@@ -1,0 +1,167 @@
+@import "variables";
+$gradient1: hsl(7, 86%, 67%);
+$gradient2: hsl(0, 0%, 100%);
+.attendant--name {
+    background: linear-gradient(120deg, $gradient1 25%, $gradient2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.details {
+    color: $neutral-300;
+}
+
+.email {
+    color: $orange-500;
+}
+
+.ticket--wrapper {
+    background-image: url("./images/pattern-ticket.svg");
+    background-repeat: no-repeat;
+    padding: 1rem;
+    background-size: contain; /* Ensure the background scales properly */
+    background-position: center; /* Center the background image */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 160px;
+    position: relative;
+    max-width: 343px;
+    margin: auto;
+
+    .ticket--id {
+        writing-mode: vertical-lr;
+        text-orientation: sideways-right;
+        position: absolute;
+        right: 1rem;
+        top: 0;
+        color: $neutral-500;
+        font-size: 1.5rem;
+        height: 100%;
+        text-align: center;
+        font-weight: 500;
+    }
+}
+
+.ticket--header {
+    display: flex;
+    gap: 1rem;
+    align-items: start;
+
+    h2 {
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    img {
+        width: 29px;
+        height: 29px;
+    }
+}
+
+.ticket--date {
+    padding-left: 2.75rem;
+    font-size: 14px;
+    margin: 0;
+    color: $neutral-300;
+}
+
+.ticket--footer {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+
+    .ticket--avatar {
+        width: 45px;
+        height: 45px;
+        border-radius: 0.75rem;
+    }
+
+    .ticket--avatar--details {
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            font-size: 1.5rem;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        div {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+
+            span {
+                color: $neutral-300;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        p {
+            max-width: 514px;
+            margin: auto;
+        }
+    }
+
+    .ticket--wrapper {
+        margin: auto;
+        margin-top: 5rem;
+        max-width: 600px;
+        height: 280px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1.5rem;
+
+        .ticket--id {
+            right: 2.25rem;
+            font-size: 30px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        .ticket--date {
+            font-size: 1.25rem;
+            padding-left: 3.5rem;
+        }
+        .ticket--logo {
+            width: 40px;
+            height: 40px;
+        }
+        .ticket--avatar {
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    #ticketName {
+        font-size: 30px;
+    }
+
+    .github--logo {
+        width: 17px;
+        height: 17px;
+    }
+
+    #githubUsername {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .ticket--avatar--details {
+        gap: 0.5rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .ticket--wrapper {
+        margin-top: 111px;
+    }
+}

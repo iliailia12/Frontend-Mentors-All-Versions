@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #ffffff;
+    --green: #2AB3B1;
+    --light-green: #9AA7BE;
+    --button: #C0DF33;
+    --light-blue: #276871;
+    --dark-blue: #143F3F;
+    --orange: #E38525;
+    --purple-start: #4e00c2;
+    --purple-end: #8f00ff;
+    --bg-light: #f0f0f0;
+
+    --text-dark: rgb(51, 50, 50);
+    --text-light: #ffffff;
+
+    --font-primary: 'Karla', sans-serif;
+    --font-secondary: 'Big Shoulders', sans-serif;
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+    --radius-small: 5px;
+    --radius-medium: 8px;
+    --radius-large: 32px;
+    --btn-radius: 25px;
+
+    --space-xs: 5px;
+    --space-sm: 10px;
+    --space-md: 20px;
+    --space-lg: 40px;
+
+    --btn-padding: 1rem 2rem;
+    --btn-transition: all 0.3s ease;
+}
+
+body {
+    background-color: var(--bg-light);
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--text-dark);
+    margin: 1rem;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+    max-width: 1200px;
+    justify-content: center;
+    width: 635px;
+}
+
+.card, .card-overview {
+    background-color: var(--white);
+    border-radius: var(--radius-medium);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-gradient {
+    background: linear-gradient(to bottom, var(--purple-start), var(--purple-end));
+    color: var(--white);
+    text-align: center;
+}
+
+.card-pricing-green { background-color: var(--green); color: var(--text-light);}
+.card-pricing-light-green { background-color: var(--light-green); color: var(--text-light);}
+.card-pricing-button { background-color: var(--button); color: var(--text-light); }
+
+.card h1, .card h2, .card h3 {
+    margin-bottom: var(--space-sm);
+}
+
+.card p {
+    margin-bottom: var(--space-sm);
+    line-height: 1.5;
+}
+
+.btn, .signup-btn {
+    padding: var(--btn-padding);
+    border-radius: var(--btn-radius);
+    border: none;
+    cursor: pointer;
+    font-weight: var(--fw-bold);
+    transition: var(--btn-transition);
+}
+
+.btn:hover, .signup-btn:hover {
+    opacity: 0.9;
+}
+
+.signup-btn {
+    background-color: var(--button);
+    color: var(--text-light);
+}
+
+.signup-btn:hover {
+    background-color: hsl(165, 53%, 65%);
+}
+
+.card-overview {
+    display: grid;
+    grid-template: 259px 259px / 1fr 1fr;
+    border-radius: var(--radius-small);
+    overflow: hidden;
+}
+
+.header {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 15px 40px;
+}
+
+.header h1 { color: var(--green); font-weight: 700; }
+
+p.refund-text { color: var(--button); font-size: 18px; }
+p.gain-access-text { color: var(--light-green); line-height: 26px; }
+
+.month-section {
+    background-color: var(--green);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 30px 40px;
+}
+
+.month-section h2 { font-size: 22px; }
+
+.price-container { display: flex; align-items: center; }
+
+.sub-price { font-size: 32px; font-weight: 700; padding-right: 11px; }
+.sub-time { color: hsl(165, 53%, 65%); }
+
+.whyus-section {
+    background-color: var(--light-green);
+    color: var(--white);
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.whyus-section h2 { font-size: 18px; font-weight: 700; }
+
+.whyus-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.whyus-list li {
+    color: hsl(165, 90%, 81%);
+    transition: all 0.4s ease;
+}
+
+.whyus-list li:hover {
+    background-color: var(--green);
+    color: var(--white);
+    border-radius: var(--radius-small);
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+.name a, .attribution a { text-decoration: none; color: blue; }
+.attribution a:hover { color: hsl(212, 7%, 52%); }
+.attribution img { width: 14px; }
+
+@media (max-width: 768px) {
+    .container { flex-direction: column; align-items: center; }
+    .card-overview { grid-template: 1fr 1fr / 1fr; }
+}

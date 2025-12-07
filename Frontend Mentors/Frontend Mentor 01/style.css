@@ -1,0 +1,98 @@
+body {
+      background-color: hsl(30, 38%, 92%);
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card {
+      background-color: hsl(0, 0%, 100%);
+      width: 700px;
+      height: 400px;
+      display: flex;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+    .card-image {
+      flex: 1 1 50%;
+      background: url('./images/image-product-desktop.jpg') center/cover no-repeat;
+    }
+    .card-content {
+      flex: 1 1 50%;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .card-content h3 {
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      color: hsl(228, 12%, 48%);
+      font-size: 14px;
+      margin: 0 0 16px 0;
+      font-weight: 500;
+    }
+    .card-content h1 {
+      font-family: 'Fraunces', serif;
+      font-size: 2rem;
+      margin: 0 0 24px 0;
+      color: hsl(212, 21%, 14%);
+      font-weight: 700;
+    }
+    .card-content p {
+      color: hsl(228, 12%, 48%);
+      font-size: 15px;
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+    .price-row {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+    .price {
+      font-family: 'Fraunces', serif;
+      color: hsl(158, 36%, 37%);
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    .old-price {
+      color: hsl(228, 12%, 48%);
+      text-decoration: line-through;
+      font-size: 1rem;
+    }
+    .add-to-cart {
+      background: hsl(158, 36%, 37%);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 16px 0;
+      font-size: 1rem;
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+      cursor: pointer;
+      transition: background 0.2s;
+      width: 100%;
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .add-to-cart:hover {
+      background: hsl(158, 36%, 25%);
+    }
+    @media (max-width: 750px) {
+      .card {
+        flex-direction: column;
+        width: 90vw;
+        height: auto;
+      }
+      .card-image {
+        height: 240px;
+      }
+    }

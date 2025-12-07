@@ -1,0 +1,196 @@
+:root {
+  /*   ფერები */
+  --color-bg: #faf9fc;
+  --color-text-main: #3B0B44;
+  --color-text-secondary: #7E6E8A;
+  --color-highlight: #F59E0B;
+  --color-card-bg: #3B0B44;
+  --color-light-bg: #F7F1F9;
+  --color-avatar-status: #D9A6B3;
+
+  /*   ფონტები */
+  --font-main: 'Open Sans', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+}
+
+/* ------------------- საერთო სტილები ------------------- */
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  overflow-x: hidden;
+  position: relative;
+}
+
+h1 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-text-main);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  font-size: 32px;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 40px;
+  }
+}
+
+p {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 100%;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  p {
+    font-size: 15px;
+  }
+}
+
+/* ------------------- ლეაუთი ------------------- */
+main {
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  main {
+    padding: 6rem 1.5rem;
+  }
+}
+
+.flex-md {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .flex-md {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 5rem;
+  }
+}
+
+.section-left,
+.section-right {
+  max-width: 28rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .section-left,
+  .section-right {
+    width: 50%;
+  }
+
+  .section-right {
+    margin-top: 0;
+  }
+}
+
+/* ------------------- რეიტინგები ------------------- */
+.rating-box {
+  background-color: var(--color-light-bg);
+  border-radius: 0.375rem;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 20rem;
+  margin-bottom: 1rem;
+}
+
+.rating-box.large {
+  max-width: 22.5rem;
+}
+
+.stars {
+  display: flex;
+  gap: 0.25rem;
+  color: var(--color-highlight);
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.rating-text {
+  color: var(--color-text-main);
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* ------------------- მიმოხილვების ბლოკი ------------------- */
+.reviews-grid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .reviews-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.review-card {
+  background-color: var(--color-card-bg);
+  border-radius: 0.375rem;
+  padding: 1.5rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 20rem;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.review-avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.reviewer-name {
+  font-weight: 700;
+  font-size: 15px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.reviewer-status {
+  font-size: 13px;
+  line-height: 1.2;
+  color: var(--color-avatar-status);
+  margin: 0;
+}
+
+.review-text {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 20rem;
+}
+
+/* ვარსკვლავის აიკონი */
+svg.star {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: currentColor;
+  flex-shrink: 0;
+}

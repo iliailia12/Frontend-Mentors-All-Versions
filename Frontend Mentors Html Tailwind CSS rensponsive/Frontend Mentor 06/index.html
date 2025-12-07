@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Profile card component</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-screen bg-teal-600 bg-bottom bg-cover bg-no-repeat flex flex-col justify-center items-center text-center"
+      style="background-image: url('../images/bg-pattern-bottom.svg'), url('../images/bg-pattern-top.svg');">
+
+  <div class="card flex flex-col w-full max-w-[400px] h-auto bg-white rounded-2xl overflow-hidden shadow-lg">
+    <!-- Card Header -->
+    <div class="card-header flex-[0.3]">
+      <img src="images/bg-pattern-card.svg" alt="" class="w-full">
+    </div>
+
+    <!-- Card Content -->
+    <div class="card-content flex-[0.5] flex flex-col items-center relative p-4">
+      <img src="images/image-victor.jpg" alt="" class="rounded-full border-8 border-white -translate-y-1/2 shadow-lg transition-transform transform hover:scale-105 w-24 h-24 md:w-32 md:h-32">
+      <p class="font-bold text-xl md:text-2xl text-gray-800 mt-4">Victor Crest<span class="text-teal-400 font-normal"> 26</span></p>
+      <p class="text-teal-300 text-base md:text-lg">London</p>
+    </div>
+
+    <!-- Card Footer -->
+    <div class="card-footer flex-[0.2] flex flex-row items-center justify-evenly border-t-2 border-gray-200 text-gray-800 py-4">
+      <div class="footer-item flex flex-col items-center">
+        <p class="status text-xl md:text-2xl font-bold">80K</p>
+        <small class="item-name text-teal-400 tracking-wide text-xs">Followers</small>
+      </div>
+      <div class="footer-item flex flex-col items-center">
+        <p class="status text-xl md:text-2xl font-bold">803K</p>
+        <small class="item-name text-teal-400 tracking-wide text-xs">Likes</small>
+      </div>
+      <div class="footer-item flex flex-col items-center">
+        <p class="status text-xl md:text-2xl font-bold">1.4K</p>
+        <p class="item-name text-teal-400 tracking-wide text-xs">Photos</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

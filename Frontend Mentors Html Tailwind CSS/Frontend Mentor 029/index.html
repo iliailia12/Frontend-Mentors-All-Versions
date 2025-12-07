@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Frontend Mentor | Stats preview card component</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .blend-multiply {
+      mix-blend-mode: multiply;
+    }
+  </style>
+</head>
+<body class="bg-[#0B0C1A] font-inter flex items-center justify-center min-h-screen p-6">
+
+  <section aria-label="Insights section" role="region"  class="bg-[#1B1938] rounded-lg overflow-hidden max-w-[1536px] w-full flex flex-col md:flex-row">
+
+    <div class="flex-1 flex flex-col justify-center p-10 md:p-16">
+      <h2 class="text-white font-extrabold text-3xl sm:text-4xl leading-tight mb-6">
+        <span>Get </span>
+        <span class="text-purple-600">insights </span>
+        <span>that help your business grow.</span>
+      </h2>
+      <p class="text-gray-400 text-sm sm:text-base max-w-xl mb-14 leading-7"> Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency. </p>
+
+      <div class="flex gap-10 max-w-xl">
+        <div class="flex flex-col">
+          <p class="text-white font-bold text-lg leading-none">10k+</p>
+          <p class="text-gray-500 uppercase text-xs tracking-widest mt-1">Companies</p>
+        </div>
+        <div class="flex flex-col">
+          <p class="text-white font-bold text-lg leading-none">314</p>
+          <p class="text-gray-500 uppercase text-xs tracking-widest mt-1">Templates</p>
+        </div>
+        <div class="flex flex-col">
+          <p class="text-white font-bold text-lg leading-none">12M+</p>
+          <p class="text-gray-500 uppercase text-xs tracking-widest mt-1">Queries</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-1 relative">
+      <img src="images/image-header-desktop.jpg" alt="Analytics dashboard preview" 
+           class="w-full h-full object-cover object-center blend-multiply" />
+      <div class="absolute inset-0 bg-purple-600 opacity-10 pointer-events-none"></div>
+    </div>
+  </section>
+</body>
+</html>

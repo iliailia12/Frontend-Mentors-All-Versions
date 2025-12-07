@@ -1,0 +1,94 @@
+ body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  display: flex;
+}
+.container {
+  display: flex;
+  background-color: white;
+  border-radius: 32px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 700px;
+  max-width: 90%;
+}
+.Result {
+  background: linear-gradient(to bottom, #4e00c2, #8f00ff);
+  color: white;
+  text-align: center;
+  padding: 30px;
+  border-radius: 32px 32px 32px 32px;
+  flex: 1;
+}
+.summary {
+  background-color: hsl(0, 0%, 100%);
+  width: 50%;
+  border-radius: 23px;
+  text-align: center;
+  padding: 20px;
+  flex: 1;
+}
+.summary h2 {
+  color: rgb(51, 50, 50);
+  text-align: left;
+}
+.summary-card-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  font-weight: bolder;
+}
+.React {
+  background-color: #f7cccc;
+  color: #dc3545;
+}
+.Mem {
+  background-color: #eef8b7;
+  color: #dcb535;
+}
+.Veb {
+  background-color: #b4f3bf;
+  color: #35dc9c;
+}
+.Vis {
+  background-color: #bab7e6;
+  color: #3540dc;
+}
+.continue {
+  margin-top: 20px;
+  width: 100%;
+  padding: 20px;
+  border: none;
+  border-radius: 25px;
+  background-color: #4e00c2;
+  color: white;
+  cursor: pointer;
+}
+.summary-card-item:hover {
+  background-color: #48c3e9;
+  transition: background-color 0.5s ease;
+}
+.Result .elipse {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(to bottom, #4e00c2, #3a363d);
+  border-radius: 50%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.Result .elipse h1 {
+  color: white;
+  font-size: 40px;
+  margin: 0;
+}
+.Result .elipse h3 {
+  margin: 0px 0 0 0;
+}

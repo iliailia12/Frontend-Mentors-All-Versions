@@ -1,0 +1,132 @@
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.parent{
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(229, 57%, 11%);
+    background-image: url('./images/bg-desktop.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+}
+.sec{
+  width: 100%;
+  height:100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  font-size: 14px;
+}
+.sec1{
+    width: 340px;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 5px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 10px;
+    margin-top: -45px;
+}
+.sec2{
+    background-color: hsl(228, 56%, 26%);
+    width:470px;
+    padding: 30px 30px;
+    border-radius: 5px;
+}
+.sec1 .img1{
+    width: 150px;
+    margin: 0px 30px;
+    margin-top: 35px;
+}
+.icons img{
+    width: 40px;
+    height: 40px;
+    margin: 35px 0px;
+    background-color: hsl(229, 57%, 11%);
+    padding: 11px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.icons img:first-child{
+    margin-left: 30px;
+}
+.sp1{
+    color: hsl(229, 7%, 55%);
+}
+.sp1 span{
+    color: hsl(243, 100%, 93%);
+    font-weight: 700;
+}
+.sec2 .sp2{
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(229, 57%, 11%);
+  padding: 15px 20px ;
+  margin-top: -80px;
+  margin-left: 35px;
+  position: absolute;
+  border-radius: 5px;
+  border-bottom-right-radius: 0px;
+  text-align: center;
+  font-size: 14px;
+  
+}
+.sec2 .sp2::after{
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    right: 0px;
+    border-width: 25px 0px 0px 20px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+.sp2 span{
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+}
+.loading hr:first-child{
+    margin-top: 30px;
+    width: 100%;
+    height: 17px;
+    border: none;
+    border-radius: 15px;
+    background-color: hsl(229, 57%, 11%);
+    position: relative;
+}
+.loading hr:nth-child(2){
+    width: 310px;
+    height: 17px;
+    background-image: linear-gradient(to right,hsl(6, 100%, 80%),hsl(335, 100%, 65%));
+    border-radius: 15px;
+    border: none;
+    position: absolute;
+    margin-top: -17px;
+}
+.loading hr:last-child{
+    width: 15px;
+    height: 15px;
+    border-radius:50%;
+    background-color: white;
+    border: none;
+    position: absolute;
+    margin-top: -16px;
+    margin-left: 292px;
+    cursor: pointer;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    color: hsl(243, 100%, 93%);
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Conference ticket generator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="main">
+      <header>
+        <div>
+          <img src="assets/images/logo-full.svg" alt="" />
+        </div>
+      </header>
+      <div class="heading_container">
+        <h2>Congrats, <span id="name"></span>! Your ticket is ready.</h2>
+
+        <h3>
+          We've emailed your ticket to
+          <span id="email"></span>
+          and will send updates in the run up to the event.
+        </h3>
+
+        <div class="ticket-container">
+          <div class="logo">
+            <img src="assets/images/logo-mark.svg" alt="">
+            Coding Conf
+          </div>
+          <p class="date">Jan 31, 2025 / Austin, TX</p>
+
+          <div class="ticket-user">
+            <img id="display-image" src="" alt="">
+            <div class="user-info">
+              <span id="display-name"></span>
+              <div class="github-username">
+                <img src="assets/images/icon-github.svg" alt="icon-github"><span id="display-github"></span>
+              </div>
+            </div>
+          </div>
+
+          <p class="ticket-number">
+            #01609
+          </p>
+        </div>
+        </div>
+      </div>
+    </main>
+    <script src="ticket.js" defer></script>
+  </body>
+</html>

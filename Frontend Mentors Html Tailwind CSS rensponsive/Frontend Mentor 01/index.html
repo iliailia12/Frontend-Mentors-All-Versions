@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Product Preview Card - Responsive</title>
+</head>
+<body class="bg-[#F7E1C8] font-montserrat flex justify-center items-center min-h-screen p-4">
+  <div class="card bg-white w-full max-w-[700px] flex flex-col md:flex-row rounded-[15px] overflow-hidden shadow-xl">
+    <img src="images/image-product-desktop.jpg" alt="Product image mobile" class="w-full h-56 md:h-auto md:w-1/2 object-cover" />
+
+    <div class="card-content flex-1 p-6 md:p-8 flex flex-col justify-center">
+      <h3 class="uppercase tracking-[5px] text-[#5C5C5C] text-[12px] md:text-[14px] mb-3 font-medium">Perfume</h3>
+      <h1 class="font-serif text-[1.25rem] md:text-[2rem] text-[#212121] mb-4 md:mb-6 font-semibold">Gabrielle Essence Eau De Parfum</h1>
+      <p class="text-[#5C5C5C] text-[14px] md:text-[15px] mb-4 md:mb-6 leading-[1.5]">A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
+
+      <div class="price-row flex items-center gap-4 mb-4 md:mb-6">
+        <span class="price font-serif text-[#9A5C32] text-[1.5rem] md:text-[2rem] font-bold">$149.99</span>
+        <span class="old-price text-[#5C5C5C] line-through text-[0.9rem] md:text-[1rem]">$169.99</span>
+      </div>
+
+      <button class="add-to-cart bg-[#9A5C32] text-white rounded-[8px] py-4 text-[1rem] font-bold w-full mt-auto flex justify-center items-center gap-2 transition-colors hover:bg-[#7B4F2A]">Add to Cart</button>
+    </div>
+  </div>
+</body>
+</html>

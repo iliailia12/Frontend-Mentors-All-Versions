@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>News Homepage - Tailwind</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+</head>
+
+<body class="bg-gray-50 font-sans text-gray-800 leading-relaxed">
+
+  <!-- Header -->
+  <header class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="text-4xl font-extrabold">W.</div>
+
+    <!-- Hamburger (mobile) -->
+    <div class="md:hidden">
+      <button id="menu-toggle" class="text-3xl">&#9776;</button>
+    </div>
+
+    <!-- Desktop nav -->
+    <nav id="desktop-nav" class="hidden md:block">
+      <ul class="flex space-x-12 text-gray-600">
+        <li><a href="#home" class="hover:text-red-500 transition">Home</a></li>
+        <li><a href="#new" class="hover:text-red-500 transition">New</a></li>
+        <li><a href="#popular" class="hover:text-red-500 transition">Popular</a></li>
+        <li><a href="#trending" class="hover:text-red-500 transition">Trending</a></li>
+        <li><a href="#categories" class="hover:text-red-500 transition">Categories</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Mobile menu -->
+  <nav id="mobile-nav" class="md:hidden hidden px-4 pb-4">
+    <ul class="flex flex-col space-y-4 text-gray-700 bg-white p-4 rounded-md shadow">
+      <li><a href="#home" class="hover:text-red-500 transition">Home</a></li>
+      <li><a href="#new" class="hover:text-red-500 transition">New</a></li>
+      <li><a href="#popular" class="hover:text-red-500 transition">Popular</a></li>
+      <li><a href="#trending" class="hover:text-red-500 transition">Trending</a></li>
+      <li><a href="#categories" class="hover:text-red-500 transition">Categories</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 mt-8 max-w-7xl">
+    <section id="home" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Feature -->
+      <div class="md:col-span-2 flex flex-col">
+        <img src="images/წ.jpg" alt="Web 3.0" class="rounded-lg w-full object-cover h-64 md:h-auto" />
+        <div class="flex flex-col md:flex-row justify-between gap-6 mt-6">
+          <h1 class="text-4xl font-extrabold text-[#00001a] leading-tight md:flex-1">The Bright<br />Future of<br />Web 3.0?</h1>
+          <div class="md:flex-1 text-gray-600">
+            <p class="mb-6">We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
+            <button class="bg-red-600 hover:bg-red-700 transition text-white uppercase font-bold px-8 py-3 tracking-wide">Read More</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside id="new" class="bg-[#00001a] p-8 rounded-lg text-white">
+        <h2 class="text-yellow-500 text-3xl font-semibold mb-6">New</h2>
+
+        <div class="mb-6 cursor-pointer">
+          <h3 class="text-lg mb-1 hover:text-yellow-500 transition">Hydrogen VS Electric Cars</h3>
+          <p class="text-gray-300 text-sm">Will hydrogen-fueled cars ever catch up to EVs?</p>
+        </div>
+        <hr class="border-gray-600 mb-6" />
+
+        <div class="mb-6 cursor-pointer">
+          <h3 class="text-lg mb-1 hover:text-yellow-500 transition">The Downsides of AI Artistry</h3>
+          <p class="text-gray-300 text-sm">What are the possible adverse effects of on-demand AI image generation?</p>
+        </div>
+        <hr class="border-gray-600 mb-6" />
+
+        <div class="cursor-pointer">
+          <h3 class="text-lg mb-1 hover:text-yellow-500 transition">Is VC Funding Drying Up?</h3>
+          <p class="text-gray-300 text-sm">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Popular Section -->
+    <section id="popular" class="flex flex-wrap gap-8 mt-12 justify-center md:justify-start">
+      <article class="flex gap-6 max-w-xs w-full rounded-md hover:shadow-lg transition cursor-pointer bg-white p-4 shadow-sm">
+        <img src="images/image-retro-pcs.jpg" alt="Retro PCs" class="w-24 h-24 rounded-md object-cover" />
+        <div class="flex flex-col">
+          <span class="text-gray-400 text-xl font-bold">01</span>
+          <h3 class="text-base font-semibold text-[#00001a] mt-1 mb-2">Reviving Retro PCs</h3>
+          <p class="text-gray-500 text-sm">What happens when old PCs are given modern upgrades?</p>
+        </div>
+      </article>
+
+      <article class="flex gap-6 max-w-xs w-full rounded-md hover:shadow-lg transition cursor-pointer bg-white p-4 shadow-sm">
+        <img src="images/image-top-laptops.jpg" alt="Top Laptops" class="w-24 h-24 rounded-md object-cover" />
+        <div class="flex flex-col">
+          <span class="text-gray-400 text-xl font-bold">02</span>
+          <h3 class="text-base font-semibold text-[#00001a] mt-1 mb-2">Top 10 Laptops of 2022</h3>
+          <p class="text-gray-500 text-sm">Our best picks for various needs and budgets.</p>
+        </div>
+      </article>
+
+      <article class="flex gap-6 max-w-xs w-full rounded-md hover:shadow-lg transition cursor-pointer bg-white p-4 shadow-sm">
+        <img src="images/image-gaming-growth.jpg" alt="Gaming Growth" class="w-24 h-24 rounded-md object-cover" />
+        <div class="flex flex-col">
+          <span class="text-gray-400 text-xl font-bold">03</span>
+          <h3 class="text-base font-semibold text-[#00001a] mt-1 mb-2">The Growth of Gaming</h3>
+          <p class="text-gray-500 text-sm">How the pandemic has sparked fresh opportunities.</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Mobile Menu Toggle Script -->
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileNav = document.getElementById("mobile-nav");
+
+    menuToggle.addEventListener("click", () => {
+      mobileNav.classList.toggle("hidden");
+    });
+  </script>
+
+</body>
+</html>

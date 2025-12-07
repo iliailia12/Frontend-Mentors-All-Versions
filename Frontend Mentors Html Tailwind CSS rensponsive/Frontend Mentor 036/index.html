@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Multi-Step Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            ubuntu: ['Ubuntu', 'sans-serif'],
+          },
+          colors: {
+            primary: '#4837ff',
+            secondary: '#6e7aff',
+          },
+        },
+      },
+    };
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body class="bg-blue-50 font-ubuntu">
+  <main class="max-w-5xl mx-auto my-10 flex flex-col md:flex-row bg-white rounded-xl shadow-lg overflow-hidden">
+    <section class="bg-gradient-to-br from-primary to-secondary text-white w-full md:w-64 p-6 flex flex-col justify-between shadow-md border-r-4 border-secondary">
+      <nav class="flex flex-col gap-6">
+        <a href="#" class="flex items-center gap-4 step">
+          <span class="circle filled w-8 h-8 rounded-full bg-white text-primary font-bold flex items-center justify-center text-sm">1</span>
+          <div class="step-text">
+            <div class="uppercase text-xs opacity-70">Step 1</div>
+            <div class="font-bold text-sm">Your info</div>
+          </div>
+        </a>
+        <a href="#" class="flex items-center gap-4 step">
+          <span class="circle outlined w-8 h-8 rounded-full border-2 border-white text-white font-bold flex items-center justify-center text-sm">2</span>
+          <div class="step-text">
+            <div class="uppercase text-xs opacity-70">Step 2</div>
+            <div class="font-bold text-sm">Select plan</div>
+          </div>
+        </a>
+        <a href="#" class="flex items-center gap-4 step">
+          <span class="circle outlined w-8 h-8 rounded-full border-2 border-white text-white font-bold flex items-center justify-center text-sm">3</span>
+          <div class="step-text">
+            <div class="uppercase text-xs opacity-70">Step 3</div>
+            <div class="font-bold text-sm">Add-ons</div>
+          </div>
+        </a>
+        <a href="#" class="flex items-center gap-4 step">
+          <span class="circle outlined w-8 h-8 rounded-full border-2 border-white text-white font-bold flex items-center justify-center text-sm">4</span>
+          <div class="step-text">
+            <div class="uppercase text-xs opacity-70">Step 4</div>
+            <div class="font-bold text-sm">Summary</div>
+          </div>
+        </a>
+      </nav>
+      <div class="flex gap-3 mt-6 md:mt-0">
+        <img src="https://storage.googleapis.com/a1aa/image/7e3883a5-57fc-4b59-e42c-679a288d989c.jpg" class="w-10 h-10 rounded-full border-2 border-white object-cover" alt="Shape">
+        <img src="https://storage.googleapis.com/a1aa/image/0fc8cc70-ebf6-4324-2e17-e656629527b0.jpg" class="w-10 h-10 rounded-full border-2 border-white object-cover" alt="Shape">
+      </div>
+    </section>
+
+    <section class="content flex-1 p-8 animate-fadeIn">
+    </section>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const steps = document.querySelectorAll(".step");
+      const contentSection = document.querySelector(".content");
+      let currentStep = 0;
+
+      const stepContents = [
+        {
+          title: "Personal info",
+          description: "Please provide your name, email address, and phone number.",
+          html: `
+            <form id="step1" class="space-y-4">
+              <div>
+                <label for="name" class="block text-primary font-bold mb-1">Name</label>
+                <input type="text" id="name" placeholder="e.g. Stephen King" required class="w-full px-4 py-2 rounded-md border border-blue-100 focus:ring-2 focus:ring-secondary focus:outline-none bg-blue-50" />
+              </div>
+              <div>
+                <label for="email" class="block text-primary font-bold mb-1">Email Address</label>
+                <input type="email" id="email" placeholder="e.g. stephenking@lorem.com" required class="w-full px-4 py-2 rounded-md border border-blue-100 focus:ring-2 focus:ring-secondary focus:outline-none bg-blue-50" />
+              </div>
+              <div>
+                <label for="phone" class="block text-primary font-bold mb-1">Phone Number</label>
+                <input type="tel" id="phone" placeholder="e.g. +1 234 567 890" required class="w-full px-4 py-2 rounded-md border border-blue-100 focus:ring-2 focus:ring-secondary focus:outline-none bg-blue-50" />
+              </div>
+              <div class="flex justify-end gap-3 mt-6">
+                <button type="button" id="back0" disabled class="bg-gray-300 text-white px-5 py-2 rounded-md font-bold cursor-not-allowed">Go Back</button>
+                <button type="submit" class="bg-primary text-white px-5 py-2 rounded-md font-bold hover:bg-secondary transition">Next Step</button>
+              </div>
+            </form>
+          `
+        },
+        {
+          title: "Select plan",
+          description: "Choose your plan.",
+          html: `
+            <form id="step2" class="space-y-4">
+              <label class="block font-bold text-primary">
+                <input type="radio" name="plan" value="Basic" required class="mr-2 accent-primary"> Basic
+              </label>
+              <label class="block font-bold text-primary">
+                <input type="radio" name="plan" value="Premium" class="mr-2 accent-primary"> Premium
+              </label>
+              <div class="flex justify-end gap-3 mt-6">
+                <button type="button" id="back1" class="bg-gray-300 text-white px-5 py-2 rounded-md font-bold">Go Back</button>
+                <button type="submit" class="bg-primary text-white px-5 py-2 rounded-md font-bold hover:bg-secondary transition">Next Step</button>
+              </div>
+            </form>
+          `
+        },
+        {
+          title: "Add-ons",
+          description: "Pick add-ons.",
+          html: `
+            <form id="step3" class="space-y-4">
+              <label class="block font-bold text-primary">
+                <input type="checkbox" name="addon1" class="mr-2 accent-primary"> Extra Storage
+              </label>
+              <label class="block font-bold text-primary">
+                <input type="checkbox" name="addon2" class="mr-2 accent-primary"> Priority Support
+              </label>
+              <div class="flex justify-end gap-3 mt-6">
+                <button type="button" id="back2" class="bg-gray-300 text-white px-5 py-2 rounded-md font-bold">Go Back</button>
+                <button type="submit" class="bg-primary text-white px-5 py-2 rounded-md font-bold hover:bg-secondary transition">Next Step</button>
+              </div>
+            </form>
+          `
+        },
+        {
+          title: "Summary",
+          description: "Review your choices.",
+          html: `
+            <div id="summary" class="bg-blue-50 p-6 rounded-md shadow mb-6 text-primary"></div>
+            <div class="flex justify-end gap-3 mt-6">
+              <button type="button" id="back3" class="bg-gray-300 text-white px-5 py-2 rounded-md font-bold">Go Back</button>
+              <button type="button" id="confirm" class="bg-primary text-white px-5 py-2 rounded-md font-bold hover:bg-secondary transition">Confirm</button>
+            </div>
+          `
+        }
+      ];
+
+      const formData = {};
+
+      function updateSidebar() {
+        steps.forEach((step, idx) => {
+          const circle = step.querySelector(".circle");
+          circle.className = "circle w-8 h-8 rounded-full font-bold flex items-center justify-center text-sm";
+          if (idx === currentStep) {
+            circle.classList.add("bg-white", "text-primary");
+          } else {
+            circle.classList.add("border-2", "border-white", "text-white");
+          }
+        });
+      }
+
+      function renderStep() {
+        const step = stepContents[currentStep];
+        contentSection.innerHTML = `
+          <h1 class="text-2xl font-bold text-primary mb-2">${step.title}</h1>
+          <p class="text-secondary mb-6">${step.description}</p>
+          ${step.html}
+        `;
+        updateSidebar();
+
+        if (currentStep === 0) {
+          document.getElementById("step1").onsubmit = function (e) {
+            e.preventDefault();
+            formData.name = document.getElementById("name").value;
+            formData.email = document.getElementById("email").value;
+            formData.phone = document.getElementById("phone").value;
+            currentStep++;
+            renderStep();
+          };
+        }
+
+        if (currentStep === 1) {
+          document.getElementById("back1").onclick = () => { currentStep--; renderStep(); };
+          document.getElementById("step2").onsubmit = function (e) {
+            e.preventDefault();
+            formData.plan = document.querySelector('input[name="plan"]:checked').value;
+            currentStep++;
+            renderStep();
+          };
+        }
+
+        if (currentStep === 2) {
+          document.getElementById("back2").onclick = () => { currentStep--; renderStep(); };
+          document.getElementById("step3").onsubmit = function (e) {
+            e.preventDefault();
+            formData.addon1 = document.querySelector('input[name="addon1"]').checked;
+            formData.addon2 = document.querySelector('input[name="addon2"]').checked;
+            currentStep++;
+            renderStep();
+          };
+        }
+
+        if (currentStep === 3) {
+          document.getElementById("back3").onclick = () => { currentStep--; renderStep(); };
+          document.getElementById("confirm").onclick = () => {
+            alert("Form submitted!\n" + JSON.stringify(formData, null, 2));
+            currentStep = 0;
+            renderStep();
+          };
+          document.getElementById("summary").innerHTML = `
+            <ul class="space-y-2">
+              <li><strong class="text-secondary">Name:</strong> ${formData.name}</li>
+              <li><strong class="text-secondary">Email:</strong> ${formData.email}</li>
+              <li><strong class="text-secondary">Phone:</strong> ${formData.phone}</li>
+              <li><strong class="text-secondary">Plan:</strong> ${formData.plan}</li>
+              <li><strong class="text-secondary">Add-ons:</strong> ${formData.addon1 ? "Extra Storage" : ""} ${formData.addon2 ? "Priority Support" : ""}</li>
+            </ul>
+          `;
+        }
+      }
+
+      renderStep();
+    });
+  </script>
+</body>
+</html>

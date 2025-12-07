@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Bookmark landing page</title>
+  <style>
+     html, body {
+      overflow-x: hidden;
+      font-family: 'Rubik', sans-serif;
+      margin: 0px;
+    }
+
+
+    header{
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+    .container, .container2, .container3, .container4, .container5 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+      margin-bottom: 100px; 
+      flex-direction: column;
+    }
+
+    .image1 {
+      position: relative;
+      display: flex;              
+      justify-content: center;   
+      align-items: center;       
+    }
+    
+    .burger-btn, .faq-btn, .close-btn, .footer-btn{
+      background: none;
+      border:none;
+      padding: 0;
+      cursor: pointer;
+    }
+
+    img{
+      height: auto;
+      display: block;
+      position: relative;
+      z-index: 2; 
+      max-width: 100%;
+    }
+    .purple-obj {
+      position: absolute;
+      right: -50px;  
+      bottom: -30px;  
+      width: 400px;
+      height: 250px;
+      background-color: hsl(231, 69%, 60%);
+      border-radius: 125px 0 0 125px; 
+      z-index: 1;
+    }
+    .reverse{
+      right: 50px;
+      border-radius: 0px 125px 125px 0px;
+    }
+
+    .text{
+      margin-top: 50px;
+      text-align: center;
+    }
+    p{
+      margin-left: 25px;
+      margin-right: 25px;
+      color: rgb(160, 160, 160)
+    }
+
+    .firefox-btn {
+      background-color: rgb(240, 240, 240); 
+      color: hsl(0, 0%, 29%);         
+      border: 1px solid transparent; 
+      width: 150px;
+      height: 50px;
+      border-radius: 5px;
+      font-family: 'Rubik', sans-serif;
+      font-weight: 500;
+      box-shadow: 0px 4px 10px hsla(231, 46%, 44%, 0.3);
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .firefox-btn:hover {
+      background-color: white;                  
+      border: 2px solid hsl(0, 0%, 29%);      
+      color: hsl(0, 0%, 29%);               
+    }
+
+
+
+    .purple{
+      background-color: hsl(231, 69%, 60%);
+      color: white;
+    }
+    .purple:hover {
+      background-color: white;                  
+      border: 2px solid hsl(231, 69%, 60%);      
+      color: hsl(231, 69%, 60%);                
+    }
+
+    .tabs {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      border-bottom: 1px solid #e0e0e0;
+      padding-bottom: 20px;
+    }
+
+    .tab {
+      padding: 1rem 0;
+      position: relative;
+      cursor: pointer;
+      color: #666;
+      transition: color 0.3s ease;
+    }
+    .tab:hover{
+      color:hsl(0, 94%, 66%);
+    }
+
+    .tab.active {
+      color: #000;
+      font-weight: 500;
+    }
+
+    .tab.active::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: #ff5c5c;
+      border-radius: 3px 3px 0 0;
+    }
+
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: flex; 
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .item{
+      padding: 10px;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffffff;
+      border-radius: 20px;
+      flex-direction: column;
+      gap: 30px;
+      box-shadow: 0 4px 10px hsla(231, 69%, 60%, 0.1);
+    }
+    .item h1{
+      margin: 0px;
+    }
+    .item p{
+      margin:0px;
+    }
+
+    .install-btn{
+      background-color: hsl(231, 69%, 60%);
+      border: 1px solid transparent; 
+      width: 250px;
+      height: 50px;
+      border-radius: 5px;
+      color: white;
+      box-shadow: hsla(231, 69%, 60%, 0.1);
+    }
+    .install-btn:hover{
+      background-color: white;                  
+      border: 2px solid hsl(231, 69%, 60%);      
+      color: hsl(231, 69%, 60%);            
+
+    }
+    .question{
+      display: flex;
+      flex-direction: column;
+    }
+    .title-faq{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .faq{
+      width: 300px;
+    }
+    hr {
+      border: none;
+      height: 1px;
+      width: 100%; 
+      background: hsl(0, 0%, 71%);
+      margin: 10px 0; 
+    }
+
+    .answer {
+      display: none;
+      margin-top: 10px;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    .answer.active {
+      display: block;
+    }
+
+    .menu {
+      position: fixed;  
+      top: 0;
+      left: 0;
+      width: 100vw;      
+      height: 100vh;    
+      background-color: hsl(229, 31%, 21%, 0.9);
+      z-index: 9999;     
+      display: none; 
+      flex-direction: column;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .header-menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 50px;
+    }
+
+    nav {
+      flex: 1; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+    }
+
+    .footer-buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 10px;
+    }
+    .footer-buttons button {
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    a{
+      color: white;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: 25px;
+    }
+    .login-btn {
+      border: 2px solid hsl(0, 0%, 100%); 
+      border-radius: 6px;                  
+      padding: 10px 120px;                 
+      color: hsl(0, 0%, 100%);        
+      background-color: transparent;       
+      cursor: pointer;
+      text-decoration: none;             
+      font-weight: 500;
+      transition: all 0.3s ease;          
+    }
+
+    .login-btn:hover {
+      background-color: hsl(231, 69%, 60%);
+      color: white;
+    }
+    
+    .white-logo{
+      color: white;
+    }
+
+    .more-info-btn{
+      background-color: hsl(231, 69%, 60%);
+      border:none;
+      width: 100px;
+      height: 50px;
+      border-radius: 5px;
+      color: white;
+      box-shadow: hsla(231, 69%, 60%, 0.1);
+    }
+
+    .container-purple {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+      flex-direction: column;
+      background-color: hsl(231, 69%, 60%);
+      width: 100%;
+      height: 300px;
+      text-align: center;
+    }
+
+    footer{
+      background-color: hsl(229, 31%, 21%, 1);
+    }
+    footer nav{
+      padding: 30px;
+    }
+    footer a{
+      font-size: 20px;
+    }
+
+    .first-btn{
+      display: flex;
+      gap: 15px; 
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+    }
+
+    .tab-image{
+      width: 90%;
+      height: auto;
+    }
+    .faq-text{
+      color:#444;
+      padding: 0px;
+      margin: 10px;
+      transition: color 0.3s ease;
+    }
+
+    .container-purple p{
+      color: white;
+      text-transform: uppercase; 
+      letter-spacing: 5px;        
+    }
+
+    .purple-h2{
+      color: white;
+      margin-left: 25px;
+      margin-right: 25px;
+    }
+
+    input[type="email"] {
+      width: 250px;              
+      padding: 15px 15px;        
+      font-size: 16px;           
+      border: 2px solid #ccc;    
+      border-radius: 8px;       
+      outline: none;          
+      transition: 0.3s;    
+      color:#ccc;    
+    }
+
+    input[type="email"]:focus {
+      border-color: hsl(0, 94%, 66%); 
+      box-shadow: 0 0 8px rgba(106, 90, 205, 0.5); 
+    }
+
+    .contact-btn{
+      background-color: hsl(0, 94%, 66%);
+      border:none;
+      width: 250px;
+      height: 50px;
+      border-radius: 5px;
+      color: white;
+      box-shadow: hsla(231, 69%, 60%, 0.1);
+      margin-top: 20px;
+    }
+
+    .nav {
+      display: none;
+      justify-content: flex-end; 
+      align-items: center;
+      gap: 30px;
+      padding: 20px 40px;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: hsl(229, 31%, 21%);
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 2px;
+      transition: background 0.3s;
+    }
+    .nav-link:hover{
+      color:hsl(0, 94%, 66%);
+
+    }
+
+    .nav-btn {
+      background: hsl(0, 94%, 66%);
+      color: #fff;
+      padding: 15px 35px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: uppercase;
+      border: 1px solid transparent; 
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .nav-btn:hover {
+      background: #fff;
+      border: 2px solid hsl(0, 94%, 66%); 
+      color: hsl(0, 94%, 66%);
+    }
+
+    .faq-text:hover{
+      color:hsl(0, 94%, 66%); 
+    }
+
+
+    @media (min-width: 1024px) {
+      .burger-btn{
+        display: none;
+      }
+      .container{
+        flex-direction: row;
+        flex-direction: row-reverse;
+        gap: 30px;
+      }
+      .purple-obj {
+        right: -550px;  
+        width: 1000px;
+        height: 300px;
+      }
+      footer{
+        display: flex;
+        flex-direction: row;
+      }
+      nav{
+        flex-direction: row;
+      }
+      .tabs{
+        flex-direction: row;
+        padding-bottom: 50px;
+      }
+      .tab-content {
+        display: none;
+      }
+      .tab-content.active {
+        display: flex; 
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+      }
+      .reverse{
+        right: 50px;
+        border-radius: 0px 125px 125px 0px;
+        width: 1300px;
+      }
+      p{
+        width: 500px;
+      }
+      .browser-item{
+        display: flex;
+        flex-direction: row;
+        gap: 50px
+      }
+      .item:nth-child(2) {
+        margin-top: 40px;
+      }
+      .item:nth-child(3) {
+        margin-top: 80px;
+      }
+      h1{
+        font-size: 50px;
+      }
+      header{
+        padding: 50px 100px;
+        align-items: center;
+      }
+      .item p{
+        text-align: center;
+      }
+      header img {
+        height: 30px;   
+        width: auto;       
+        display: block;
+      }
+      .nav{
+        display: flex;
+      }
+      .faq{
+        width: 600px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/logo-bookmark.svg">
+    <button class="burger-btn" onclick="OpenMenu()">
+      <img src="images/icon-hamburger.svg">
+    </button>
+    <nav class="nav">
+      <a href="#" class="nav-link">Features</a>
+      <a href="#" class="nav-link">Pricing</a>
+      <a href="#" class="nav-link">Contact</a>
+      <button class="nav-btn">Login</button>
+    </nav>
+  </header>
+  
+  <div class="menu">
+    <div class="header-menu">
+      <img class="white-logo" src="images/logo-bookmark.svg" alt="Logo">
+      <button class="close-btn" onclick="CloseMenu()">
+        <img src="images/icon-close.svg" alt="Close">
+      </button>
+    </div>
+    <nav>
+      <hr>
+      <a>Features</a>
+      <hr>
+      <a>Pricing</a>
+      <hr>
+      <a>Contact</a>
+      <hr>
+      <a href="#" class="login-btn">Login</a>
+    </nav>
+    <div class="footer-buttons">
+      <button class="footer-btn">
+        <img src="images/icon-facebook.svg">
+      </button>
+      <button class="footer-btn">
+        <img src="images/icon-twitter.svg">
+      </button>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="image1">
+      <img src="images/illustration-hero.svg">
+      <div class="purple-obj"></div>
+    </div>
+    <div class="text">
+      <h1>A Simple Bookmark Manager</h1>
+      <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
+      <div class="first-btn">
+        <button class="firefox-btn purple">Get it on Chrome</button>
+        <button class="firefox-btn">Get it on Firefox</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container2">
+    <div class="text">
+      <h1>Features</h1>
+      
+      <p>Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
+    </div>
+    <div class="tabs">
+      <div class="tab active">Simple Bookmarking</div>
+      <div class="tab">Speedy Searching</div>
+      <div class="tab">Easy Sharing</div>
+    </div>
+
+    <div class="tab-content tab1 active">
+      <div class="image1">
+        <img class="tab-image" src="images/illustration-features-tab-1.svg">
+        <div class="purple-obj reverse"></div>
+      </div>
+      <div class="text">
+        <h1>Bookmark in one click</h1>
+        <p>Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
+        <button class="more-info-btn">More Info</button>
+      </div>
+    </div>
+
+    <div class="tab-content tab2">
+      <div class="image1">
+        <img class="tab-image" src="images/illustration-features-tab-2.svg">
+        <div class="purple-obj reverse"></div>
+      </div>
+      <div class="text">
+        <h1>Intelligent search</h1>
+        <p>Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
+        <button class="more-info-btn">More Info</button>
+      </div>
+    </div>
+
+    <div class="tab-content tab3">
+      <div class="image1">
+        <img class="tab-image" src="images/illustration-features-tab-3.svg">
+        <div class="purple-obj reverse"></div>
+      </div>
+      <div class="text">
+        <h1>Share your bookmarks</h1>
+        <p>Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
+        <button class="more-info-btn">More Info</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container3">
+    <div class="text">
+      <h1>Download the extension</h1>
+      <p>We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to prioritize.</p>
+    </div>
+    <div class="browser-item">
+      <div class="item">
+        <img src="images/logo-chrome.svg">
+        <h1>Add to Chrome</h1>
+        <p>Minimum version 62</p>
+        <img src="images/bg-dots.svg">
+        <button class="install-btn">Add & Install Extension</button>
+      </div>
+      <div class="item">
+        <img src="images/logo-firefox.svg">
+        <h1>Add to Firefox</h1>
+        <p>Minimum version 55</p>
+        <img src="images/bg-dots.svg">
+        <button class="install-btn">Add & Install Extension</button>
+      </div>
+      <div class="item">
+        <img src="images/logo-opera.svg">
+        <h1>Add to Opera</h1>
+        <p>Minimum version 46</p>
+        <img src="images/bg-dots.svg">
+        <button class="install-btn">Add & Install Extension</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container4">
+    <div class="text">
+      <h1>Frequently Asked Questions</h1>
+      <p>Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.</p>
+    </div>
+    <div class="faq">
+      <div class="question">
+        <div class="title-faq">
+          <p class="faq-text">What is Bookmark?</p>
+          <button class="faq-btn">
+            <img src="images/icon-arrow.svg">
+          </button>
+        </div>
+        <p class="answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
+        <hr>
+      </div>
+
+      <div class="question">
+        <div class="title-faq">
+          <p class="faq-text">How can I request a new browser?</p>
+          <button class="faq-btn">
+            <img src="images/icon-arrow.svg">
+          </button>
+        </div>
+        <p class="answer">Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.</p>
+        <hr>
+      </div>
+
+      <div class="question">
+        <div class="title-faq">
+          <p class="faq-text">Is there a mobile app?</p>
+          <button class="faq-btn">
+            <img src="images/icon-arrow.svg">
+          </button>
+        </div>
+        <p class="answer">Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin ex et ultricies bibendum.</p>
+        <hr>
+      </div>
+
+      <div class="question">
+        <div class="title-faq">
+          <p class="faq-text">What about other Chromium browsers?</p>
+          <button class="faq-btn">
+            <img src="images/icon-arrow.svg">
+          </button>
+        </div>
+        <p class="answer">Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida pellentesque non ut velit.</p>
+        <hr>
+      </div>
+    </div>
+    <button class="more-info-btn">More Info</button>
+  </div>
+
+  <div class="container-purple">
+    <p>35,000+ already joined</p>
+    <h2 class="purple-h2">Stay up-to-date with what we’re doing</h2>
+    <input type="email" id="email" name="email" placeholder=" Example@mail.com" required>
+    <button class="contact-btn">Contact Us</button>
+  </div>
+  <footer>
+     <nav>
+      <a>Features</a>
+      <a>Pricing</a>
+      <a>Contact</a>
+    </nav>
+    <div class="footer-buttons">
+      <button class="footer-btn">
+        <img class="social-img" src="images/icon-facebook.svg">
+      </button>
+      <button class="footer-btn">
+        <img class="social-img" src="images/icon-twitter.svg">
+      </button>
+    </div>
+  </footer>
+  <script src="index.js"></script>
+</body>
+</html>

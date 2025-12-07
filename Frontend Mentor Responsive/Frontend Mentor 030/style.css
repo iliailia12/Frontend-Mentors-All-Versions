@@ -1,0 +1,692 @@
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0px; padding: 0px; box-sizing: border-box;
+}
+
+:root {
+    --bg-color: hsl(226, 43%, 10%);
+    --bg-tile: hsl(235, 46%, 20%);
+    --user-tile: hsl(246, 80%, 60%);
+    --work-tile:hsl(15, 100%, 70%);
+    --play-tile:hsl(195, 74%, 62%);
+    --study-tile: hsl(348, 100%, 68%);
+    --exercise-tile: hsl(145, 58%, 55%);
+    --social-tile: hsl(264, 64%, 52%);
+    --self-tile: hsl(43, 84%, 65%);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: white;    
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:300;
+    font-style: normal;
+}
+
+.container {
+    margin: 50px;
+    display: grid;
+    /* gap: 10px; */
+    padding: 150px;
+}
+
+.container > * {
+    margin-bottom: 20px;
+}
+
+.user {
+    grid-row: 1 / span 2;
+    grid-column: 1;
+    border-radius: 20px;
+    line-height: 200%;
+    width: 225px;
+    gap: 10px;
+    background-color: var(--bg-tile);
+}
+
+.user-profile {
+    background-color: var(--user-tile);
+    padding: 20px;
+    width: 100%;
+    height: 70%;
+    border-radius: 20px;
+}
+
+.filters {
+    padding: 20px;
+}
+
+.work {
+    background-color: var(--work-tile);
+    background-image: url(./images/icon-work.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 50px 50px;
+    border-radius: 20px;
+    padding-top: 30px;
+    width: 90%;
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.inner-element{
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg-tile);
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.play {
+    background-color: var(--play-tile);
+    background-image: url(./images/icon-play.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 50px 50px;
+    border-radius: 20px;
+    padding-top: 30px;
+    width: 90%;
+    grid-row: 1;
+    grid-column: 3;
+}
+
+.study {
+    background-color: var(--study-tile);
+    background-image: url(./images/icon-study.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 50px 50px;
+    border-radius: 20px;
+    padding-top: 30px;
+    width: 90%;
+    grid-row: 1;
+    grid-column: 4;
+}
+
+.self {
+    background-color: var(--self-tile);
+    background-image: url(./images/icon-self-care.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 50px 50px;
+    border-radius: 20px;
+    padding-top: 30px;
+    width: 90%;
+    grid-row: 2;
+    grid-column: 4;
+}
+
+.exercise {
+    background-color: var(--exercise-tile);
+    background-image: url(./images/icon-exercise.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 50px 50px;
+    border-radius: 20px;
+    padding-top: 30px;
+    width: 90%;
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.social {
+    background-color: var(--social-tile);
+    background-image: url(./images/icon-social.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 50px 50px;
+    border-radius: 20px;
+    padding-top: 30px;
+    width: 90%;
+    grid-row: 2;
+    grid-column: 3;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+    }
+    .container > * {
+        width: 350px;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        width: 300px;
+        padding: 50px;
+        margin: 20px;
+    }
+    .container > * {
+        width: 300px;
+    }
+    .user {
+        width: 300px;
+    }
+    .work, .play, .study, .self, .exercise, .social {
+        width: 300px;
+    }
+    .nav_buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    .nav_buttons button {
+        background-color: var(--bg-tile);
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .nav_buttons button img {
+        width: 15px;
+        height: 15px;
+    }
+    .nav_buttons button:focus {
+        outline: 2px solid white;
+        outline-offset: 2px;
+    }
+
+    .nav {
+        display: none;
+    }
+    .nav.active {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+    .hamburger-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    .hamburger-btn img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .hamburger-btn:focus {
+        outline: 2px solid white;
+        outline-offset: 2px;
+    }
+
+    .filters {
+        padding: 0;
+    }
+    .filters button {
+        background: none;
+        border: none;
+        color: hsl(236, 100%, 87%);
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .filters button:hover, .filters button:focus {
+        color: white;
+        outline: none;
+    }
+    .filters button.active {
+        color: white;
+    }
+    
+    .user-profile {
+        height: 150px;
+    }
+
+    .header h2 {
+        font-size: 18px;
+    }
+    .header p {
+        font-size: 14px;
+    }
+    .inner-element h1 {
+        font-size: 32px;
+    }
+    .inner-element p {
+        font-size: 14px;
+    }
+
+    .header img {
+        width: 20px;
+        height: 5px;
+    }
+
+    .inner-element img {
+        width: 20px;
+        height: 5px;
+    }
+}
+
+
+@media (max-width: 320px) {
+    .container {
+        width: 280px;
+        padding: 30px;
+        margin: 10px;
+    }
+    .container > * {
+        width: 280px;
+    }
+    .user {
+        width: 280px;
+    }
+    .work, .play, .study, .self, .exercise, .social {
+        width: 280px;
+    }
+    .nav_buttons button {
+        width: 35px;
+        height: 35px;
+    }
+    .nav_buttons button img {
+        width: 12px;
+        height: 12px;
+    }
+    .hamburger-btn {
+        width: 25px;
+        height: 25px;
+        top: 15px;
+        right: 15px;
+    }
+    .hamburger-btn img {
+        width: 100%;
+        height: 100%;
+    }
+    .user-profile {
+        height: 130px;
+    }
+    .header h2 {
+        font-size: 16px;
+    }
+    .header p {
+        font-size: 12px;
+    }
+    .inner-element h1 {
+        font-size: 28px;
+    }
+    .inner-element p {
+        font-size: 12px;
+    }
+    .header img {
+        width: 15px;
+        height: 4px;
+    }
+    .inner-element img {
+        width: 15px;
+        height: 4px;
+    }
+    
+}
+
+@media (max-width: 280px) {
+    .container {
+        width: 250px;
+        padding: 20px;
+        margin: 5px;
+    }
+    .container > * {
+        width: 250px;
+    }
+    .user {
+        width: 250px;
+    }
+    .work, .play, .study, .self, .exercise, .social {
+        width: 250px;
+    }
+    .nav_buttons button {
+        width: 30px;
+        height: 30px;
+    }
+    .nav_buttons button img {
+        width: 10px;
+        height: 10px;
+    }
+    .hamburger-btn {
+        width: 20px;
+        height: 20px;
+        top: 10px;
+        right: 10px;
+    }
+    .hamburger-btn img {
+        width: 100%;
+        height: 100%;
+    }
+    .user-profile {
+        height: 110px;
+    }
+    .header h2 {
+        font-size: 14px;
+    }
+    .header p {
+        font-size: 10px;
+    }
+    .inner-element h1 {
+        font-size: 24px;
+    }
+    .inner-element p {
+        font-size: 10px;
+    }
+    .header img {
+        width: 12px;
+        height: 3px;
+    }
+    .inner-element img {
+        width: 12px;
+        height: 3px;
+    }
+    
+}
+
+@media (max-width: 240px) {
+    .container {
+        width: 220px;
+        padding: 10px;
+        margin: 2px;
+    }
+    .container > * {
+        width: 220px;
+    }
+    .user {
+        width: 220px;
+    }
+    .work, .play, .study, .self, .exercise, .social {
+        width: 220px;
+    }
+    .nav_buttons button {
+        width: 25px;
+        height: 25px;
+    }
+    .nav_buttons button img {
+        width: 8px;
+        height: 8px;
+    }
+    .hamburger-btn {
+        width: 15px;
+        height: 15px;
+        top: 5px;
+        right: 5px;
+    }
+    .hamburger-btn img {
+        width: 100%;
+        height: 100%;
+    }
+    .user-profile {
+        height: 90px;
+    }
+    .header h2 {
+        font-size: 12px;
+    }
+    .header p {
+        font-size: 8px;
+    }
+    .inner-element h1 {
+        font-size: 20px;
+    }
+    .inner-element p {
+        font-size: 8px;
+    }
+    .header img {
+        width: 10px;
+        height: 2px;
+    }
+    .inner-element img {
+        width: 10px;
+        height: 2px;
+    }   
+    
+}
+
+@media (max-width: 200px) {
+    .container {
+        width: 180px;
+        padding: 5px;
+        margin: 1px;
+    }
+    .container > * {
+        width: 180px;
+    }
+    .user {
+        width: 180px;
+    }
+    .work, .play, .study, .self, .exercise, .social {
+        width: 180px;
+    }
+    .nav_buttons button {
+        width: 20px;
+        height: 20px;
+    }
+    .nav_buttons button img {
+        width: 6px;
+        height: 6px;
+    }
+    .hamburger-btn {
+        width: 10px;
+        height: 10px;
+        top: 2px;
+        right: 2px;
+    }
+    .hamburger-btn img {
+        width: 100%;
+        height: 100%;
+    }
+    .user-profile {
+        height: 70px;
+    }
+    .header h2 {
+        font-size: 10px;
+    }
+    .header p {
+        font-size: 6px;
+    }
+    .inner-element h1 {
+        font-size: 16px;
+    }
+    .inner-element p {
+        font-size: 6px;
+    }
+    .header img {
+        width: 8px;
+        height: 2px;
+    }
+    .inner-element img {
+        width: 8px;
+        height: 2px;
+    }
+    
+}
+
+@media (max-width: 150px) {
+    .container {
+        width: 130px;
+        padding: 2px;
+        margin: 0px;
+    }
+    .container > * {
+        width: 130px;
+    }
+    .user {
+        width: 130px;
+    }
+    .work, .play, .study, .self, .exercise, .social {
+        width: 130px;
+    }
+    .nav_buttons button {
+        width: 15px;
+        height: 15px;
+    }
+    .nav_buttons button img {
+        width: 5px;
+        height: 5px;
+    }
+    .hamburger-btn {
+        width: 8px;
+        height: 8px;
+        top: 1px;
+        right: 1px;
+    }
+    .hamburger-btn img {
+        width: 100%;
+        height: 100%;
+    }
+    .user-profile {
+        height: 50px;
+    }
+    .header h2 {
+        font-size: 8px;
+    }
+    .header p {
+        font-size: 5px;
+    }
+    .inner-element h1 {
+        font-size: 12px;
+    }
+    .inner-element p {
+        font-size: 5px;
+    }
+    .header img {
+        width: 6px;
+        height: 1px;
+    }
+    .inner-element img {
+        width: 6px;
+        height: 1px;
+    }
+    
+}
+
+@media (max-width: 100px) {
+    .container {
+        width: 80px;
+        padding: 1px;
+        margin: 0px;
+    }
+    .container > * {
+        width: 80px;
+    }
+    .user {
+        width: 80px;
+    }
+    .work, .play, .study, .self, .exercise, .social {
+        width: 80px;
+    }
+    .nav_buttons button {
+        width: 10px;
+        height: 10px;
+    }
+    .nav_buttons button img {
+        width: 4px;
+        height: 4px;
+    }
+    .hamburger-btn {
+        width: 5px;
+        height: 5px;
+        top: 0px;
+        right: 0px;
+    }
+    .hamburger-btn img {
+        width: 100%;
+        height: 100%;
+    }
+    .user-profile {
+        height: 30px;
+    }
+    .header h2 {
+        font-size: 6px;
+    }
+    .header p {
+        font-size: 4px;
+    }
+    .inner-element h1 {
+        font-size: 10px;
+    }
+    .inner-element p {
+        font-size: 4px;
+    }
+    .header img {
+        width: 5px;
+        height: 1px;
+    }
+    .inner-element img {
+        width: 5px;
+        height: 1px;
+    }
+    
+}
+
+@media (max-width: 50px) {
+    .container {
+        width: 40px;
+        padding: 0px;
+        margin: 0px;
+    }
+    .container > * {
+        width: 40px;
+    }
+    .user {
+        width: 40px;
+    }
+    .work, .play, .study, .self, .exercise, .social {
+        width: 40px;
+    }
+    .nav_buttons button {
+        width: 8px;
+        height: 8px;
+    }
+    .nav_buttons button img {
+        width: 3px;
+        height: 3px;
+    }
+    .hamburger-btn {
+        width: 4px;
+        height: 4px;
+        top: 0px;
+        right: 0px;
+    }
+    .hamburger-btn img {
+        width: 100%;
+        height: 100%;
+    }
+    .user-profile {
+        height: 20px;
+    }
+    .header h2 {
+        font-size: 5px;
+    }
+    .header p {
+        font-size: 3px;
+    }
+    .inner-element h1 {
+        font-size: 8px;
+    }
+    .inner-element p {
+        font-size: 3px;
+    }
+    .header img {
+        width: 4px;
+        height: 1px;
+    }
+    .inner-element img {
+        width: 4px;
+        height: 1px;
+    }
+    
+}

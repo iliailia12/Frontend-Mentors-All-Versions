@@ -1,0 +1,145 @@
+:root {
+    --purple-700: hsl(257, 40%, 49%);
+    --magenta-400: hsl(300, 69%, 71%);
+    --font-family-poppins: "Poppins";
+    --poppins-font-weight-400: 400;
+    --poppins-font-weight-600: 600;
+    --font-family-open-sans: "Open Sans";
+    --open-sans-weight-400: 400;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+.huddle {
+    background-image: url('images/bg-desktop.svg');
+    background-repeat: no-repeat;
+    background-color: var(--purple-700);
+    height: 100vh;
+    padding: 40px;
+}
+
+@media (max-width:767px) {
+    .huddle {
+        height: 100%;
+        background-image: url('images/bg-mobile.svg');
+    }
+}
+
+.huddle .logo {
+    margin-bottom: 100px;
+}
+
+.huddle .illustration {
+    display: flex;
+}
+
+@media (max-width: 767px) {
+    .huddle .illustration {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+}
+
+.huddle .illustration .image {
+    margin-right: 30px;
+}
+
+@media (max-width: 767px) {
+    .huddle .illustration .image {
+        margin-right: 0;
+    }
+
+}
+
+.huddle .illustration .image img {
+    max-width: 100%;
+}
+
+.huddle .illustration .content {
+    flex-basis: 35%;
+}
+
+.huddle .illustration .content h1 {
+    color: white;
+    font-size: 2em;
+    font-family: var(--font-family-poppins);
+    font-weight: var(--poppins-font-weight-600);
+    margin-top: 50px;
+}
+
+
+@media (max-width: 767px) {
+    .huddle .illustration .content h1 {
+        font-size: 1.5em;
+    }
+}
+
+.huddle .illustration .content p {
+    font-family: var(--font-family-open-sans);
+    font-weight: var(--open-sans-weight-400);
+    color: white;
+}
+
+.huddle .illustration button {
+    border: none;
+    outline: none;
+    padding: 20px;
+    border-radius: 60px;
+    width: 200px;
+    color: var(--purple-700);
+    font-weight: var(--poppins-font-weight-400);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.huddle .illustration button:hover {
+    color: white;
+    background-color: var(--magenta-400);
+}
+
+@media (max-width: 767px) {
+    .huddle .illustration button {
+        padding: 15px;
+        width: 250px;
+        margin-bottom: 50px;
+    }
+}
+
+.huddle .social {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media (max-width: 767px) {
+    .huddle .social {
+        justify-content: center;
+        margin-top: 20px;
+    }
+}
+
+.huddle .social i {
+    color: white;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.huddle .social i:hover {
+    cursor: pointer;
+    border-color: var(--magenta-400);
+    color: var(--magenta-400);
+}
+
+.huddle .social i:nth-child(2) {
+    margin: 0 20px;
+}

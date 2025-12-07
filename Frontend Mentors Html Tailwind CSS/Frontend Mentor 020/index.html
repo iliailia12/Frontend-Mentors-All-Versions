@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Job Listings - Tailwind Version</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link  href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap"  rel="stylesheet"/>
+    <style>
+      body {
+        font-family: "Karla", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-[#d9f0f2] min-h-screen p-4 flex justify-center">
+    <main class="w-full max-w-3xl">
+      <ul class="flex flex-col gap-6">
+        <!-- Job Item -->
+        <li class="bg-white border-l-4 border-[#5ba4a4] p-6 rounded-md shadow-md flex flex-col gap-4">
+          <div class="flex items-center gap-6 flex-col sm:flex-row sm:items-start"  >
+            <img    src="https://placehold.co/48x48/000000/ffffff?text=Photosnap+logo"    class="w-12 h-12 rounded-full object-cover flex-shrink-0"    alt="Photosnap"  />
+            <div class="text-start">
+              <p class="text-[10px] font-bold text-[#5ba4a4] flex flex-wrap gap-2">Photosnap
+                <span class="bg-[#5ba4a4] text-white rounded-full px-2 py-0.5 uppercase">New!</span>
+                <span class="bg-[#2c3a3a] text-white rounded-full px-2 py-0.5 uppercase" >Featured</span>
+              </p>
+              <h2 class="text-[14px] font-bold text-[#2c3a3a] leading-tight">Senior Frontend Developer</h2>
+              <p class="text-[10px] text-[#7b8e8e] mt-1">1d ago • Full Time • USA only </p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2 text-[12px] font-bold text-[#5ba4a4]">
+            <span class="bg-[#effafa] px-2 py-1 rounded">Frontend</span>
+            <span class="bg-[#effafa] px-2 py-1 rounded">Senior</span>
+            <span class="bg-[#effafa] px-2 py-1 rounded">HTML</span>
+            <span class="bg-[#effafa] px-2 py-1 rounded">CSS</span>
+            <span class="bg-[#effafa] px-2 py-1 rounded">JavaScript</span>
+          </div>
+        </li>
+
+        <!-- დანაეჩენის დამატება დამეზარა  -->
+      </ul>
+    </main>
+  </body>
+</html>

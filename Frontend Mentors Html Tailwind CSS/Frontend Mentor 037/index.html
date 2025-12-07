@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Age Calculator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            ubuntu: ['Ubuntu', 'sans-serif'],
+          },
+        }
+      }
+    };
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body class="bg-gray-100 font-ubuntu min-h-screen flex flex-col justify-center items-center px-4">
+  <main class="bg-white rounded-xl shadow-lg max-w-xl w-full p-6 sm:p-10">
+    <form id="age-form" class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+      <div>
+        <label for="day" class="text-xs font-bold text-gray-600 uppercase tracking-wide">Day</label>
+        <input type="text" id="day" placeholder="DD" class="w-full mt-1 px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" />
+        <span class="text-sm text-red-500 mt-1 block" id="day-error"></span>
+      </div>
+      <div>
+        <label for="month" class="text-xs font-bold text-gray-600 uppercase tracking-wide">Month</label>
+        <input type="text" id="month" placeholder="MM" class="w-full mt-1 px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" />
+        <span class="text-sm text-red-500 mt-1 block" id="month-error"></span>
+      </div>
+      <div>
+        <label for="year" class="text-xs font-bold text-gray-600 uppercase tracking-wide">Year</label>
+        <input type="text" id="year" placeholder="YYYY" class="w-full mt-1 px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" />
+        <span class="text-sm text-red-500 mt-1 block" id="year-error"></span>
+      </div>
+    </form>
+
+    <div class="relative mb-6">
+      <hr class="border-t border-gray-300" />
+      <button id="submit" aria-label="Calculate age" class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white p-4 rounded-full hover:bg-blue-700 transition duration-200">
+        &#10140;
+      </button>
+    </div>
+
+    <section class="text-4xl sm:text-5xl font-bold text-gray-800 space-y-2 text-center sm:text-left">
+      <div><span class="text-blue-600" id="years">--</span> years</div>
+      <div><span class="text-blue-600" id="months">--</span> months</div>
+      <div><span class="text-blue-600" id="days">--</span> days</div>
+    </section>
+  </main>
+
+  <footer class="mt-8 text-sm text-gray-500 text-center">
+    Challenge by <a class="text-blue-500 underline" href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a class="text-blue-500 underline" href="#">Ilia Kviciani</a>.
+  </footer>
+
+  <script src="js.js"></script>
+</body>
+</html>

@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+/* ROOT VARIABLES */
+:root {
+  /* ფერები */
+  --color-bg: #fafafa;
+  --color-white: #ffffff;
+  --color-purple: rgb(136, 56, 240);
+  --color-pink: rgb(233, 66, 240);
+  --color-light-purple: hsl(276, 23%, 91%);
+  --color-dark-purple: hsl(271, 36%, 24%);
+  --color-text-dark: hsl(271, 15%, 43%);
+  --color-text-light: hsl(270, 7%, 64%);
+  --color-accent: hsl(276, 55%, 52%);
+  --color-placeholder: hsl(206, 6%, 79%);
+
+  /* შრიფტი */
+  --font-main: 'Rubik', sans-serif;
+  --font-size-xs: 10px;
+  --font-size-sm: 12px;
+  --font-size-md: 14px;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 32px;
+
+  /* ზომები */
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 20px;
+  --border-radius-xl: 30px;
+  --border-radius-round: 50%;
+
+  --container-max-width: 1450px;
+  --container-max-height: 800px;
+
+  /* მობილურის ზომები */
+  --mobile-width: 250px; /* 15% ფართობის მაგივრად */
+  --mobile-height: 435px;
+  --mobile-border: 8px;
+
+  /* ინტერვალები */
+  --spacing-xxs: 4px;
+  --spacing-xs: 8px;
+  --spacing-sm: 12px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+  --spacing-xxxl: 64px;
+
+  /* დეკორატიული ფორმები */
+  --shape-radius: 180px;
+  --shape-opacity: 0.1;
+
+  /* ჩრდილები */
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-strong: 5px 5px 30px #d1d1d1;
+
+  /* ტრანზიციები */
+  --transition-speed: 300ms;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  font-size: 16px;
+}
+
+/* STRUCTURE */
+html {
+  height: 100%;
+}
+
+body {
+  background: var(--color-bg);
+  height: 100%;
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  max-height: var(--container-max-height);
+  height: 100%;
+}
+
+/* DECORATIVE ELEMENTS */
+.roundedPurpleModel {
+  background: linear-gradient(0deg, var(--color-purple) 20%, var(--color-pink) 100%);
+  height: 90%;
+  width: 25%;
+  border-bottom-left-radius: var(--shape-radius);
+  border-bottom-right-radius: var(--shape-radius);
+  z-index: -1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* MOBILE MOCKUP */
+.mobile {
+  width: var(--mobile-width);
+  height: var(--mobile-height);
+  background: var(--color-bg);
+  position: relative;
+  top: 15%;
+  left: 21%;
+  border-radius: var(--border-radius-xl);
+  border: var(--mobile-border) solid var(--color-white);
+  box-shadow: var(--shadow-strong);
+  min-width: 200px;
+}
+
+.mobile header {
+  background: linear-gradient(90deg, var(--color-purple) 0%, var(--color-pink) 100%);
+  border-top-left-radius: var(--border-radius-lg);
+  border-top-right-radius: var(--border-radius-lg);
+  padding: 0 var(--spacing-xs) var(--spacing-sm) var(--spacing-xs);
+  height: 15%;
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile header i {
+  cursor: pointer;
+  color: var(--color-white);
+  vertical-align: middle;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+.mobile header img {
+  border-radius: var(--border-radius-round);
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.mobile header .user {
+  display: inline-block;
+  width: 130px;
+}
+
+.mobile header .user h6,
+.mobile header .user p {
+  opacity: 0.75;
+  color: var(--color-white);
+  display: inline-block;
+  font-size: 0.7em;
+  padding: 0;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.mobile header .user h6 p {
+  font-weight: 400;
+  color: var(--color-white);
+  opacity: 0.6;
+}
+
+.mobile header .note {
+  background: var(--color-white);
+  height: 15px;
+  width: 60%;
+  margin: 0 auto var(--spacing-sm) auto;
+  border-bottom-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+}
+
+/* CHAT SECTION */
+.mobile .chat {
+  background: hsl(270, 20%, 96%);
+  height: 85%;
+  padding: 0 0.5em 0.5em 0.5em;
+  box-sizing: border-box;
+  border-bottom-right-radius: var(--border-radius-lg);
+  border-bottom-left-radius: var(--border-radius-lg);
+}
+
+.mobile .chat .mensagens1 li {
+  font-size: 0.5em;
+  max-width: 70%;
+  padding: 1em;
+  color: var(--color-accent);
+  background: var(--color-light-purple);
+  border-radius: 10px;
+  margin-top: 0.8em;
+  clear: both;
+}
+
+.mobile .chat .mensagens2 {
+  margin-top: 0.4em;
+  text-align: right;
+}
+
+.mobile .chat .mensagens2 .mensagem2 {
+  float: right;
+  text-align: right;
+  font-size: 0.5em;
+  max-width: 70%;
+  padding: 1em;
+  color: var(--color-text-dark);
+  background: var(--color-white);
+  border-radius: 10px;
+  margin-top: 0.8em;
+}
+
+.mobile .chat .prices li {
+  font-size: 0.5em;
+  max-width: 80%;
+  padding: 1em;
+  background: linear-gradient(270deg, var(--color-purple) 0%, var(--color-pink) 100%);
+  border-radius: 10px;
+  margin-top: 0.8em;
+}
+
+.mobile .chat .prices li .circle {
+  border-radius: var(--border-radius-round);
+  border: 1px solid hsl(289, 100%, 72%);
+  height: 10px;
+  width: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.mobile .chat .prices li p {
+  font-size: 1em;
+  display: inline-block;
+  vertical-align: middle;
+  color: var(--color-white);
+  opacity: 0.7;
+}
+
+.mobile .chat .prices li span {
+  color: var(--color-white);
+  font-size: 1.3em;
+}
+
+/* INPUT AREA */
+.mobile .chat input {
+  border: none;
+  box-sizing: border-box;
+  padding: 1em;
+  font-size: 0.6em;
+  width: 85%;
+  border-radius: var(--border-radius-xl);
+}
+
+::placeholder {
+  color: var(--color-placeholder);
+}
+
+.mobile .chat .buttonSubmit {
+  display: inline-block;
+  width: 100%;
+  background: var(--color-white);
+  border-radius: var(--border-radius-xl);
+  margin-top: var(--spacing-sm);
+}
+
+.mobile .chat .buttonSubmit button {
+  background: var(--color-dark-purple);
+  border-radius: var(--border-radius-round);
+}
+
+.mobile .chat .buttonSubmit button i {
+  color: var(--color-white);
+  font-size: 1em;
+}
+
+/* SIDE CONTENT */
+.conteudo {
+  bottom: 40%;
+  right: 17%;
+  position: fixed;
+  width: 34%;
+}
+
+.conteudo h2 {
+  font-weight: 500;
+  font-size: 2em;
+  color: var(--color-dark-purple);
+  margin-bottom: 0.5em;
+}
+
+.conteudo p {
+  font-weight: 400;
+  font-size: 1em;
+  color: var(--color-text-light);
+  line-height: 1.5em;
+}
+
+/* SECOND DECORATIVE SHAPE */
+.roundedPinkModel {
+  background: linear-gradient(0deg, var(--color-purple) 20%, var(--color-pink) 100%);
+  height: 80%;
+  width: 22%;
+  border-top-left-radius: var(--shape-radius);
+  z-index: -1000;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  opacity: var(--shape-opacity);
+}

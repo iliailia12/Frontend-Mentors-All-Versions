@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Project tracking intro component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<main class="container">
+    <nav class="logo-nav  global-padding">
+    <div class="logo">
+      <a class="link-logo" href="#">
+        <img src="images/logo.svg" alt="logo">
+      </a>
+    </div>
+    <button class="hamburger">
+      <img class="hamburger-close"  src="images/icon-hamburger.svg" alt="hamburger icon"></img>
+    </button>
+    <div class="nav-links  display-none">
+      <a href="#">Product</a>
+      <a href="#">Features</a>
+      <a href="#">Pricing</a>
+      <a href="#" class="dot">.</a>
+      <a href="#" id="login"> Login</a>
+    </div>
+   </nav>
+    <div class="content">
+      <div class="new-dash global-padding">
+          <h1 class="new">New  </h1>
+          <p class="dash">Monograph Dashboard</p>
+      </div>
+      <div class="hero  global-padding">
+        <h2 class="hero-text">Powerful insights into your team</h2>
+        <p>  Project planning and time tracking for agile teams</p>
+      </div>
+      <div class="demo-preview global-padding">
+        <button class="btn-demo">Schedule a demo</button>
+        <p>  to see a live preview</p>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img class="img-devices" src="images/illustration-devices.svg"></img>
+    </div>
+</main>
+  <script>
+    
+
+
+const hamburger = document.querySelector('.hamburger');
+const hamCloseIcon = document.querySelector('.hamburger-close');
+const navLinks = document.querySelector('.nav-links');
+
+
+let count =0;
+
+
+hamburger.addEventListener('click', function () {
+
+
+
+	hamburger.classList.toggle('isActive');
+
+	if (count===0) {
+
+    hamCloseIcon.src='images/icon-close.svg';
+     count=1;
+     navLinks.classList.remove('display-none');
+     return;
+
+
+	}
+	if (count===1) {
+	  hamCloseIcon.src='images/icon-hamburger.svg';
+     count=0;
+     navLinks.classList.add('display-none');
+     return;
+	}
+})
+  </script>
+</body>
+</html>

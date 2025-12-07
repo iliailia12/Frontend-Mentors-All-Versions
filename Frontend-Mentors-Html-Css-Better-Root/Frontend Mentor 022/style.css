@@ -1,0 +1,178 @@
+/* ===========================
+   ROOT VARIABLES
+=========================== */
+:root {
+  /* Colors */
+  --color-text-dark: hsl(240, 38%, 20%);
+  --color-text-light: hsl(240, 18%, 77%);
+  --color-white: #ffffff;
+  --shadow-nav: rgba(0, 0, 0, 0.4);
+
+  /* Backgrounds */
+  --bg-pattern-main: url(./images/pattern-bg.svg);
+  --bg-pattern-quotes: url(./images/pattern-quotes.svg);
+  --bg-pattern-curve: url(./images/pattern-curve.svg);
+
+  /* Font sizes */
+  --fs-base: 32px;
+  --fs-p: 1.4rem;
+  --fs-name: 1.2rem;
+  --fs-title: 1.3rem;
+
+  /* Image sizes */
+  --img-size: 500px;
+  --img-size-mobile: 250px;
+
+  /* Nav buttons */
+  --nav-width: 100px;
+  --nav-height: 50px;
+  --nav-width-mobile: 70px;
+  --nav-height-mobile: 40px;
+  --nav-shadow: var(--shadow-nav);
+}
+
+/* ===========================
+   BASE STYLES
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Inter', sans-serif;
+  font-size: var(--fs-base);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: var(--bg-pattern-main), var(--bg-pattern-quotes), var(--bg-pattern-curve);
+  background-repeat: no-repeat;
+  background-position: 92% 0%, 30% 25%, bottom left;
+}
+
+.hide{
+  display: none !important;
+}
+
+.container{
+  max-width: 80vw;
+}
+
+.tanya, .john{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container p{
+  font-size: var(--fs-p);
+  font-weight: 300;
+  color: var(--color-text-dark);
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+
+.container .name{
+  font-size: var(--fs-name);
+  font-weight: 500;
+  color: var(--color-text-dark);
+}
+
+.container .title{
+  font-size: var(--fs-title);
+  font-weight: 300;
+  color: var(--color-text-light);
+}
+
+.image__container{
+  position: relative;
+}
+
+.image__container img{
+  width: var(--img-size);
+  height: var(--img-size);
+  border-radius: 10px;
+}
+
+.image__container .nav_buttons{
+  position: absolute;
+  height: var(--nav-height);
+  width: var(--nav-width);
+  right: 350px;
+  bottom: -15px;
+  display: flex;
+  background: var(--color-white);
+  border-radius: 30px;
+  box-shadow: 1px 8px 10px var(--nav-shadow);
+}
+
+.nav_buttons .prev__button,
+.nav_buttons .next__button{
+  background-size: 30%;
+  background-position: center;
+  width: 50%;
+  border: none;
+  outline: none;
+  border-radius: 30px 0 0 30px;
+  z-index: 4;
+}
+
+.nav_buttons .prev__button{
+  background: url('./images/icon-prev.svg') no-repeat;
+}
+
+.nav_buttons .next__button{
+  background: url('./images/icon-next.svg') no-repeat;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media screen and (max-width: 768px) {
+  body{
+    background: var(--bg-pattern-main), var(--bg-pattern-quotes), var(--bg-pattern-curve);
+    background-repeat: no-repeat;
+    background-size: 80%, 20%, 80%;
+    background-position: 62% 18%, 45% 58%, bottom left;
+  }
+
+  .tanya, .john{
+    flex-direction: column-reverse;
+  }
+
+  .image__container img{
+    width: var(--img-size-mobile);
+    height: var(--img-size-mobile);
+  }
+
+  .container p{
+    margin-top: 4.5rem;
+    font-size: 1.2rem;
+  }
+
+  .container .name{
+    font-size: 1rem;
+  }
+
+  .container .title{
+    font-size: 1.1rem;
+  }
+
+  .image__container .nav_buttons{
+    position: absolute;
+    height: var(--nav-height-mobile);
+    width: var(--nav-width-mobile);
+    top: 230px;
+    right: 90px;
+  }
+
+  .name-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

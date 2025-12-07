@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Barlow:wght@300&family=Fraunces:opsz@9..144&family=Josefin+Sans:wght@100;300&family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Loopstudios landing page</title>
+</head>
+<body>
+ 
+  <section class="header">
+    <nav>
+      <div class="logo"><img src="./images/logo.svg" alt=""></div>
+      <div class="hamburger"><img src="./images/icon-hamburger.svg" alt=""></div>
+      <ul class="main">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Support</a></li>
+        <div class="main-logo"><img src="./images/logo.svg" alt=""></div>
+        <div class="closemenu"><img src="./images/icon-close.svg" alt=""></div>
+      </ul>
+    </nav>
+  </section>
+ 
+  <section id="hero">
+    <div class="hero">
+      <div class="hero-body">
+        <h1>Immersive experiences that deliver</h1>
+      </div>
+    </div>
+  </section>
+ 
+  <section id="vr">
+    <div class="vr">
+      <div class="vr-image"><img src="./images/desktop/image-interactive.jpg" alt=""></div>
+      <div class="vr-text">
+        <h1>The leader in interactive VR</h1>
+        <p>Founded in 2011, Loopstudios has been producing world-class virtual reality 
+          projects for some of the best companies around the globe. Our award-winning 
+          creations have transformed businesses through digital experiences that bind 
+          to their brand.</p>
+      </div>
+    </div>
+  </section>
+ 
+  <section id="creations">
+    <div class="creations container">
+      <div class="creation-tittle">
+        <h1>Our creations</h1>
+        <button>See all</button>
+      </div>
+      <div class="creation-grid">
+        <div class="grid one"><h2>Deep earth</h2></div>
+        <div class="grid two"><h2>Night arcade</h2></div>
+        <div class="grid three"><h2>Soccer team VR</h2></div>
+        <div class="grid four"><h2>The grid</h2></div>
+        <div class="grid five"><h2>From up above VR</h2></div>
+        <div class="grid six"><h2>Pocket borealis</h2></div>
+        <div class="grid seven"><h2>The curiosity</h2></div>
+        <div class="grid eight"><h2>Make it fisheye</h2></div>
+      </div>
+    </div>
+  </section>
+ 
+  <section id="footer">
+    <div class="footer">
+      <div class="footer-flex">
+        <div class="footer-left">
+          <div class="logo"><img src="./images/logo.svg" alt="logo"></div>
+          <div class="footer-links">
+            <ul class="footer-main">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Product</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-right">
+          <div class="footer-icons">
+            <ul>
+              <li><a href="#"><img src="./images/icon-facebook.svg" alt="facebook"></a></li>
+              <li><a href="#"><img src="./images/icon-twitter.svg" alt="twitter"></a></li>
+              <li><a href="#"><img src="./images/icon-pinterest.svg" alt="pinterest"></a></li>
+              <li><a href="#"><img src="./images/icon-instagram.svg" alt="instagram"></a></li>
+            </ul>
+          </div>
+          <div class="copyrights">© 2022 Loopstudios. All rights reserved.</div>
+        </div>
+      </div>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/bavic9">Adebayo Emmanuel</a>.
+      </div>
+    </div>
+  </section>
+ 
+  <script>
+    const main = document.querySelector('.main');
+    const closemenu = document.querySelector('.closemenu');
+    const hamburger = document.querySelector('.hamburger');
+
+
+    hamburger.addEventListener('click',show);
+    closemenu.addEventListener('click',close);
+
+    function show(){
+    main.style.display = 'flex';
+    main.style.left = '0'
+  }
+    function close(){
+    main.style.left = '-100vh';
+}                             
+  </script>
+</body>
+</html>

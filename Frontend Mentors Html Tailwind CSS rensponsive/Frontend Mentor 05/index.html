@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frontend Mentor | NFT preview card component</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-[#0d1a2d] min-h-screen flex items-center justify-center p-4">
+
+  <main class="bg-[rgba(13,25,41,0.1)] p-6 sm:p-10 rounded-[0.875rem]"></main>
+    <div class="bg-[#1c2b3a] max-w-[327px] w-full p-6 rounded-[0.75rem] flex flex-col gap-[0.9375rem] shadow-[0_20px_30px_hsl(217,54%,8%)]">
+
+      <!-- Image Container -->
+      <div class="relative w-full rounded-lg overflow-hidden group">
+        <img src="images/image-equilibrium.jpg" alt="Equilibrium" class="w-full h-auto rounded-lg transition-opacity duration-500 group-hover:opacity-60" />
+        <img src="images/icon-view.svg" alt="View Icon" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      </div>
+
+      <!-- Text Content -->
+      <div class="flex flex-col gap-[0.875rem]">
+        <h1>
+          <a href="#" class="text-white text-[1.25rem] font-semibold hover:text-cyan-400 transition-colors duration-300">  Equilibrium #3429 </a>
+        </h1>
+        <p class="text-[0.9375rem] font-light text-gray-400">Our Equilibrium collection promotes balance and calm.</p>
+
+        <!-- Stats -->
+        <div class="flex justify-between items-center text-sm font-normal">
+          <div class="flex items-center gap-2">
+            <img src="images/icon-ethereum.svg" alt="Ethereum Icon" />
+            <span class="text-cyan-400">0.041 ETH</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <img src="images/icon-clock.svg" alt="Clock Icon" />
+            <span class="text-gray-400">3 days left</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Author Section -->
+      <div class="flex items-center gap-4 border-t border-[#2f415b] pt-4 text-sm font-light">
+        <img src="images/image-avatar.png" alt="Avatar" class="w-[33px] h-[33px] rounded-full border border-white" />
+        <p class="text-gray-400">
+          Creation of <a href="#" class="text-white hover:text-cyan-400 transition-colors duration-300">Jules Wyvern</a>
+        </p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

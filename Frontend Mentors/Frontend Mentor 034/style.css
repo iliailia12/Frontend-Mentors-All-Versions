@@ -1,0 +1,137 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #f0f2fa;
+      display: flex;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    main {
+      background-color: white;
+      width: 100%;
+      max-width: 600px;
+      border-radius: 10px;
+      padding: 1.5rem;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .top h1 {
+      font-size: 1.3rem;
+    }
+
+    .top .count {
+      background-color: #0a327b;
+      color: white;
+      padding: 0 8px;
+      border-radius: 6px;
+      margin-left: 8px;
+      font-size: 0.9rem;
+    }
+
+    .top button {
+      background: none;
+      border: none;
+      color: #5e6778;
+      cursor: pointer;
+    }
+
+    .top button:hover {
+      color: #0a327b;
+    }
+
+    .notification {
+      display: flex;
+      gap: 1rem;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      background-color: white;
+      text-decoration: none;
+      color: #5e6778;
+    }
+
+    .notification.unread {
+      background-color: #f0f2fa;
+    }
+
+    .notification img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .text {
+      flex: 1;
+      font-size: 14px;
+    }
+
+    .user {
+      font-weight: 800;
+      color: #1c202b;
+    }
+
+    .action {
+      font-weight: 800;
+    }
+
+    .highlight {
+      color: #0a327b;
+    }
+
+    .dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background-color: red;
+      border-radius: 50%;
+      margin-left: 5px;
+    }
+
+    .time {
+      color: #939cad;
+      font-size: 12px;
+      margin-top: 5px;
+    }
+
+    .private-msg {
+      border: 1px solid #ccc;
+      padding: 1rem;
+      border-radius: 5px;
+      margin-top: 0.5rem;
+      background-color: white;
+    }
+
+    .notification .thumb {
+      width: 40px;
+      height: 40px;
+      margin-left: auto;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 12px;
+      margin-top: 2rem;
+      color: #555;
+    }
+
+    footer a {
+      color: #0a327b;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }

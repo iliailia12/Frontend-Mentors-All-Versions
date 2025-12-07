@@ -1,0 +1,68 @@
+@media only screen and (min-width: 30em) {
+  .card {
+    border-radius: 0 0 3rem 3rem;
+    min-height: fit-content;
+  }
+}
+
+@media only screen and (min-width: 43em) {
+}
+
+@media only screen and (min-width: 58em) {}
+
+@media only screen and (min-width: 70em) {
+  main {
+    min-height: calc(100vh - 5rem);
+    display: grid;
+    place-content: center;
+  }
+
+  .card {
+    border-radius: 3rem;
+  }
+
+  h2 {
+    font-size: 5.6rem;
+  }
+
+  .sign-up-card {
+    max-width: 100rem;
+    padding: 3rem;
+
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+  }
+
+  .sign-up-img {
+    grid-column: -1 / -2;
+    content: url(../images/illustration-sign-up-desktop.svg);
+  }
+
+  .sign-up-text {
+    grid-row: 1;
+    padding: 0 6.5rem;
+    justify-content: center;
+    gap: 2.5rem;
+  }
+
+  .success-card {
+    max-width: 55rem;
+    padding: 7rem 9rem;
+
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 23em) {
+}
+
+@media (max-width: 23em) {
+  footer {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .boxv {
+    display: none;
+  }
+}

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <title>Frontend Mentor | Todo app</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-darkB text-lightB font-sans selection:bg-gray-800 selection:text-white transition-colors duration-300">
+  <img src="images/bg-desktop-dark.jpg" alt="dark" class="w-full md:hidden" />
+  <img src="images/bg-desktop-light.jpg" alt="light" class="w-full hidden md:block" />
+
+  <div class="container mx-auto absolute top-[50px] left-1/2 transform -translate-x-1/2 w-full sm:w-[500px]">
+    <div class="upper w-full h-[140px] text-5xl sm:text-6xl font-bold relative">
+      <span class="text-white tracking-[11px]">Todo</span>
+      <!-- Theme toggle buttons -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" id="darkToggle" class="text-white absolute top-1/2 right-5 transform -translate-y-1/2 md:hidden cursor-pointer">
+        <path fill="#FFF" fill-rule="evenodd"
+          d="M13 21a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-5.657-2.343a1 1 0 010 1.414l-2.121 2.121a1 1 0 01-1.414-1.414l2.12-2.121a1 1 0 011.415 0zm12.728 0l2.121 2.121a1 1 0 01-1.414 1.414l-2.121-2.12a1 1 0 011.414-1.415zM13 8a5 5 0 110 10 5 5 0 010-10zm12 4a1 1 0 110 2h-3a1 1 0 110-2h3zM4 12a1 1 0 110 2H1a1 1 0 110-2h3zm18.192-8.192a1 1 0 010 1.414l-2.12 2.121a1 1 0 01-1.415-1.414l2.121-2.121a1 1 0 011.414 0zm-16.97 0l2.121 2.12A1 1 0 015.93 7.344L3.808 5.222a1 1 0 011.414-1.414zM13 0a1 1 0 011 1v3a1 1 0 11-2 0V1a1 1 0 011-1z" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" id="lightToggle" class="text-white absolute top-1/2 right-5 transform -translate-y-1/2 hidden md:block cursor-pointer">
+        <path fill="#FFF" fill-rule="evenodd"
+          d="M13 0c.81 0 1.603.074 2.373.216C10.593 1.199 7 5.43 7 10.5 7 16.299 11.701 21 17.5 21c2.996 0 5.7-1.255 7.613-3.268C23.22 22.572 18.51 26 13 26 5.82 26 0 20.18 0 13S5.82 0 13 0z" />
+      </svg>
+
+      <form id="todoForm" class="relative mt-10">
+        <input
+          type="text"
+          id="todoInput"
+          placeholder="Create a new todo..."
+          class="w-full h-[50px] rounded-lg text-base p-4 pl-[60px] border-none focus:outline-none bg-darkB text-lightB dark:bg-gray-900 dark:text-white transition-colors duration-300"
+          autocomplete="off"
+        />
+        <div
+          class="absolute left-5 bottom-4 w-5 h-5 border-2 border-gray-500 rounded-full cursor-pointer"
+          id="toggleAll"
+          title="Toggle all todos"
+        ></div>
+      </form>
+    </div>
+
+    <div class="lower mt-[30px]">
+      <div
+        class="summary bg-darkL rounded-lg p-2 flex justify-between items-center text-sm text-gray-400 dark:bg-gray-800 dark:text-gray-300 transition-colors duration-300"
+      >
+        <span class="number">0 items left</span>
+        <span class="all cursor-pointer hover:text-gray-100">All</span>
+        <span class="active cursor-pointer hover:text-gray-100">Active</span>
+        <span class="completed cursor-pointer hover:text-gray-100">Completed</span>
+        <span class="clear cursor-pointer hover:text-gray-100">Clear completed</span>
+      </div>
+    </div>
+
+    <div class="todo-list mt-4 space-y-2" id="todoList"></div>
+  </div>
+
+  <script>
+    (() => {
+      // Elements
+      const body = document.body;
+      const todoForm = document.getElementById("todoForm");
+      const todoInput = document.getElementById("todoInput");
+      const todoList = document.getElementById("todoList");
+      const itemsLeftSpan = document.querySelector(".number");
+      const allFilter = document.querySelector(".all");
+      const activeFilter = document.querySelector(".active");
+      const completedFilter = document.querySelector(".completed");
+      const clearBtn = document.querySelector(".clear");
+      const darkToggle = document.getElementById("darkToggle");
+      const lightToggle = document.getElementById("lightToggle");
+      const toggleAll = document.getElementById("toggleAll");
+      const filterButtons = [allFilter, activeFilter, completedFilter];
+
+      // State
+      let todos = JSON.parse(localStorage.getItem("todos") || "[]");
+      let currentFilter = "all";
+
+      // Init theme from localStorage or default
+      function initTheme() {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "light") {
+          setLightMode();
+        } else {
+          setDarkMode();
+        }
+      }
+
+      function setDarkMode() {
+        body.classList.remove("lightB");
+        body.classList.add("darkB");
+        todoInput.classList.remove("lightB");
+        todoInput.classList.add("darkB");
+        document.querySelector(".summary").classList.remove("lightL");
+        document.querySelector(".summary").classList.add("darkL");
+        filterButtons.forEach((btn) => {
+          btn.classList.add("darkS");
+          btn.classList.remove("lightS");
+        });
+        toggleAll.classList.remove("bg-gray-200");
+        toggleAll.classList.add("border-gray-500", "bg-transparent");
+        // Toggle imgs visibility
+        darkToggle.classList.remove("hidden");
+        lightToggle.classList.add("hidden");
+
+        localStorage.setItem("theme", "dark");
+      }
+
+      function setLightMode() {
+        body.classList.remove("darkB");
+        body.classList.add("lightB");
+        todoInput.classList.remove("darkB");
+        todoInput.classList.add("lightB");
+        document.querySelector(".summary").classList.remove("darkL");
+        document.querySelector(".summary").classList.add("lightL");
+        filterButtons.forEach((btn) => {
+          btn.classList.add("lightS");
+          btn.classList.remove("darkS");
+        });
+        toggleAll.classList.remove("border-gray-500", "bg-transparent");
+        toggleAll.classList.add("bg-gray-200");
+        // Toggle imgs visibility
+                darkToggle.classList.add("hidden");
+        lightToggle.classList.remove("hidden");
+
+        localStorage.setItem("theme", "light");
+      }
+
+      // Toggle theme on icon click
+      darkToggle.addEventListener("click", () => {
+        setLightMode();
+      });
+
+      lightToggle.addEventListener("click", () => {
+        setDarkMode();
+      });
+
+      // Save todos to localStorage
+      function saveTodos() {
+        localStorage.setItem("todos", JSON.stringify(todos));
+      }
+
+      // Render todos based on filter
+      function renderTodos() {
+        todoList.innerHTML = "";
+
+        let filteredTodos = todos;
+        if (currentFilter === "active") {
+          filteredTodos = todos.filter(todo => !todo.completed);
+        } else if (currentFilter === "completed") {
+          filteredTodos = todos.filter(todo => todo.completed);
+        }
+
+        filteredTodos.forEach((todo, index) => {
+          const todoDiv = document.createElement("div");
+          todoDiv.className = `list rounded-lg relative border-b border-gray-300 py-4 pl-16 pr-6 flex items-center justify-between cursor-default ${
+            body.classList.contains("darkB") ? "darkL" : "lightL"
+          }`;
+
+          // Ball (checkbox)
+          const ball = document.createElement("div");
+          ball.className = `ball w-5 h-5 rounded-full border-2 ${
+            todo.completed ? "border-blue-500 bg-blue-500" : "border-gray-500 bg-transparent"
+          } absolute left-5 bottom-4 cursor-pointer`;
+          ball.title = "Mark as completed";
+
+          // Text
+          const textSpan = document.createElement("span");
+          textSpan.textContent = todo.text;
+          textSpan.className = todo.completed ? "line-through text-gray-500" : "";
+
+          // Delete button
+          const deleteBtn = document.createElement("button");
+          deleteBtn.className = "b bg-transparent border-none outline-none hover:bg-gray-200 rounded-full w-5 h-5";
+          deleteBtn.title = "Delete todo";
+
+          // Append elements in order: text, ball, delete button
+          todoDiv.appendChild(ball);
+          todoDiv.appendChild(textSpan);
+          todoDiv.appendChild(deleteBtn);
+
+          // Append todoDiv to list
+          todoList.appendChild(todoDiv);
+
+          // Ball click toggles completed
+          ball.addEventListener("click", () => {
+            todos[index].completed = !todos[index].completed;
+            saveTodos();
+            updateItemsLeft();
+            renderTodos();
+          });
+
+          // Delete button removes todo
+          deleteBtn.addEventListener("click", () => {
+            todos.splice(index, 1);
+            saveTodos();
+            updateItemsLeft();
+            renderTodos();
+          });
+        });
+
+        updateItemsLeft();
+      }
+
+      // Update the "items left" counter
+      function updateItemsLeft() {
+        const count = todos.filter(todo => !todo.completed).length;
+        itemsLeftSpan.textContent = `${count} item${count !== 1 ? "s" : ""} left`;
+      }
+
+      // Add todo on form submit
+      todoForm.addEventListener("submit", e => {
+        e.preventDefault();
+        const text = todoInput.value.trim();
+        if (text) {
+          todos.push({ text, completed: false });
+          saveTodos();
+          todoInput.value = "";
+          renderTodos();
+        }
+      });
+
+      // Filter buttons handlers
+      allFilter.addEventListener("click", () => {
+        currentFilter = "all";
+        setActiveFilterStyle();
+        renderTodos();
+      });
+
+      activeFilter.addEventListener("click", () => {
+        currentFilter = "active";
+        setActiveFilterStyle();
+        renderTodos();
+      });
+
+      completedFilter.addEventListener("click", () => {
+        currentFilter = "completed";
+        setActiveFilterStyle();
+        renderTodos();
+      });
+
+      function setActiveFilterStyle() {
+        [allFilter, activeFilter, completedFilter].forEach(btn => {
+          btn.classList.remove("text-gray-100");
+          btn.classList.add("text-gray-300");
+        });
+        if (currentFilter === "all") allFilter.classList.add("text-gray-100");
+        if (currentFilter === "active") activeFilter.classList.add("text-gray-100");
+        if (currentFilter === "completed") completedFilter.classList.add("text-gray-100");
+      }
+
+      // Clear completed todos
+      clearBtn.addEventListener("click", () => {
+        todos = todos.filter(todo => !todo.completed);
+        saveTodos();
+        renderTodos();
+      });
+
+      // Toggle all todos complete/incomplete
+      toggleAll.addEventListener("click", () => {
+        const allCompleted = todos.every(todo => todo.completed);
+        todos.forEach(todo => (todo.completed = !allCompleted));
+        saveTodos();
+        renderTodos();
+      });
+
+      // Initialize
+      initTheme();
+      setActiveFilterStyle();
+      renderTodos();
+    })();
+  </script>
+</body>
+
+</html>

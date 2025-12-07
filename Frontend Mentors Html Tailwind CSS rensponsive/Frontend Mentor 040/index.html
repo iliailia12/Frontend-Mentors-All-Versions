@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog Preview Card | Tailwind CSS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@500;800&display=swap" rel="stylesheet"/>
+  <style>
+    html {
+      font-family: 'Figtree', Arial, Helvetica, sans-serif;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex items-center justify-center bg-yellow-400 px-4">
+  <article
+    class="bg-white max-w-sm sm:max-w-md md:max-w-lg w-full rounded-2xl border-2 border-black p-6
+           flex flex-col shadow-[8px_10px_0_0_rgb(0,0,0)]"
+  >
+    <img src="images/illustration-article.svg" alt="Illustration for HTML & CSS foundations article" class="rounded-2xl w-full object-cover" loading="lazy"/>
+
+    <h3 class="mt-8 inline-block bg-yellow-400 px-3 py-1 rounded-md font-extrabold text-sm self-start">Learning</h3>
+
+    <p class="mt-4 text-sm sm:text-base">Published 21 Dec 2023</p>
+
+    <h2 class="mt-6 text-xl sm:text-2xl md:text-3xl font-extrabold leading-tight"> HTML & CSS foundations</h2>
+
+    <p class="mt-6 text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed"> These languages are the backbone of every website, defining structure,content, and presentation.</p>
+
+    <div class="mt-8 flex items-center gap-4">
+      <img src="images/image-avatar.webp" alt="Avatar of Greg Hooper" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover" loading="lazy"/>
+      <p class="font-bold text-sm sm:text-base md:text-lg">Greg Hooper</p>
+    </div>
+  </article>
+</body>
+</html>

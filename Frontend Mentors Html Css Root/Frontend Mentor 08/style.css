@@ -1,0 +1,141 @@
+:root {
+  /* ფერები */
+  --color-bg: #f0f0f0;
+  --color-white: #ffffff;
+  --color-purple-start: #4e00c2;
+  --color-purple-end: #8f00ff;
+  --color-button: #4e00c2;
+  --color-text-dark: rgb(51, 50, 50);
+
+  /* კატეგორიების ფერები */
+  --color-react-bg: #f7cccc;
+  --color-react-text: #dc3545;
+
+  --color-memory-bg: #eef8b7;
+  --color-memory-text: #dcb535;
+
+  --color-verbal-bg: #b4f3bf;
+  --color-verbal-text: #35dc9c;
+
+  --color-visual-bg: #bab7e6;
+  --color-visual-text: #3540dc;
+}
+
+body {
+  background-color: var(--color-bg);
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  background-color: var(--color-white);
+  border-radius: 32px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 700px;
+  max-width: 90%;
+}
+
+/* მარცხენა ბლოკი */
+.Result {
+  background: linear-gradient(to bottom, var(--color-purple-start), var(--color-purple-end));
+  color: var(--color-white);
+  text-align: center;
+  padding: 30px;
+  border-radius: 32px;
+  flex: 1;
+}
+
+.Result .elipse {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(to bottom, var(--color-purple-start), #3a363d);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.Result .elipse h1 {
+  color: var(--color-white);
+  font-size: 40px;
+  margin: 0;
+}
+
+.Result .elipse h3 {
+  margin: 0;
+}
+
+/* მარჯვენა ბლოკი */
+.summary {
+  background-color: var(--color-white);
+  width: 50%;
+  border-radius: 23px;
+  text-align: center;
+  padding: 20px;
+  flex: 1;
+}
+
+.summary h2 {
+  color: var(--color-text-dark);
+  text-align: left;
+}
+
+/* ქარდების სტილი */
+.summary-card-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  font-weight: bolder;
+  transition: background-color 0.5s ease;
+}
+
+.summary-card-item:hover {
+  background-color: #48c3e9;
+}
+
+/* ინდივიდუალური კატეგორიები */
+.React {
+  background-color: var(--color-react-bg);
+  color: var(--color-react-text);
+}
+
+.Mem {
+  background-color: var(--color-memory-bg);
+  color: var(--color-memory-text);
+}
+
+.Veb {
+  background-color: var(--color-verbal-bg);
+  color: var(--color-verbal-text);
+}
+
+.Vis {
+  background-color: var(--color-visual-bg);
+  color: var(--color-visual-text);
+}
+
+/* ღილაკი */
+.continue {
+  margin-top: 20px;
+  width: 100%;
+  padding: 20px;
+  border: none;
+  border-radius: 25px;
+  background-color: var(--color-button);
+  color: var(--color-white);
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.continue:hover {
+  background-color: var(--color-purple-end);
+}

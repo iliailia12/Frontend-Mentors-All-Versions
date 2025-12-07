@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Frontend Mentor | Article preview component</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"  />
+</head>
+<body class="bg-[#edf2f8] flex items-center justify-center min-h-screen p-4 font-inter">
+  <div class="card flex max-w-3xl w-full bg-white rounded-lg shadow-lg overflow-hidden md:flex-col md:max-w-md">
+    <img src="images/drawers.jpg" alt="Drawers" class="card-image w-[280px] h-[280px] object-cover flex-shrink-0 md:w-full md:h-auto"~/>
+    
+    <div class="card-content flex flex-col justify-between p-8 max-w-[320px] md:max-w-full md:p-6">
+      <div>
+        <h2 class="text-[#2f3e53] font-semibold text-lg leading-6 mb-3 max-w-[320px] md:max-w-full">  Shift the overall look and feel by adding these wonderful touches to furniture in your home</h2>
+        <p class="text-[#7b8794] text-sm leading-5 max-w-[320px] md:max-w-full">  Ever been in a room and felt like something was missing? Perhaps it  felt slightly bare and uninviting. I've got some simple tips to help  you make any room feel complete.</p>
+      </div>
+
+      <div class="card-footer flex items-center justify-between mt-6 max-w-[320px] md:max-w-full">
+        <div class="author flex items-center gap-3">
+          <img  src="images/avatar-michelle.jpg"  alt="Michelle Appleton"  class="w-10 h-10 rounded-full object-cover flex-shrink-0"/>
+          <div class="author-info text-[#7b8794] text-xs leading-4">
+            <p class="name text-[#2f3e53] font-semibold mb-0.5">Michelle Appleton</p>
+            <p class="m-0">28 Jun 2020</p>
+          </div>
+        </div>
+        <button aria-label="Share" class="share-btn w-8 h-8 bg-[#f0f4f8] rounded-full flex items-center justify-center text-[#7b8794] hover:text-[#2f3e53] transition-colors duration-300 flex-shrink-0" >
+          <i class="fas fa-share"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

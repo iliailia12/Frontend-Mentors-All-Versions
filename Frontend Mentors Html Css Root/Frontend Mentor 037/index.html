@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Age Calculator</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <main class="wrapper">
+    <form class="form">
+      <div class="field">
+        <label for="day">DAY</label>
+        <input type="text" id="day" placeholder="DD" />
+        <span class="error" id="day-error"></span>
+      </div>
+      <div class="field">
+        <label for="month">MONTH</label>
+        <input type="text" id="month" placeholder="MM" />
+        <span class="error" id="month-error"></span>
+      </div>
+      <div class="field">
+        <label for="year">YEAR</label>
+        <input type="text" id="year" placeholder="YYYY" />
+        <span class="error" id="year-error"></span>
+      </div>
+    </form>
+
+    <div class="submit-wrapper">
+      <hr />
+      <button class="submit-btn" id="submit" aria-label="Calculate age">
+        &#10140;
+      </button>
+    </div>
+
+    <section class="result">
+      <div><span class="value" id="years">--</span> years</div>
+      <div><span class="value" id="months">--</span> months</div>
+      <div><span class="value" id="days">--</span> days</div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Ilia Kviciani</a>.
+  </footer>
+</body>
+</html>

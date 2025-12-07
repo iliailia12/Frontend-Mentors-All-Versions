@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap" rel="stylesheet">
+  <title>Sunnyside agency landing page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Barlow', sans-serif; }
+    h1, h2, h3, h4 { font-family: 'Fraunces', serif; }
+  </style>
+</head>
+<body class="overflow-x-hidden">
+
+  <!-- Header -->
+  <section class="h-screen p-10 bg-center bg-cover relative" style="background-image: url('images/desktop/image-header.jpg');">
+    <header class="flex items-center justify-between">
+      <a href="index.html"><img src="images/logo.svg" alt="Sunnyside’s logo" class="w-32"></a>
+      <nav>
+        <ul class="flex items-center">
+          <li class="mx-5"><a href="#" class="text-white font-barlow">About</a></li>
+          <li class="mx-5"><a href="#" class="text-white font-barlow">Services</a></li>
+          <li class="mx-5"><a href="#" class="text-white font-barlow">Projects</a></li>
+          <li class="mx-0">
+            <a href="#" class="px-4 py-2 rounded-full bg-white text-blue-900 uppercase font-bold font-fraunces text-sm hover:bg-white/40 hover:text-white transition">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="text-center mt-16">
+      <h1 class="text-5xl uppercase text-white tracking-widest font-extrabold my-16">We are creatives</h1>
+      <img src="images/icon-arrow-down.svg" alt="icon arrow down" class="mx-auto">
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="flex flex-col" style="min-height:100vh;">
+    <article class="flex h-[85vh]">
+      <div class="flex items-center justify-center w-1/2 h-full">
+        <div class="max-w-[70%]">
+          <h2 class="text-4xl mb-6 leading-tight text-blue-900 font-extrabold">Tranform your brand</h2>
+          <p class="mb-8 text-blue-900">We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.</p>
+          <a href="#" class="relative text-blue-900 uppercase font-extrabold font-fraunces px-2 py-1 before:absolute before:bottom-1 before:left-0 before:w-full before:h-3 before:bg-yellow-300/40 before:rounded before:-z-10 hover:before:bg-yellow-400 transition">Learn more</a>
+        </div>
+      </div>
+      <div class="w-1/2 h-full overflow-hidden">
+        <img src="images/desktop/image-transform.jpg" alt="transform image" class="w-full h-full object-cover">
+      </div>
+    </article>
+
+    <article class="flex h-[85vh]">
+      <div class="w-1/2 h-full overflow-hidden">
+        <img src="images/desktop/image-stand-out.jpg" alt="stand out image" class="w-full h-full object-cover">
+      </div>
+      <div class="flex items-center justify-center w-1/2 h-full">
+        <div class="max-w-[70%]">
+          <h2 class="text-4xl mb-6 leading-tight text-blue-900 font-extrabold">Stand out to the right audience</h2>
+          <p class="mb-8 text-blue-900">Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
+          <a href="#" class="relative text-blue-900 uppercase font-extrabold font-fraunces px-2 py-1 before:absolute before:bottom-1 before:left-0 before:w-full before:h-3 before:bg-red-400/40 before:rounded before:-z-10 hover:before:bg-red-400 transition">Learn more</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="flex h-[85vh]">
+      <div class="relative w-1/2 h-full flex items-end justify-center bg-center bg-cover" style="background-image: url('images/desktop/image-graphic-design.jpg');">
+        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-center max-w-[45%]">
+          <h3 class="text-2xl text-green-900 mb-4 font-bold">Graphic design</h3>
+          <p class="text-sm text-green-900">Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
+        </div>
+      </div>
+      <div class="relative w-1/2 h-full flex items-end justify-center bg-center bg-cover" style="background-image: url('images/desktop/image-photography.jpg');">
+        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-center max-w-[45%]">
+          <h3 class="text-2xl text-blue-800 mb-4 font-bold">Photography</h3>
+          <p class="text-sm text-blue-800">Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-24 px-24 text-center bg-yellow-100/20">
+    <h3 class="uppercase font-extrabold text-gray-400 mb-12 tracking-widest text-lg">Client testimonials</h3>
+    <div class="flex justify-between">
+      <div class="w-1/3 px-4">
+        <img src="images/image-emily.jpg" alt="Emily R." class="rounded-full w-14 mx-auto mb-10">
+        <p class="text-blue-800 mb-10 leading-relaxed">We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
+        <div>
+          <h4 class="font-bold text-base mb-2">Emily R.</h4>
+          <p class="text-sm">Marketing Director</p>
+        </div>
+      </div>
+      <div class="w-1/3 px-4">
+        <img src="images/image-thomas.jpg" alt="Thomas S." class="rounded-full w-14 mx-auto mb-10">
+        <p class="text-blue-800 mb-10 leading-relaxed">Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
+        <div>
+          <h4 class="font-bold text-base mb-2">Thomas S.</h4>
+          <p class="text-sm">Chief Operating Officer</p>
+        </div>
+      </div>
+      <div class="w-1/3 px-4">
+        <img src="images/image-jennie.jpg" alt="Jennie F." class="rounded-full w-14 mx-auto mb-10">
+        <p class="text-blue-800 mb-10 leading-relaxed">Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
+        <div>
+          <h4 class="font-bold text-base mb-2">Jennie F.</h4>
+          <p class="text-sm">Business Owner</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <div class="flex items-center justify-between h-[70vh] overflow-hidden">
+    <img src="images/desktop/image-gallery-milkbottles.jpg" alt="milk bottle" class="w-1/4 h-full object-cover">
+    <img src="images/desktop/image-gallery-orange.jpg" alt="orange" class="w-1/4 h-full object-cover">
+    <img src="images/desktop/image-gallery-cone.jpg" alt="ice cream cone" class="w-1/4 h-full object-cover">
+    <img src="images/desktop/image-gallery-sugarcubes.jpg" alt="sugar cubes" class="w-1/4 h-full object-cover">
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-12 px-8 bg-teal-400 text-center">
+    <nav>
+      <a href="#"><img src="images/logo.svg" alt="Sunnyside’s logo" class="w-36 filter invert brightness-0 mx-auto"></a>
+      <ul class="my-8">
+        <li class="inline-block mx-4"><a href="#" class="text-teal-900 text-lg font-barlow hover:text-white transition">About</a></li>
+        <li class="inline-block mx-4"><a href="#" class="text-teal-900 text-lg font-barlow hover:text-white transition">Services</a></li>
+        <li class="inline-block mx-4"><a href="#" class="text-teal-900 text-lg font-barlow hover:text-white transition">Projects</a></li>
+      </ul>
+    </nav>
+    <ul class="flex items-center justify-center mb-8">
+      <li class="inline-block mx-2"><a href="#"><img src="images/icon-facebook.svg" alt="facebook icon" class="transition hover:filter brightness-0 invert"></a></li>
+      <li class="inline-block mx-2"><a href="#"><img src="images/icon-instagram.svg" alt="instagram icon" class="transition hover:filter brightness-0 invert"></a></li>
+      <li class="inline-block mx-2"><a href="#"><img src="images/icon-twitter.svg" alt="twitter icon" class="transition hover:filter brightness-0 invert"></a></li>
+      <li class="inline-block mx-2"><a href="#"><img src="images/icon-pinterest.svg" alt="pinterest icon" class="transition hover:filter brightness-0 invert"></a></li>
+    </ul>
+    <div class="text-base font-barlow"> Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="text-teal-900 hover:text-white transition">Frontend Mentor</a>. Coded by <a href="https://github.com/iliailia12/" target="_blank" class="text-teal-900 hover:text-white transition">Ilia Kviciani</a>.
+    </div>
+  </footer>
+</body>
+</html>

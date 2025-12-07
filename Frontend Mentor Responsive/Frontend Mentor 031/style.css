@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    background-color: hsl(217, 54%, 11%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+main {
+    background-color: hsl(217, 54%, 8%, 0.1);
+    padding: 2.5rem;
+    border-radius: 0.875rem;
+}
+
+.card {
+    background-color: hsl(216, 50%, 16%);
+    max-width: 327px;
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9375rem;
+    box-shadow: 
+        -5px 20px 30px hsl(217, 54%, 8%),
+        5px 20px 30px hsl(217, 54%, 8%);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    transition: background-color 0.5s ease;
+}
+
+.container:hover,
+.container:focus-visible {
+    background-color: hsl(178, 100%, 50%);
+}
+
+.principal {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    transition: opacity 0.5s ease;
+}
+
+.container:hover .principal,
+.container:focus-visible .principal {
+    opacity: 0.6;
+}
+
+.icon-view {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.container:hover .icon-view,
+.container:focus-visible .icon-view {
+    opacity: 1;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+}
+
+.text a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: hsl(0, 0%, 90%);
+    transition: color 0.5s ease;
+}
+
+.text a:hover,
+.text a:focus-visible {
+    color: hsl(178, 100%, 50%);
+}
+
+.text p {
+    font-weight: 300;
+    font-size: 0.9375rem;
+    color: hsl(215, 51%, 70%);
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.balance, 
+.time {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.balance span {
+    color: hsl(178, 100%, 50%);
+}
+
+.time span {
+    color: hsl(215, 51%, 70%);
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-top: 1px solid;
+    border-color: hsl(215, 32%, 27%);
+    font-size: 0.875rem;
+    font-weight: 300;
+    padding-top: 1rem;
+}
+
+.author img {
+    width: 33px;
+    height: auto;
+    border-radius: 50%;
+    border: 1px solid;
+    border-color: hsl(0, 0%, 100%);
+}
+
+.author span {
+    color: hsl(215, 51%, 70%);
+}
+
+.author a:hover,
+.author a:focus-visible {
+    color: hsl(178, 100%, 50%);
+}
+
+.author a {
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+}

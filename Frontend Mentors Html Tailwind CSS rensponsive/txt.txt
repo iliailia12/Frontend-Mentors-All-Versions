@@ -1,0 +1,948 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Customer Reviews
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&amp;family=Open+Sans&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: "Open Sans", sans-serif;
+      background-color: #faf9fc;
+    }
+    h1 {
+      font-family: "Montserrat", sans-serif;
+    }
+  </style>
+ </head>
+ <body class="relative overflow-x-hidden">
+  <!-- Large faint shapes top-left and bottom-right -->
+  <img alt="Large faint white circular shape top left" class="hidden md:block absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none" height="600" src="https://storage.googleapis.com/a1aa/image/69c10335-5345-4b5f-29e0-e1a3f2c9e2ba.jpg" style="filter: blur(120px); width: 600px; height: 600px;" width="600"/>
+  <img alt="Large faint white circular shape bottom right" class="hidden md:block absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 pointer-events-none select-none" height="600" src="https://storage.googleapis.com/a1aa/image/6e378b46-1af7-4c68-768d-5c683377d821.jpg" style="filter: blur(120px); width: 600px; height: 600px;" width="600"/>
+  <main class="max-w-7xl mx-auto px-6 py-16 md:py-24">
+   <div class="md:flex md:justify-between md:items-start md:gap-20">
+    <section class="md:w-1/2 max-w-md">
+     <h1 class="text-[32px] md:text-[40px] font-bold text-[#3B0B44] leading-[1.1] mb-6">
+      10,000+ of our
+      <br/>
+      users love our
+      <br/>
+      products.
+     </h1>
+     <p class="text-[#7E6E8A] text-[14px] md:text-[15px] leading-relaxed max-w-md">
+      We only provide great products combined with excellent customer
+          service. See what our satisfied customers are saying about our
+          services.
+     </p>
+    </section>
+    <section class="md:w-1/2 mt-10 md:mt-0 space-y-4 max-w-md">
+     <div class="bg-[#F7F1F9] rounded-md py-3 px-6 flex items-center gap-4 max-w-[320px]">
+      <div class="flex gap-1 text-[#F59E0B] text-lg">
+       <svg aria-hidden="true" class="w-5 h-5 fill-current" data-icon="star" data-prefix="fas" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+        </path>
+       </svg>
+       <svg aria-hidden="true" class="w-5 h-5 fill-current" data-icon="star" data-prefix="fas" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+        </path>
+       </svg>
+       <svg aria-hidden="true" class="w-5 h-5 fill-current" data-icon="star" data-prefix="fas" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+        </path>
+       </svg>
+       <svg aria-hidden="true" class="w-5 h-5 fill-current" data-icon="star" data-prefix="fas" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+        </path>
+       </svg>
+       <svg aria-hidden="true" class="w-5 h-5 fill-current" data-icon="star" data-prefix="fas" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+        </path>
+       </svg>
+      </div>
+      <p class="text-[#3B0B44] font-semibold text-[14px] leading-tight whitespace-nowrap">
+       Rated 5 Stars in Reviews
+      </p>
+     </div>
+     <div class="bg-[#F7F1F9] rounded-md py-3 px-6 flex items-center gap-4 max-w-[320px]">
+      <div class="flex gap-1 text-[#F59E0B] text-lg">
+       <svg aria-hidden="true" class="w-5 h-5 fill-current" data-icon="star" data-prefix="fas" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+        </path>
+       </svg>
+       <svg aria-hidden="true" class="w-5 h-5 fill-current" data-icon="star" data-prefix="fas" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+        </path>
+       </svg>
+       <svg aria-hidden="true" class="w-5 h-5 fill-current" data-icon="star" data-prefix="fas" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+        </path>
+       </svg>
+       <svg aria-hidden="true" class="w-5 h-5 fill-current" data-icon="star" data-prefix="fas" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+        </path>
+       </svg>
+       <svg aria-hidden="true" class="w-5 h-5 fill-current" data-icon="star" data-prefix="fas" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+        </path>
+       </svg>
+      </div>
+      <p class="text-[#3B0B44] font-semibold text-[14px] leading-tight whitespace-nowrap">
+       Rated 5 Stars in Report Guru
+      </p>
+     </div>
+     <div class="bg-[#F7F1F9] rounded-md py-3 px-6 flex items-center gap-4 max-w-[360px]">
+      <div class="flex gap-1 text-[#F59E0B] text-lg">
+       <svg aria-hidden="true" class="w-5 h-5 fill-current" data-icon="star" data-prefix="fas" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+        </path>
+       </svg>
+       <svg aria-hidden="true" class="w-5 h-5 fill-current" data-icon="star" data-prefix="fas" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+        </path>
+       </svg>
+       <svg aria-hidden="true" class="w-5 h-5 fill-current" data-icon="star" data-prefix="fas" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+        </path>
+       </svg>
+       <svg aria-hidden="true" class="w-5 h-5 fill-current" data-icon="star" data-prefix="fas" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+        </path>
+       </svg>
+       <svg aria-hidden="true" class="w-5 h-5 fill-current" data-icon="star" data-prefix="fas" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+        </path>
+       </svg>
+      </div>
+      <p class="text-[#3B0B44] font-semibold text-[14px] leading-tight whitespace-nowrap">
+       Rated 5 Stars in BestTech
+      </p>
+     </div>
+    </section>
+   </div>
+   <section class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+    <article class="bg-[#3B0B44] rounded-md p-6 text-white flex flex-col gap-4">
+     <div class="flex items-center gap-4">
+      <img alt="Profile photo of Colton Smith, a man with short hair and beard, wearing a red shirt" class="w-12 h-12 rounded-full object-cover" height="48" src="https://storage.googleapis.com/a1aa/image/873c27b5-4322-4181-8e7e-4ab4bc459dc4.jpg" width="48"/>
+      <div>
+       <p class="font-semibold text-[15px] leading-tight">
+        Colton Smith
+       </p>
+       <p class="text-[#D9A6B3] text-[13px] leading-tight">
+        Verified Buyer
+       </p>
+      </div>
+     </div>
+     <p class="text-[14px] leading-relaxed font-semibold max-w-[320px]">
+      “ We needed the same printed design as the one we had ordered a week
+          prior. Not only did they find the original order, but we also
+          received it in time. Excellent! ”
+     </p>
+    </article>
+    <article class="bg-[#3B0B44] rounded-md p-6 text-white flex flex-col gap-4">
+     <div class="flex items-center gap-4">
+      <img alt="Profile photo of Irene Roberts, a woman with shoulder-length hair, smiling, outdoors" class="w-12 h-12 rounded-full object-cover" height="48" src="https://storage.googleapis.com/a1aa/image/0a21dc06-02f0-4c55-b22d-e0711debc5ed.jpg" width="48"/>
+      <div>
+       <p class="font-semibold text-[15px] leading-tight">
+        Irene Roberts
+       </p>
+       <p class="text-[#D9A6B3] text-[13px] leading-tight">
+        Verified Buyer
+       </p>
+      </div>
+     </div>
+     <p class="text-[14px] leading-relaxed font-semibold max-w-[320px]">
+      “ Customer service is always excellent and very quick turn around.
+          Completely delighted with the simplicity of the purchase and the
+          speed of delivery. ”
+     </p>
+    </article>
+    <article class="bg-[#3B0B44] rounded-md p-6 text-white flex flex-col gap-4">
+     <div class="flex items-center gap-4">
+      <img alt="Profile photo of Anne Wallace, a woman with long hair, wearing a pink top, smiling" class="w-12 h-12 rounded-full object-cover" height="48" src="https://storage.googleapis.com/a1aa/image/5cf6947b-babf-417d-b3ab-adce10fcbbc5.jpg" width="48"/>
+      <div>
+       <p class="font-semibold text-[15px] leading-tight">
+        Anne Wallace
+       </p>
+       <p class="text-[#D9A6B3] text-[13px] leading-tight">
+        Verified Buyer
+       </p>
+      </div>
+     </div>
+     <p class="text-[14px] leading-relaxed font-semibold max-w-[320px]">
+      “ Put an order with this company and can only praise them for the very
+          high standard. Will definitely use them again and recommend them to
+          everyone! ”
+     </p>
+    </article>
+   </section>
+  </main>
+ </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Customer Reviews
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&amp;family=Open+Sans&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: "Open Sans", sans-serif;
+      background-color: #faf9fc;
+    }
+    h1 {
+      font-family: "Montserrat", sans-serif;
+    }
+  </style>
+ </head>
+ <body class="relative overflow-x-hidden">
+  <main class="max-w-7xl mx-auto px-6 py-16 md:py-24">
+   <div class="md:flex md:justify-between md:items-start md:gap-20">
+    <section class="md:w-1/2 max-w-md">
+     <h1 class="text-[32px] md:text-[40px] font-bold text-[#3B0B44] leading-[1.1] mb-6">
+      10,000+ of our
+      <br/>
+      users love our
+      <br/>
+      products.
+     </h1>
+     <p class="text-[#7E6E8A] text-[14px] md:text-[15px] leading-relaxed max-w-md">
+      We only provide great products combined with excellent customer
+          service. See what our satisfied customers are saying about our
+          services.
+     </p>
+    </section>
+    <section class="md:w-1/2 mt-10 md:mt-0 space-y-4 max-w-md">
+     <div class="bg-[#F7F1F9] rounded-md py-3 px-6 flex items-center gap-4 max-w-[320px]">
+      <div class="flex gap-1 text-[#F59E0B] text-lg">
+       <svg aria-hidden="true" class="w-5 h-5 fill-current" data-icon="star" data-prefix="fas" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+       </svg>
+       <svg aria-hidden="true" class="w-5 h-5 fill-current" data-icon="star" data-prefix="fas" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+       </svg>
+       <svg aria-hidden="true" class="w-5 h-5 fill-current" data-icon="star" data-prefix="fas" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+       </svg>
+       <svg aria-hidden="true" class="w-5 h-5 fill-current" data-icon="star" data-prefix="fas" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+       </svg>
+       <svg aria-hidden="true" class="w-5 h-5 fill-current" data-icon="star" data-prefix="fas" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+       </svg>
+      </div>
+      <p class="text-[#3B0B44] font-semibold text-[14px] leading-tight whitespace-nowrap">
+       Rated 5 Stars in Reviews
+      </p>
+     </div>
+     <div class="bg-[#F7F1F9] rounded-md py-3 px-6 flex items-center gap-4 max-w-[320px]">
+      <div class="flex gap-1 text-[#F59E0B] text-lg">
+       <svg aria-hidden="true" class="w-5 h-5 fill-current" data-icon="star" data-prefix="fas" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+       </svg>
+       <svg aria-hidden="true" class="w-5 h-5 fill-current" data-icon="star" data-prefix="fas" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+       </svg>
+       <svg aria-hidden="true" class="w-5 h-5 fill-current" data-icon="star" data-prefix="fas" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+       </svg>
+       <svg aria-hidden="true" class="w-5 h-5 fill-current" data-icon="star" data-prefix="fas" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+       </svg>
+       <svg aria-hidden="true" class="w-5 h-5 fill-current" data-icon="star" data-prefix="fas" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+       </svg>
+      </div>
+      <p class="text-[#3B0B44] font-semibold text-[14px] leading-tight whitespace-nowrap">
+       Rated 5 Stars in Report Guru
+      </p>
+     </div>
+     <div class="bg-[#F7F1F9] rounded-md py-3 px-6 flex items-center gap-4 max-w-[360px]">
+      <div class="flex gap-1 text-[#F59E0B] text-lg">
+       <svg aria-hidden="true" class="w-5 h-5 fill-current" data-icon="star" data-prefix="fas" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+       </svg>
+       <svg aria-hidden="true" class="w-5 h-5 fill-current" data-icon="star" data-prefix="fas" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+       </svg>
+       <svg aria-hidden="true" class="w-5 h-5 fill-current" data-icon="star" data-prefix="fas" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+       </svg>
+       <svg aria-hidden="true" class="w-5 h-5 fill-current" data-icon="star" data-prefix="fas" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+       </svg>
+       <svg aria-hidden="true" class="w-5 h-5 fill-current" data-icon="star" data-prefix="fas" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+       </svg>
+      </div>
+      <p class="text-[#3B0B44] font-semibold text-[14px] leading-tight whitespace-nowrap">
+       Rated 5 Stars in BestTech
+      </p>
+     </div>
+    </section>
+   </div>
+   <section class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+    <article class="bg-[#3B0B44] rounded-md p-6 text-white flex flex-col gap-4">
+     <div class="flex items-center gap-4">
+      <img alt="Profile photo of Colton Smith, a man with short hair and beard, wearing a red shirt" class="w-12 h-12 rounded-full object-cover" height="48" src="https://storage.googleapis.com/a1aa/image/873c27b5-4322-4181-8e7e-4ab4bc459dc4.jpg" width="48"/>
+      <div>
+       <p class="font-semibold text-[15px] leading-tight">
+        Colton Smith
+       </p>
+       <p class="text-[#D9A6B3] text-[13px] leading-tight">
+        Verified Buyer
+       </p>
+      </div>
+     </div>
+     <p class="text-[14px] leading-relaxed font-semibold max-w-[320px]">
+      “ We needed the same printed design as the one we had ordered a week
+          prior. Not only did they find the original order, but we also
+          received it in time. Excellent! ”
+     </p>
+    </article>
+    <article class="bg-[#3B0B44] rounded-md p-6 text-white flex flex-col gap-4">
+     <div class="flex items-center gap-4">
+      <img alt="Profile photo of Irene Roberts, a woman with shoulder-length hair, smiling, outdoors" class="w-12 h-12 rounded-full object-cover" height="48" src="https://storage.googleapis.com/a1aa/image/0a21dc06-02f0-4c55-b22d-e0711debc5ed.jpg" width="48"/>
+      <div>
+       <p class="font-semibold text-[15px] leading-tight">
+        Irene Roberts
+       </p>
+       <p class="text-[#D9A6B3] text-[13px] leading-tight">
+        Verified Buyer
+       </p>
+      </div>
+     </div>
+     <p class="text-[14px] leading-relaxed font-semibold max-w-[320px]">
+      “ Customer service is always excellent and very quick turn around.
+          Completely delighted with the simplicity of the purchase and the
+          speed of delivery. ”
+     </p>
+    </article>
+    <article class="bg-[#3B0B44] rounded-md p-6 text-white flex flex-col gap-4">
+     <div class="flex items-center gap-4">
+      <img alt="Profile photo of Anne Wallace, a woman with long hair, wearing a pink top, smiling" class="w-12 h-12 rounded-full object-cover" height="48" src="https://storage.googleapis.com/a1aa/image/5cf6947b-babf-417d-b3ab-adce10fcbbc5.jpg" width="48"/>
+      <div>
+       <p class="font-semibold text-[15px] leading-tight">
+        Anne Wallace
+       </p>
+       <p class="text-[#D9A6B3] text-[13px] leading-tight">
+        Verified Buyer
+       </p>
+      </div>
+     </div>
+     <p class="text-[14px] leading-relaxed font-semibold max-w-[320px]">
+      “ Put an order with this company and can only praise them for the very
+          high standard. Will definitely use them again and recommend them to
+          everyone! ”
+     </p>
+    </article>
+   </section>
+  </main>
+ </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32"  href="./images/favicon-32x32.png"/>
+    <title>Social proof section w3 </title>
+    <style>
+    :root{
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+body{
+    font-size: 0.94rem;
+    font-family: 'League Spartan', sans-serif;
+    overflow: hidden;
+    background-image:url("images/bg-pattern-top-desktop.svg"), url("images/bg-pattern-bottom-desktop.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left , bottom right ;
+}
+p{
+    font-weight: 400;
+}
+.background{
+    z-index: -2;
+}
+.bottomright{
+    position: absolute;
+    bottom: -5rem;
+    right: 0px;
+}
+.topleft{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.contanier{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+    place-items: center;
+}
+.lovers{
+    width: 25ch;
+}
+.lovers > h1{
+    color: var(--Very-Dark-Magenta);
+    font-weight: 700;
+}
+.lovers > p{
+    color: var(--Dark-Grayish-Magenta);
+}
+.ratng{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+.r{
+    background-color: var(--Light-Grayish-Magenta);
+    border-radius: 10px;
+    margin: 5px;
+    width: fit-content;
+}
+.rate-p{
+    display: inline;  
+    padding: 15px;  
+}
+.r-cont{
+    padding: 15px;
+}
+.r2{
+    margin-left: 2rem;
+}
+.r3{
+    margin-left: 4rem;
+    padding-right: 20px;
+}
+.memmber-cont{
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem; 
+}
+.memmber-cont > div{
+    background-color: var(--Very-Dark-Magenta);
+    border-radius: 8px;
+    width: 240px;
+    
+}
+figure{
+    margin-left:0 ;
+}
+.memmber-img{
+    border-radius: 50%;
+    width: 40px;
+    margin: 20px 10px 0 20px;
+    display: inline;
+}
+.img-desc{
+    position: absolute;
+    display: inline;
+    padding-top: 15px;
+    font-size: 0.7rem;
+}
+.name, .member-desc{
+    color: var(--White);
+}
+.buyer{
+    color: var(--Soft-Pink);
+}
+.card2{
+    margin-top: 1rem;
+}
+.card3{
+    margin-top: 2rem;
+}
+</style>
+  </head>
+  <body>
+    <main class="contanier">
+      <div class="lovers">
+        <h1>10,000+ of our users love our products.</h1>
+        <p> We only provide great products combined with excellent customer service.
+          See what our satisfied customers are saying about our services.</p>
+      </div>
+      <div class="ratng">
+        <div class="r">
+          <div class="r-cont">
+            <img src="images/icon-star.svg" alt="Star">
+            <img src="images/icon-star.svg" alt="Star">
+            <img src="images/icon-star.svg" alt="Star">
+            <img src="images/icon-star.svg" alt="Star">
+            <img src="images/icon-star.svg" alt="Star">
+            <p class="rate-p">Rated 5 Stars in Reviews</p>
+          </div>
+        </div>
+        <div class="r r2">
+          <div class="r-cont">
+            <img src="images/icon-star.svg" alt="Star">
+            <img src="images/icon-star.svg" alt="Star">
+            <img src="images/icon-star.svg" alt="Star">
+            <img src="images/icon-star.svg" alt="Star">
+            <img src="images/icon-star.svg" alt="Star">
+            <p class="rate-p">Rated 5 Stars in Report Guru</p>
+          </div>
+        </div>
+        <div class="r r3">
+          <div class="r-cont" r3>
+            <img src="images/icon-star.svg" alt="Star">
+            <img src="images/icon-star.svg" alt="Star">
+            <img src="images/icon-star.svg" alt="Star">
+            <img src="images/icon-star.svg" alt="Star">
+            <img src="images/icon-star.svg" alt="Star">
+            <p class="rate-p">Rated 5 Stars in BestTech</p>
+          </div>
+        </div>
+      </div>
+      <div class="memmber-cont">
+        <div class="card1">
+          <figure>
+            <img src="images/image-colton.jpg" alt="Colton Smith img" class="memmber-img">
+            <figcaption class="img-desc">
+              <p class="name">Colton Smith <br><span class="buyer">Verified Buyer</span></p>
+            </figcaption>
+          </figure>
+          <blockquote class="member-desc">
+            "We needed the same printed design as the one we had ordered a week prior.
+            Not only did they find the original order, but we also received it in time.
+            Excellent!"
+          </blockquote>
+        </div>
+        <div class="card2">
+          <figure>
+            <img src="images/image-irene.jpg" alt="Irene Roberts" class="memmber-img">
+            <figcaption class="img-desc">
+              <p class="name">Irene Roberts <br><span class="buyer">Verified Buyer</span></p>
+            </figcaption>
+          </figure>
+          <blockquote class="member-desc">
+            "Customer service is always excellent and very quick turn around. Completely
+            delighted with the simplicity of the purchase and the speed of delivery."
+          </blockquote>
+        </div>
+        <div class="card3">
+          <figure>
+            <img src="images/image-anne.jpg" alt="Anne Wallace" class="memmber-img">
+            <figcaption class="img-desc">
+              <p class="name">Anne Wallace <br><span class="buyer">Verified Buyer</span></p>            
+            </figcaption>
+          </figure>
+          <blockquote class="member-desc">
+            "Put an order with this company and can only praise them for the very high
+            standard. Will definitely use them again and recommend them to everyone!"
+          </blockquote>
+        </div>
+      </div>
+    </main>
+  </body>
+  </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Article preview component</title>
+  <style>
+    body {
+      background: hsl(210, 46%, 95%);
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      max-width: 420px;
+      padding: 32px 28px 24px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .title {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: hsl(217, 19%, 35%);
+    }
+    .desc {
+      color: hsl(214, 17%, 51%);
+      font-size: 1rem;
+      margin-bottom: 12px;
+    }
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 18px;
+    }
+    .author-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .author-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: hsl(210, 46%, 95%);
+      object-fit: cover;
+    }
+    .author-details {
+      display: flex;
+      flex-direction: column;
+      font-size: 0.95rem;
+    }
+    .author-name {
+      font-weight: bold;
+      color: hsl(217, 19%, 35%);
+    }
+    .author-date {
+      color: hsl(212, 23%, 69%);
+      font-size: 0.9em;
+    }
+    .share-btn {
+      background: hsl(210, 46%, 95%);
+      border: none;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .share-btn:hover {
+      background: hsl(214, 17%, 51%);
+    }
+    .share-btn svg {
+      width: 18px;
+      height: 18px;
+      fill: hsl(214, 17%, 51%);
+      transition: fill 0.2s;
+    }
+    .share-btn:hover svg {
+      fill: #fff;
+    }
+    .share-popup {
+      display: none;
+      position: absolute;
+      bottom: 70px;
+      right: 32px;
+      background: hsl(217, 19%, 35%);
+      color: #fff;
+      border-radius: 12px;
+      padding: 14px 24px;
+      font-size: 0.95rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      z-index: 10;
+      align-items: center;
+      gap: 12px;
+    }
+    .share-popup.active {
+      display: flex;
+    }
+    .share-label {
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-size: 0.9em;
+      color: hsl(212, 23%, 69%);
+      margin-right: 12px;
+    }
+    .share-icons img {
+      width: 22px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    .draving-iluustrtacion{
+      float: right;
+      width: auto;
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="title">
+      <img class="draving-iluustrtacion"   src="/project  103.html/images/drawers.jpg" alt="">
+      Shift the overall look and feel by adding these wonderful touches to furniture in your home
+    </div>
+    <div class="desc">
+      Ever been in a room and felt like something was missing? Perhaps 
+      it felt slightly bare and uninviting. I’ve got some simple tips 
+      to help you make any room feel complete.
+    </div>
+    <div class="footer">
+      <div class="author-info">
+        <img class="author-avatar" src="/project  103.html/images/avatar-michelle.jpg" alt="Michelle Appleton">
+        <div class="author-details">
+          <span class="author-name">Michelle Appleton</span>
+          <span class="author-date">28 Jun 2020</span>
+        </div>
+      </div>
+      <button class="share-btn" aria-label="Share">
+        <svg viewBox="0 0 24 24"><path d="M18 8.59l-1.41-1.42L12 11.76 7.41 7.17 6 8.59l6 6z"/></svg>
+      </button>
+    </div>
+    <div class="share-popup" id="sharePopup">
+      <span class="share-label">Share</span>
+      <div class="share-icons">
+        <img src="./images/icon-facebook.svg" alt="Facebook">
+        <img src="./images/icon-twitter.svg" alt="Twitter">
+        <img src="./images/icon-pinterest.svg" alt="Pinterest">
+      </div>
+    </div>
+  </div>
+  <script>
+    const shareBtn = document.querySelector('.share-btn');
+    const sharePopup = document.getElementById('sharePopup');
+    let popupVisible = false;
+
+    shareBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      popupVisible = !popupVisible;
+      sharePopup.classList.toggle('active', popupVisible);
+    });
+
+    document.addEventListener('click', (e) => {
+      if (popupVisible && !sharePopup.contains(e.target) && !shareBtn.contains(e.target)) {
+        sharePopup.classList.remove('active');
+        popupVisible = false;
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

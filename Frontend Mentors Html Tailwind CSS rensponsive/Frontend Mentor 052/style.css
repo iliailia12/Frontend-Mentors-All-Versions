@@ -1,0 +1,491 @@
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    html, body {
+      overflow-x: hidden;
+      font-family: 'Rubik', sans-serif;
+      margin: 0px;
+    }
+
+
+    header{
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+    .container, .container2, .container3, .container4, .container5 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+      margin-bottom: 100px; 
+      flex-direction: column;
+    }
+
+    .image1 {
+      position: relative;
+      display: flex;              
+      justify-content: center;   
+      align-items: center;       
+    }
+    
+    .burger-btn, .faq-btn, .close-btn, .footer-btn{
+      background: none;
+      border:none;
+      padding: 0;
+      cursor: pointer;
+    }
+
+    img{
+      height: auto;
+      display: block;
+      position: relative;
+      z-index: 2; 
+      max-width: 100%;
+    }
+    .purple-obj {
+      position: absolute;
+      right: -50px;  
+      bottom: -30px;  
+      width: 400px;
+      height: 250px;
+      background-color: hsl(231, 69%, 60%);
+      border-radius: 125px 0 0 125px; 
+      z-index: 1;
+    }
+    .reverse{
+      right: 50px;
+      border-radius: 0px 125px 125px 0px;
+    }
+
+    .text{
+      margin-top: 50px;
+      text-align: center;
+    }
+    p{
+      margin-left: 25px;
+      margin-right: 25px;
+      color: rgb(160, 160, 160)
+    }
+
+    .firefox-btn {
+      background-color: rgb(240, 240, 240); 
+      color: hsl(0, 0%, 29%);         
+      border: 1px solid transparent; 
+      width: 150px;
+      height: 50px;
+      border-radius: 5px;
+      font-family: 'Rubik', sans-serif;
+      font-weight: 500;
+      box-shadow: 0px 4px 10px hsla(231, 46%, 44%, 0.3);
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .firefox-btn:hover {
+      background-color: white;                  
+      border: 2px solid hsl(0, 0%, 29%);      
+      color: hsl(0, 0%, 29%);               
+    }
+
+
+
+    .purple{
+      background-color: hsl(231, 69%, 60%);
+      color: white;
+    }
+    .purple:hover {
+      background-color: white;                  
+      border: 2px solid hsl(231, 69%, 60%);      
+      color: hsl(231, 69%, 60%);                
+    }
+
+    .tabs {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      border-bottom: 1px solid #e0e0e0;
+      padding-bottom: 20px;
+    }
+
+    .tab {
+      padding: 1rem 0;
+      position: relative;
+      cursor: pointer;
+      color: #666;
+      transition: color 0.3s ease;
+    }
+    .tab:hover{
+      color:hsl(0, 94%, 66%);
+    }
+
+    .tab.active {
+      color: #000;
+      font-weight: 500;
+    }
+
+    .tab.active::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: #ff5c5c;
+      border-radius: 3px 3px 0 0;
+    }
+
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: flex; 
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .item{
+      padding: 10px;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffffff;
+      border-radius: 20px;
+      flex-direction: column;
+      gap: 30px;
+      box-shadow: 0 4px 10px hsla(231, 69%, 60%, 0.1);
+    }
+    .item h1{
+      margin: 0px;
+    }
+    .item p{
+      margin:0px;
+    }
+
+    .install-btn{
+      background-color: hsl(231, 69%, 60%);
+      border: 1px solid transparent; 
+      width: 250px;
+      height: 50px;
+      border-radius: 5px;
+      color: white;
+      box-shadow: hsla(231, 69%, 60%, 0.1);
+    }
+    .install-btn:hover{
+      background-color: white;                  
+      border: 2px solid hsl(231, 69%, 60%);      
+      color: hsl(231, 69%, 60%);            
+
+    }
+    .question{
+      display: flex;
+      flex-direction: column;
+    }
+    .title-faq{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .faq{
+      width: 300px;
+    }
+    hr {
+      border: none;
+      height: 1px;
+      width: 100%; 
+      background: hsl(0, 0%, 71%);
+      margin: 10px 0; 
+    }
+
+    .answer {
+      display: none;
+      margin-top: 10px;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    .answer.active {
+      display: block;
+    }
+
+    .menu {
+      position: fixed;  
+      top: 0;
+      left: 0;
+      width: 100vw;      
+      height: 100vh;    
+      background-color: hsl(229, 31%, 21%, 0.9);
+      z-index: 9999;     
+      display: none; 
+      flex-direction: column;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .header-menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 50px;
+    }
+
+    nav {
+      flex: 1; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+    }
+
+    .footer-buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 10px;
+    }
+    .footer-buttons button {
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    a{
+      color: white;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: 25px;
+    }
+    .login-btn {
+      border: 2px solid hsl(0, 0%, 100%); 
+      border-radius: 6px;                  
+      padding: 10px 120px;                 
+      color: hsl(0, 0%, 100%);        
+      background-color: transparent;       
+      cursor: pointer;
+      text-decoration: none;             
+      font-weight: 500;
+      transition: all 0.3s ease;          
+    }
+
+    .login-btn:hover {
+      background-color: hsl(231, 69%, 60%);
+      color: white;
+    }
+    
+    .white-logo{
+      color: white;
+    }
+
+    .more-info-btn{
+      background-color: hsl(231, 69%, 60%);
+      border:none;
+      width: 100px;
+      height: 50px;
+      border-radius: 5px;
+      color: white;
+      box-shadow: hsla(231, 69%, 60%, 0.1);
+    }
+
+    .container-purple {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+      flex-direction: column;
+      background-color: hsl(231, 69%, 60%);
+      width: 100%;
+      height: 300px;
+      text-align: center;
+    }
+
+    footer{
+      background-color: hsl(229, 31%, 21%, 1);
+    }
+    footer nav{
+      padding: 30px;
+    }
+    footer a{
+      font-size: 20px;
+    }
+
+    .first-btn{
+      display: flex;
+      gap: 15px; 
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+    }
+
+    .tab-image{
+      width: 90%;
+      height: auto;
+    }
+    .faq-text{
+      color:#444;
+      padding: 0px;
+      margin: 10px;
+      transition: color 0.3s ease;
+    }
+
+    .container-purple p{
+      color: white;
+      text-transform: uppercase; 
+      letter-spacing: 5px;        
+    }
+
+    .purple-h2{
+      color: white;
+      margin-left: 25px;
+      margin-right: 25px;
+    }
+
+    input[type="email"] {
+      width: 250px;              
+      padding: 15px 15px;        
+      font-size: 16px;           
+      border: 2px solid #ccc;    
+      border-radius: 8px;       
+      outline: none;          
+      transition: 0.3s;    
+      color:#ccc;    
+    }
+
+    input[type="email"]:focus {
+      border-color: hsl(0, 94%, 66%); 
+      box-shadow: 0 0 8px rgba(106, 90, 205, 0.5); 
+    }
+
+    .contact-btn{
+      background-color: hsl(0, 94%, 66%);
+      border:none;
+      width: 250px;
+      height: 50px;
+      border-radius: 5px;
+      color: white;
+      box-shadow: hsla(231, 69%, 60%, 0.1);
+      margin-top: 20px;
+    }
+
+    .nav {
+      display: none;
+      justify-content: flex-end; 
+      align-items: center;
+      gap: 30px;
+      padding: 20px 40px;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: hsl(229, 31%, 21%);
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 2px;
+      transition: background 0.3s;
+    }
+    .nav-link:hover{
+      color:hsl(0, 94%, 66%);
+
+    }
+
+    .nav-btn {
+      background: hsl(0, 94%, 66%);
+      color: #fff;
+      padding: 15px 35px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: uppercase;
+      border: 1px solid transparent; 
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .nav-btn:hover {
+      background: #fff;
+      border: 2px solid hsl(0, 94%, 66%); 
+      color: hsl(0, 94%, 66%);
+    }
+
+    .faq-text:hover{
+      color:hsl(0, 94%, 66%); 
+    }
+
+
+    @media (min-width: 1024px) {
+      .burger-btn{
+        display: none;
+      }
+      .container{
+        flex-direction: row;
+        flex-direction: row-reverse;
+        gap: 30px;
+      }
+      .purple-obj {
+        right: -550px;  
+        width: 1000px;
+        height: 300px;
+      }
+      footer{
+        display: flex;
+        flex-direction: row;
+      }
+      nav{
+        flex-direction: row;
+      }
+      .tabs{
+        flex-direction: row;
+        padding-bottom: 50px;
+      }
+      .tab-content {
+        display: none;
+      }
+      .tab-content.active {
+        display: flex; 
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+      }
+      .reverse{
+        right: 50px;
+        border-radius: 0px 125px 125px 0px;
+        width: 1300px;
+      }
+      p{
+        width: 500px;
+      }
+      .browser-item{
+        display: flex;
+        flex-direction: row;
+        gap: 50px
+      }
+      .item:nth-child(2) {
+        margin-top: 40px;
+      }
+      .item:nth-child(3) {
+        margin-top: 80px;
+      }
+      h1{
+        font-size: 50px;
+      }
+      header{
+        padding: 50px 100px;
+        align-items: center;
+      }
+      .item p{
+        text-align: center;
+      }
+      header img {
+        height: 30px;   
+        width: auto;       
+        display: block;
+      }
+      .nav{
+        display: flex;
+      }
+      .faq{
+        width: 600px;
+      }
+    }

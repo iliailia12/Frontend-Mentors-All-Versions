@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link  rel="icon"  type="image/png"  sizes="32x32"  href="./images/favicon-32x32.png" />
+    <title>Project Tracking Intro Component</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap");
+
+      body {
+        font-family: "Barlow Condensed", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-[hsl(230,29%,20%)]">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex justify-between items-center py-6 relative">
+        <img src="images/logo.svg" alt="logo" class="h-6" />
+        <button class="md:hidden" id="hamburger">
+          <img  id="openIcon"  class="h-6 block"  src="images/icon-hamburger.svg"  alt="menu"/>
+          <img id="closeIcon" class="h-6 hidden"  src="images/icon-close.svg"  alt="close"/>
+        </button>
+
+        <ul
+          id="navLinks"
+          class="hidden md:flex space-x-10 items-center font-bold text-[hsl(230,29%,20%)]"
+        >
+          <li><a href="#" class="hover:underline">Product</a></li>
+          <li><a href="#" class="hover:underline">Features</a></li>
+          <li><a href="#" class="hover:underline">Pricing</a></li>
+          <li>
+            <a  href="#" class="ml-10 font-normal hover:underline text-[hsl(230,29%,20%)]" >Login</a>
+          </li>
+        </ul>
+      </nav>
+
+      <ul
+        id="mobileMenu"
+        class="hidden flex-col space-y-4 font-bold text-center absolute left-4 right-4 top-20 bg-white shadow-md p-6 z-50 md:hidden" >
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li>
+          <a  href="#" class="block pt-4 border-t border-[hsl(230,29%,20%)] font-normal" >Login</a>
+        </li>
+      </ul>
+
+      <div class="flex flex-col-reverse md:flex-row items-center justify-between mt-12 md:mt-20">
+        <div class="md:w-1/2 text-center md:text-left space-y-6">
+          <p class="uppercase tracking-widest text-sm">
+            <a   href="#"   class="bg-[hsl(230,29%,20%)] text-white px-2 py-1 rounded-md mr-2"   >New</a >
+            <span class="tracking-widest">Monograph Dashboard</span>
+          </p>
+
+          <h1 class="text-4xl md:text-6xl font-bold leading-tight max-w-xl mx-auto md:mx-0"> Powerful insights into your team </h1>
+
+          <p class="text-lg text-gray-700"> Project planning and time tracking for agile teams </p>
+
+          <div class="flex flex-col sm:flex-row sm:items-center sm:space-x-6 pt-4 space-y-4 sm:space-y-0">
+            <a href="#" class="bg-[hsl(0,100%,68%)] text-white py-3 px-6 rounded hover:bg-red-500 transition text-sm uppercase tracking-wide">Schedule a demo</a>
+            <span class="uppercase tracking-widest text-sm">to see a live preview</span>
+          </div>
+        </div>
+
+        <div class="md:w-1/2 relative mb-10 md:mb-0">
+          <div class="absolute bg-[hsl(207,33%,95%)] h-[60%] w-[60%] top-0 right-0 rounded-bl-[60px] -z-10"></div>
+          <img  src="images/illustration-devices.svg"  alt="Devices"  class="w-full"  loading="lazy"/>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const openIcon = document.getElementById("openIcon");
+      const closeIcon = document.getElementById("closeIcon");
+
+      hamburger.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        openIcon.classList.toggle("hidden");
+        closeIcon.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+body {
+      background-color: hsl(225, 100%, 94%);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .card {
+      width: 400px;
+      background-color: hsl(225, 100%, 98%);
+      margin: 50px auto;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 32px;
+    }
+    .img1 {
+      width: 100%;
+      display: block;
+      border-radius: 0 0 30px 30px;
+      margin-bottom: 24px;
+    }
+    h1 {
+      margin: 24px 0 12px 0;
+      font-size: 1.7rem;
+      text-align: center;
+    }
+    p {
+      font-size: 16px;
+      color: hsl(224, 23%, 55%);
+      text-align: center;
+      margin: 0 32px 24px 32px;
+    }
+    .plan-box {
+      display: flex;
+      align-items: center;
+      background-color: hsl(225, 100%, 94%);
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin: 0 32px 24px 32px;
+      width: calc(100% - 64px);
+      box-sizing: border-box;
+      justify-content: space-between;
+    }
+    .plan-details {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .plan-details img {
+      width: 40px;
+      height: 40px;
+      margin: 0;
+    }
+    .plan-text {
+      display: flex;
+      flex-direction: column;
+    }
+    .plan-text strong {
+      font-size: 1rem;
+      color: hsl(223, 47%, 23%);
+    }
+    .plan-text span {
+      font-size: 1rem;
+      color: hsl(224, 23%, 55%);
+    }
+    .change-link {
+      color: hsl(245, 75%, 52%);
+      text-decoration: underline;
+      font-weight: bold;
+      font-size: 0.95rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-left: 16px;
+    }
+    .button1 {
+      background-color: hsl(245, 75%, 52%);
+      width: 80%;
+      height: 40px;
+      border-radius: 20px;
+      color: hsl(225, 100%, 98%);
+      border: none;
+      font-size: 1rem;
+      font-weight: bold;
+      margin: 16px 0 12px 0;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(56, 41, 224, 0.1);
+      transition: background 0.2s;
+    }
+    .button1:hover {
+      background-color: hsl(245, 75%, 60%);
+    }
+    .button2 {
+      background-color: transparent;
+      width: 80%;
+      height: 40px;
+      border-radius: 20px;
+      color: hsl(223, 47%, 23%);
+      border: none;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 0;
+      transition: background 0.2s;
+    }
+    .button2:hover {
+      background-color: hsl(225, 100%, 94%);
+    }

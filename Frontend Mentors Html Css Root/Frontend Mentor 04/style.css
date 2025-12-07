@@ -1,0 +1,149 @@
+:root {
+  /* Colors */
+  --clr-bg: hsl(225, 100%, 94%);
+  --clr-card-bg: hsl(225, 100%, 98%);
+  --clr-primary: hsl(245, 75%, 52%);
+  --clr-primary-hover: hsl(245, 75%, 60%);
+  --clr-text-dark: hsl(223, 47%, 23%);
+  --clr-text-light: hsl(224, 23%, 55%);
+
+  /* Font */
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  /* Transition */
+  --transition-speed: 0.2s;
+}
+
+/* Base styles */
+body {
+  background-color: var(--clr-bg);
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+}
+
+/* Card */
+.card {
+  width: 400px;
+  background-color: var(--clr-card-bg);
+  margin: 50px auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 32px;
+}
+
+/* Image */
+.img1 {
+  width: 100%;
+  display: block;
+  border-radius: 0 0 30px 30px;
+  margin-bottom: 24px;
+}
+
+/* Text */
+h1 {
+  margin: 24px 0 12px 0;
+  font-size: 1.7rem;
+  text-align: center;
+  color: var(--clr-text-dark);
+}
+
+p {
+  font-size: 16px;
+  color: var(--clr-text-light);
+  text-align: center;
+  margin: 0 32px 24px 32px;
+}
+
+/* Plan box */
+.plan-box {
+  display: flex;
+  align-items: center;
+  background-color: var(--clr-bg);
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin: 0 32px 24px 32px;
+  width: calc(100% - 64px);
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.plan-details {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.plan-details img {
+  width: 40px;
+  height: 40px;
+}
+
+.plan-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-text strong {
+  font-size: 1rem;
+  color: var(--clr-text-dark);
+}
+
+.plan-text span {
+  font-size: 1rem;
+  color: var(--clr-text-light);
+}
+
+/* Change link */
+.change-link {
+  color: var(--clr-primary);
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 0.95rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 16px;
+}
+
+/* Buttons */
+.button1 {
+  background-color: var(--clr-primary);
+  width: 80%;
+  height: 40px;
+  border-radius: 20px;
+  color: var(--clr-card-bg);
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 16px 0 12px 0;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(56, 41, 224, 0.1);
+  transition: background var(--transition-speed);
+}
+
+.button1:hover {
+  background-color: var(--clr-primary-hover);
+}
+
+.button2 {
+  background-color: transparent;
+  width: 80%;
+  height: 40px;
+  border-radius: 20px;
+  color: var(--clr-text-dark);
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 0;
+  transition: background var(--transition-speed);
+}
+
+.button2:hover {
+  background-color: var(--clr-bg);
+}

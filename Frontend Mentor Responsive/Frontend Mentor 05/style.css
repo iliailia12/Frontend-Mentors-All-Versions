@@ -1,0 +1,113 @@
+body {
+  background-color: hsl(217, 54%, 11%);
+}
+
+.card {
+  background-color: hsl(216, 50%, 16%);
+  height: 700px;
+  width: 400px;
+  margin: 50px auto; /* Center card horizontally */
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  padding: 32px 0;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+  display: block;
+  margin: 0 auto 32px auto;
+  border-radius: 16px;
+}
+
+h1 {
+  color: white;
+  margin-left: 20px;
+  font-size: 32px;
+}
+
+h2 {
+  color: hsl(178, 100%, 50%);
+  margin-left: 20px;
+  font-size: 28px;
+}
+
+p {
+  font-size: 18px;
+  color: hsl(215, 32%, 27%);
+  margin-left: 20px;
+}
+
+.myp {
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+span {
+  color: white;
+}
+
+.myimg {
+  border-radius: 100px;
+  width: 40px;
+  height: 40px;
+  float: left;
+  margin: 0 19px 0 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .card {
+    width: 90vw;
+    margin: 40px auto;
+    padding: 16px 0;
+  }
+  img {
+    width: 90vw;
+    height: auto;
+    margin-bottom: 24px;
+  }
+  h1 {
+    font-size: 25px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  p,
+  .myp {
+    font-size: 15px;
+  }
+  .myimg {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px 0 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .card {
+    width: 95vw;
+    margin: 20px auto;
+    padding: 8px 0;
+  }
+  img {
+    width: 95vw;
+    height: auto;
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 15px;
+  }
+  p,
+  .myp {
+    font-size: 12px;
+  }
+  .myimg {
+    width: 25px;
+    height: 25px;
+    margin: 0 5px 0 5px;
+  }
+}

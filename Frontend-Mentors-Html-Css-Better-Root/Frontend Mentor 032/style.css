@@ -1,0 +1,73 @@
+:root {
+  /* 🎨 Background Colors */
+  --clr-bg: hsl(212, 45%, 89%);
+  --clr-card-bg: hsl(0, 0%, 100%);
+
+  /* 📝 Text Colors */
+  --clr-text-main: hsl(218, 44%, 22%);
+  --clr-text-secondary: hsl(216, 15%, 48%);
+
+  /* 📐 Layout */
+  --radius-card: 1rem;
+  --radius-img: 1rem;
+  --max-card-width: 300px;
+  --fs-base: 15px;
+  --space: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", Arial, Helvetica, sans-serif;
+}
+
+html {
+  font-size: var(--fs-base);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-bg);
+}
+
+article {
+  background-color: var(--clr-card-bg);
+  width: 90%;
+  max-width: var(--max-card-width);
+  padding: var(--space);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius-card);
+}
+
+.QR-Code {
+  width: 250px;
+  border-radius: var(--radius-img);
+}
+
+article h2 {
+  width: 95%;
+  text-align: center;
+  margin-top: var(--space);
+  color: var(--clr-text-main);
+}
+
+article p {
+  width: 95%;
+  text-align: center;
+  color: var(--clr-text-secondary);
+  margin-top: var(--space);
+}
+
+@media (min-width: 768px) {
+  article {
+    width: var(--max-card-width);
+  }
+}

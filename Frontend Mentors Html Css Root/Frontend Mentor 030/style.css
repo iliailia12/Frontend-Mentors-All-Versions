@@ -1,0 +1,163 @@
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0px; padding: 0px; box-sizing: border-box;
+}
+
+:root {
+    --bg-color: hsl(226, 43%, 10%);
+    --bg-tile: hsl(235, 46%, 20%);
+    --user-tile: hsl(246, 80%, 60%);
+    --work-tile:hsl(15, 100%, 70%);
+    --play-tile:hsl(195, 74%, 62%);
+    --study-tile: hsl(348, 100%, 68%);
+    --exercise-tile: hsl(145, 58%, 55%);
+    --social-tile: hsl(264, 64%, 52%);
+    --self-tile: hsl(43, 84%, 65%);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: white;    
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:300;
+    font-style: normal;
+}
+
+.container {
+    margin: 50px;
+    display: grid;
+    /* gap: 10px; */
+    padding: 150px;
+}
+
+.container > * {
+    margin-bottom: 20px;
+}
+
+.user {
+    grid-row: 1 / span 2;
+    grid-column: 1;
+    border-radius: 20px;
+    line-height: 200%;
+    width: 225px;
+    gap: 10px;
+    background-color: var(--bg-tile);
+}
+
+.user-profile {
+    background-color: var(--user-tile);
+    padding: 20px;
+    width: 100%;
+    height: 70%;
+    border-radius: 20px;
+}
+
+.filters {
+    padding: 20px;
+}
+
+.work {
+    background-color: var(--work-tile);
+    background-image: url(./images/icon-work.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 50px 50px;
+    border-radius: 20px;
+    padding-top: 30px;
+    width: 90%;
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.inner-element{
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg-tile);
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.play {
+    background-color: var(--play-tile);
+    background-image: url(./images/icon-play.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 50px 50px;
+    border-radius: 20px;
+    padding-top: 30px;
+    width: 90%;
+    grid-row: 1;
+    grid-column: 3;
+}
+
+.study {
+    background-color: var(--study-tile);
+    background-image: url(./images/icon-study.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 50px 50px;
+    border-radius: 20px;
+    padding-top: 30px;
+    width: 90%;
+    grid-row: 1;
+    grid-column: 4;
+}
+
+.self {
+    background-color: var(--self-tile);
+    background-image: url(./images/icon-self-care.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 50px 50px;
+    border-radius: 20px;
+    padding-top: 30px;
+    width: 90%;
+    grid-row: 2;
+    grid-column: 4;
+}
+
+.exercise {
+    background-color: var(--exercise-tile);
+    background-image: url(./images/icon-exercise.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 50px 50px;
+    border-radius: 20px;
+    padding-top: 30px;
+    width: 90%;
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.social {
+    background-color: var(--social-tile);
+    background-image: url(./images/icon-social.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 50px 50px;
+    border-radius: 20px;
+    padding-top: 30px;
+    width: 90%;
+    grid-row: 2;
+    grid-column: 3;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+    }
+    .container > * {
+        width: 350px;
+    }
+}

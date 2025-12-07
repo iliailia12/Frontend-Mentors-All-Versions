@@ -1,0 +1,266 @@
+body {
+      background-color: hsl(225, 100%, 94%);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .card {
+      width: 400px;
+      background-color: hsl(225, 100%, 98%);
+      margin: 50px auto;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 32px;
+    }
+    .img1 {
+      width: 100%;
+      display: block;
+      border-radius: 0 0 30px 30px;
+      margin-bottom: 24px;
+    }
+    h1 {
+      margin: 24px 0 12px 0;
+      font-size: 1.7rem;
+      text-align: center;
+    }
+    p {
+      font-size: 16px;
+      color: hsl(224, 23%, 55%);
+      text-align: center;
+      margin: 0 32px 24px 32px;
+    }
+    .plan-box {
+      display: flex;
+      align-items: center;
+      background-color: hsl(225, 100%, 94%);
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin: 0 32px 24px 32px;
+      width: calc(100% - 64px);
+      box-sizing: border-box;
+      justify-content: space-between;
+    }
+    .plan-details {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .plan-details img {
+      width: 40px;
+      height: 40px;
+      margin: 0;
+    }
+    .plan-text {
+      display: flex;
+      flex-direction: column;
+    }
+    .plan-text strong {
+      font-size: 1rem;
+      color: hsl(223, 47%, 23%);
+    }
+    .plan-text span {
+      font-size: 1rem;
+      color: hsl(224, 23%, 55%);
+    }
+    .change-link {
+      color: hsl(245, 75%, 52%);
+      text-decoration: underline;
+      font-weight: bold;
+      font-size: 0.95rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-left: 16px;
+    }
+    .button1 {
+      background-color: hsl(245, 75%, 52%);
+      width: 80%;
+      height: 40px;
+      border-radius: 20px;
+      color: hsl(225, 100%, 98%);
+      border: none;
+      font-size: 1rem;
+      font-weight: bold;
+      margin: 16px 0 12px 0;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(56, 41, 224, 0.1);
+      transition: background 0.2s;
+    }
+    .button1:hover {
+      background-color: hsl(245, 75%, 60%);
+    }
+    .button2 {
+      background-color: transparent;
+      width: 80%;
+      height: 40px;
+      border-radius: 20px;
+      color: hsl(223, 47%, 23%);
+      border: none;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 0;
+      transition: background 0.2s;
+    }
+    .button2:hover {
+      background-color: hsl(225, 100%, 94%);
+    }
+
+    @media (max-width: 450px) {
+      .card {
+        width: 90%;
+      }
+
+      .plan-box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+      .change-link {
+        margin-left: 0;
+      }
+      .button1, .button2 {
+        width: 90%;
+      }
+    }
+
+
+    @media (max-width: 350px) {
+      h1 {
+        font-size: 1.4rem;
+      }
+      p {
+        font-size: 14px;
+        margin: 0 16px 24px 16px;
+      }
+      .plan-text strong, .plan-text span {
+        font-size: 0.9rem;
+      }
+      .button1, .button2 {
+        height: 36px;
+        font-size: 0.9rem;
+      }
+      .plan-details img {
+        width: 36px;
+        height: 36px;
+      }
+      .plan-box {
+        padding: 14px 16px;
+      }
+      .plan-box {
+        width: calc(100% - 32px);
+      }
+      .change-link {
+        font-size: 0.9rem;
+      }
+      
+    }
+    @media (max-width: 250px) {
+      .plan-details img {
+        width: 32px;
+        height: 32px;
+      }
+      .plan-box {
+        padding: 10px 12px;
+      }
+      .plan-box {
+        width: calc(100% - 24px);
+      }
+      .change-link {
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (max-width: 200px) {
+      .plan-details img {
+        width: 28px;
+        height: 28px;
+      }
+      .plan-box {
+        padding: 8px 10px;
+      }
+      .plan-box {
+        width: calc(100% - 20px);
+      }
+      .change-link {
+        font-size: 0.7rem;
+      }
+      
+    }
+
+
+    @media (max-width: 150px) {
+      .plan-details img {
+        width: 24px;
+        height: 24px;
+      }
+      .plan-box {
+        padding: 6px 8px;
+      }
+      .plan-box {
+        width: calc(100% - 16px);
+      }
+      .change-link {
+        font-size: 0.6rem;
+      }
+      
+    }
+
+
+    @media (max-width: 100px) {
+      .plan-details img {
+        width: 20px;
+        height: 20px;
+      }
+      .plan-box {
+        padding: 4px 6px;
+      }
+      .plan-box {
+        width: calc(100% - 12px);
+      }
+      .change-link {
+        font-size: 0.5rem;
+      }
+      
+    }
+
+
+    @media (max-width: 50px) {
+      .plan-details img {
+        width: 16px;
+        height: 16px;
+      }
+      .plan-box {
+        padding: 2px 4px;
+      }
+      .plan-box {
+        width: calc(100% - 8px);
+      }
+      .change-link {
+        font-size: 0.4rem;
+      }
+      
+    }
+
+
+
+
+    @media (max-width: 25px) {
+      .plan-details img {
+        width: 12px;
+        height: 12px;
+      }
+      .plan-box {
+        padding: 1px 2px;
+      }
+      .plan-box {
+        width: calc(100% - 4px);
+      }
+      .change-link {
+        font-size: 0.3rem;
+      }
+    }

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsive weather app with search functionality, unit conversion, and detailed forecasts">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="app-title">
+                    <span class="weather-icon">☀️</span>
+                    Weather App
+                </h1>
+                <div class="unit-toggle">
+                    <button class="unit-btn active" data-unit="celsius">°C</button>
+                    <button class="unit-btn" data-unit="fahrenheit">°F</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="search-container">
+                <div class="search-input-wrapper">
+                    <input 
+                        type="text" 
+                        class="search-input" 
+                        placeholder="Enter city name..." 
+                        id="citySearch"
+                        autocomplete="off"
+                    >
+                    <button class="search-btn" id="searchBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="21 21l-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </div>
+                <button class="location-btn" id="locationBtn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    Use My Location
+                </button>
+            </div>
+            <div class="search-suggestions" id="searchSuggestions"></div>
+        </section>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Loading State -->
+            <div class="loading" id="loadingState">
+                <div class="loading-spinner"></div>
+                <p>Loading weather data...</p>
+            </div>
+
+            <!-- Error State -->
+            <div class="error-message" id="errorMessage">
+                <div class="error-icon">⚠️</div>
+                <h3>Unable to load weather data</h3>
+                <p id="errorText">Please try again later</p>
+                <button class="retry-btn" id="retryBtn">Try Again</button>
+            </div>
+
+            <!-- Weather Content -->
+            <div class="weather-content" id="weatherContent">
+                <!-- Current Weather -->
+                <section class="current-weather">
+                    <div class="current-weather-main">
+                        <div class="current-location">
+                            <h2 id="currentLocation">--</h2>
+                            <p id="currentDate">--</p>
+                        </div>
+                        <div class="current-temp">
+                            <span class="temp-value" id="currentTemp">--</span>
+                            <span class="temp-unit">°</span>
+                        </div>
+                    </div>
+                    <div class="current-weather-details">
+                        <div class="weather-icon-large">
+                            <div id="currentWeatherIcon">☀️</div>
+                        </div>
+                        <div class="weather-description">
+                            <p id="weatherDescription">--</p>
+                            <p class="feels-like">Feels like <span id="feelsLike">--</span>°</p>
+                        </div>
+                    </div>
+                    <div class="weather-stats">
+                        <div class="stat-item">
+                            <div class="stat-icon">💧</div>
+                            <div class="stat-info">
+                                <span class="stat-label">Humidity</span>
+                                <span class="stat-value" id="humidity">--%</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">🌪️</div>
+                            <div class="stat-info">
+                                <span class="stat-label">Wind Speed</span>
+                                <span class="stat-value" id="windSpeed">-- km/h</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">👁️</div>
+                            <div class="stat-info">
+                                <span class="stat-label">Visibility</span>
+                                <span class="stat-value" id="visibility">-- km</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">🌡️</div>
+                            <div class="stat-info">
+                                <span class="stat-label">Pressure</span>
+                                <span class="stat-value" id="pressure">-- hPa</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Hourly Forecast -->
+                <section class="hourly-forecast">
+                    <h3 class="section-title">24-Hour Forecast</h3>
+                    <div class="hourly-scroll" id="hourlyForecast">
+                        <!-- Hourly items will be dynamically generated -->
+                    </div>
+                </section>
+
+                <!-- Daily Forecast -->
+                <section class="daily-forecast">
+                    <h3 class="section-title">7-Day Forecast</h3>
+                    <div class="daily-forecast-list" id="dailyForecast">
+                        <!-- Daily items will be dynamically generated -->
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

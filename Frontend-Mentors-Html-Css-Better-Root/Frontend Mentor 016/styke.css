@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ======= CSS Reset ======= */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+/* ======= ROOT SYSTEM ======= */
+:root {
+  /*  ფერები */
+  --Red: hsl(0, 100%, 68%);
+  --Blue-dark: hsl(230, 29%, 20%);
+  --Blue-medium: hsl(230, 29%, 40%);
+  --Blue-light: hsl(207, 33%, 95%);
+  --White: #ffffff;
+
+  /* სივრცეები */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+
+  /* ფონტის ზომები */
+  --fs-xs: 12px;
+  --fs-sm: 14px;
+  --fs-md: 16px;
+  --fs-lg: 24px;
+  --fs-xl: 40px;
+  --fs-xxl: 60px;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-round: 9999px;
+
+  /*  ჩრდილები */
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+  /* Transition */
+  --transition-fast: 0.2s ease-in-out;
+  --transition-medium: 0.4s ease;
+  --transition-slow: 0.6s ease;
+}
+
+/* ======= GLOBAL TEXT ======= */
+body {
+  margin: 0;
+  font-size: var(--fs-md);
+  font-family: "Barlow Condensed", sans-serif;
+  color: var(--Blue-dark);
+  background-color: var(--White);
+  line-height: 1.6;
+}
+
+p {
+  color: var(--Blue-dark);
+}
+
+/* ======= CONTAINER ======= */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 var(--space-md);
+}
+
+/* ======= NAVIGATION ======= */
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100px;
+}
+
+nav .container ul {
+  display: flex;
+}
+
+nav .container ul li {
+  list-style: none;
+}
+
+nav .container ul li a {
+  text-decoration: none;
+  margin: 0 20px;
+  color: var(--Blue-dark);
+  font-weight: 700;
+  transition: color var(--transition-fast);
+}
+
+nav .container ul li a:hover {
+  color: var(--Red);
+}
+
+nav .container ul li:last-child a {
+  font-weight: normal;
+  margin-left: 60px;
+  opacity: 0.7;
+}
+
+/* ======= HERO GRID ======= */
+.grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  gap: var(--space-lg);
+}
+
+.col:first-child {
+  margin-left: 186px;
+}
+
+.col p a {
+  background-color: var(--Blue-dark);
+  text-decoration: none;
+  color: var(--Blue-light);
+  padding: 2px 10px;
+  border-radius: var(--radius-md);
+  font-size: var(--fs-sm);
+  letter-spacing: 1px;
+}
+
+.col p span {
+  letter-spacing: 5px;
+  margin-left: 10px;
+  color: var(--Blue-medium);
+}
+
+.col h3 {
+  font-size: var(--fs-xxl);
+  margin: 40px 0;
+  width: 60%;
+  color: var(--Blue-dark);
+  font-weight: 700;
+}
+
+.col .footer-col {
+  margin-top: 50px;
+}
+
+.col .footer-col a {
+  background-color: var(--Red);
+  padding: 10px 30px;
+  color: var(--Blue-light);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  transition: background-color var(--transition-fast);
+}
+
+.col .footer-col a:hover {
+  background-color: hsl(0, 90%, 60%);
+}
+
+.col .footer-col span {
+  letter-spacing: 3px;
+  margin-left: 30px;
+  font-size: var(--fs-sm);
+  color: var(--Blue-medium);
+}
+
+/* ======= IMAGE SIDE ======= */
+.col.img img {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.col.img::after {
+  content: '';
+  position: absolute;
+  background-color: var(--Blue-light);
+  height: 60%;
+  width: 53%;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  border-bottom-left-radius: 60px;
+}
+
+/* ======= BURGER MENU ======= */
+.humberger {
+  position: relative;
+  width: 45px;
+  display: none;
+}
+
+.humberger .icone {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  cursor: pointer;
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 700px) {
+  .humberger {
+    display: block;
+  }
+  .humberger .noactive {
+    display: none;
+  }
+  nav .container {
+    margin-bottom: 30px;
+  }
+  nav .container ul {
+    display: none;
+  }
+  nav .container ul.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    text-align: center;
+    margin: 0 20px;
+    background-color: var(--White);
+    top: 10%;
+    box-shadow: var(--shadow-md);
+    height: auto;
+    border-radius: var(--radius-md);
+    padding: var(--space-md) 0;
+  }
+  nav .container ul.active li {
+    display: inline-block;
+    margin: 10px;
+  }
+  nav .container ul.active li:last-child a {
+    margin-left: 0;
+    padding: 10px 0;
+    border-top: 1px solid var(--Blue-dark);
+    display: inline-block;
+    width: 100%;
+  }
+  .grid {
+    flex-direction: column-reverse;
+    margin-top: 20px;
+  }
+  .col:first-child {
+    margin-left: 0px;
+    margin-top: 90px;
+  }
+  .col p span {
+    letter-spacing: 2px;
+    margin-left: 5px;
+  }
+  .col h3 {
+    font-size: 40px;
+    width: 100%;
+    margin: 30px 0;
+  }
+  .col.img::after {
+    height: 50%;
+    width: 63%;
+  }
+  .col .footer-col a {
+    padding: 5px 10px;
+  }
+  .col .footer-col span {
+    letter-spacing: 1.5px;
+    margin-left: 10px;
+  }
+}

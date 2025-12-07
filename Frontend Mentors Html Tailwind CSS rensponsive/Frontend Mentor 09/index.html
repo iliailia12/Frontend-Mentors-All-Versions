@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <title>Frontend Mentor | Single Price Grid Component</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[hsl(194,54%,92%)] font-karla text-base min-h-screen flex items-center justify-center p-4">
+  <main class="w-full max-w-[635px] mx-auto">
+    <article class="bg-white rounded-lg overflow-hidden grid md:grid-rows-[259px_259px] md:grid-cols-2 grid-cols-1 shadow-md">
+
+      <!-- Header: spans full width -->
+      <header class="md:col-span-2 flex flex-col justify-around p-6 md:p-10 space-y-4">
+        <h1 class="text-[#2AB3B1] font-bold text-xl sm:text-2xl md:text-4xl">Join our community</h1>
+        <p class="text-[#C0DF33] text-base sm:text-lg md:text-xl font-semibold">30-day, hassle-free money back guarantee</p>
+        <p class="text-[#9AA7BE] text-sm sm:text-base leading-6 md:leading-7">Gain access to our full library of tutorials along with expert code reviews. Perfect for any developers who are serious about honing their skills.</p>
+      </header>
+
+      <!-- Monthly Subscription Section -->
+      <section class="bg-[#2AB3B1] text-white flex flex-col justify-around p-6 sm:p-8">
+        <h2 class="text-xl sm:text-2xl font-semibold mb-4">Monthly Subscription</h2>
+
+        <div class="flex items-center mb-4">
+          <p class="text-3xl sm:text-4xl font-extrabold pr-3">$29</p>
+          <p class="text-[hsl(165,53%,65%)]">per month</p>
+        </div>
+
+        <p class="mb-6">Full access for less than $1 a day</p>
+        <button class="bg-[#C0DF33] hover:bg-[hsl(165,53%,65%)] text-white font-bold py-3 sm:py-4 rounded shadow-[3px_7px_9px_hsl(166,32%,45%)] transition-colors duration-400">Sign Up</button>
+      </section>
+
+      <!-- Why Us Section -->
+      <section class="bg-[#9AA7BE] text-white flex flex-col justify-evenly p-6 sm:p-8">
+        <h2 class="text-lg font-bold mb-4">Why Us</h2>
+        <ul class="space-y-2 list-none text-sm sm:text-base">
+          <li class="text-[hsl(165,90%,81%)] hover:text-white rounded px-1 cursor-pointer transition-all duration-400">Tutorials by industry experts</li>
+          <li class="text-[hsl(165,90%,81%)] hover:text-white rounded px-1 cursor-pointer transition-all duration-400">Peer & expert code review</li>
+          <li class="text-[hsl(165,90%,81%)] hover:text-white rounded px-1 cursor-pointer transition-all duration-400">Coding exercises</li>
+          <li class="text-[hsl(165,90%,81%)] hover:text-white rounded px-1 cursor-pointer transition-all duration-400">Access to our GitHub repos</li>
+          <li class="text-[hsl(165,90%,81%)] hover:text-white rounded px-1 cursor-pointer transition-all duration-400">Community forum</li>
+          <li class="text-[hsl(165,90%,81%)] hover:text-white rounded px-1 cursor-pointer transition-all duration-400">Flashcard decks</li>
+          <li class="text-[hsl(165,90%,81%)] hover:text-white rounded px-1 cursor-pointer transition-all duration-400">New videos every week</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

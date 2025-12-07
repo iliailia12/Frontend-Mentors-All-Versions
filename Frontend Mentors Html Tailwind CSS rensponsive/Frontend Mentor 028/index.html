@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Pricing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: 'Manrope', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-[#f5f7ff] text-gray-500 min-h-screen flex items-center justify-center px-4">
+    <main class="w-full max-w-3xl py-12 relative">
+      <div class="absolute top-0 left-0 w-full h-1/2 bg-no-repeat bg-cover bg-[url('./images/bg-pattern.svg')] -z-10"></div>
+      
+      <header class="text-center mb-12 relative z-10">
+        <div class="w-36 h-36 bg-[url('./images/pattern-circles.svg')] bg-contain bg-no-repeat mx-auto mb-6"></div>
+        <h1 class="text-2xl md:text-3xl font-extrabold text-[#293356]">Simple, traffic-based pricing</h1>
+        <p class="mt-2 max-w-md mx-auto text-sm md:text-base font-semibold">Sign-up for our 30-day trial. No credit card required.</p>
+      </header>
+
+      <section class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <div class="p-8 text-center space-y-8">
+          <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+            <span class="uppercase tracking-widest text-sm font-extrabold">100K pageviews</span>
+            <div class="flex items-center gap-2">
+              <span class="text-4xl font-extrabold text-[#293356]">$16.00</span>
+              <span class="text-base font-semibold text-gray-400">/ month</span>
+            </div>
+          </div>
+
+          <input type="range" min="0" max="4" value="2" class="w-full h-2 rounded-lg bg-[#e0eafc] appearance-none cursor-pointer" id="priceSlider"/>
+
+          <div class="flex justify-center items-center gap-2 text-sm font-semibold">
+             <span>Monthly Billing</span>
+            <label class="relative inline-flex items-center cursor-pointer">
+              <input type="checkbox" value="" class="sr-only peer" id="billingToggle" />
+              <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:bg-teal-400 transition"></div>
+              <div
+                class="absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition-transform peer-checked:translate-x-5"
+              ></div>
+            </label>
+            <span>Yearly Billing</span>
+            <span class="bg-pink-100 text-pink-500 text-xs font-bold rounded px-2 py-0.5 ml-2">25% discount</span>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-200 px-8 py-6 flex flex-col md:flex-row justify-between items-center gap-6">
+          <ul class="space-y-2 text-sm font-semibold text-gray-400">
+            <li class="flex items-center gap-3"><img src="./images/icon-check.svg" alt="" class="w-3">Unlimited websites</li>
+            <li class="flex items-center gap-3"><img src="./images/icon-check.svg" alt="" class="w-3">100% data ownership</li>
+            <li class="flex items-center gap-3"><img src="./images/icon-check.svg" alt="" class="w-3">Email reports</li>
+          </ul>
+          <button class="bg-[#293356] text-teal-200 hover:text-white px-8 py-2 rounded-full font-bold text-sm transition hover:-translate-y-1"> Start my trial</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

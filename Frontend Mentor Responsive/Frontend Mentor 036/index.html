@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+  <title>Multi-Step Form</title>
+  <style>
+    body {
+      font-family: 'Ubuntu', sans-serif;
+      background: #f0f6ff;
+      margin: 0;
+      padding: 0;
+    }
+    .main {
+      display: flex;
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+    .sidebar {
+      background: linear-gradient(135deg, #4837ff 0%, #6e7aff 100%);
+      color: #fff;
+      width: 260px;
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .sidebar nav {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .step {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+      gap: 16px;
+    }
+    .circle {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 16px;
+      margin-right: 4px;
+      transition: background 0.2s, color 0.2s, border 0.2s;
+    }
+    .circle.filled {
+      background: #fff;
+      color: #4837ff;
+      border: 2px solid #fff;
+    }
+    .circle.outlined {
+      background: transparent;
+      color: #fff;
+      border: 2px solid #fff;
+    }
+    .step-text div:first-child {
+      font-weight: 400;
+      font-size: 9px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      opacity: 0.7;
+    }
+    .step-text div:last-child {
+      font-size: 14px;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+    .images {
+      display: flex;
+      gap: 12px;
+      margin-top: 32px;
+    }
+    .circle-img, .polygon-img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #fff;
+    }
+    .content {
+      flex: 1;
+      padding: 48px 40px;
+      min-width: 320px;
+    }
+    .content h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #4837ff;
+    }
+    .content p {
+      color: #6e7aff;
+      margin-bottom: 32px;
+      font-size: 1rem;
+    }
+    form label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 700;
+      color: #4837ff;
+      font-size: 15px;
+    }
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="tel"] {
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 18px;
+      border: 1px solid #dbeafe;
+      border-radius: 6px;
+      font-size: 1rem;
+      background: #f8fafc;
+      transition: border 0.2s;
+    }
+    form input:focus {
+      border-color: #6e7aff;
+      outline: none;
+    }
+    form label input[type="radio"],
+    form label input[type="checkbox"] {
+      margin-right: 8px;
+      accent-color: #4837ff;
+    }
+    .form-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+    button {
+      background: #4837ff;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 24px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:disabled {
+      background: #b3b3b3;
+      cursor: not-allowed;
+    }
+    button:hover:not(:disabled) {
+      background: #6e7aff;
+    }
+    @media (max-width: 700px) {
+      .main {
+        flex-direction: column;
+        max-width: 100%;
+        border-radius: 0;
+      }
+      .sidebar {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        padding: 16px;
+        gap: 16px;
+      }
+      .sidebar nav {
+        flex-direction: row;
+        gap: 12px;
+      }
+      .images {
+        margin-top: 0;
+      }
+      .content {
+        padding: 24px 12px;
+      }
+    }
+    @media (max-width: 480px) {
+      .main {
+        margin: 0;
+        box-shadow: none;
+      }
+      .sidebar {
+        padding: 8px;
+        font-size: 12px;
+      }
+      .circle-img, .polygon-img {
+        width: 28px;
+        height: 28px;
+      }
+      .content h1 {
+        font-size: 1.3rem;
+      }
+      .content p {
+        font-size: 0.95rem;
+      }
+      .form-actions {
+        flex-direction: column;
+        gap: 8px;
+        align-items: stretch;
+      }
+      button {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 0.95rem;
+      }
+    }
+    .step:hover .circle,
+    .step:focus .circle {
+      background: #fff;
+      color: #4837ff;
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 4px rgba(255,255,255,0.2);
+    }
+    .step:hover .step-text div:last-child,
+    .step:focus .step-text div:last-child {
+      color: #fff;
+      text-decoration: underline;
+    }
+    .sidebar {
+      box-shadow: 0 0 0 4px #6e7aff33;
+      border-right: 4px solid #6e7aff;
+    }
+    form input:focus {
+      border-color: #4837ff;
+      box-shadow: 0 0 0 2px #6e7aff33;
+    }
+    form label {
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+    }
+    form input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      vertical-align: middle;
+    }
+    form input[type="radio"] {
+      width: 18px;
+      height: 18px;
+      vertical-align: middle;
+    }
+    #summary {
+      background: #f0f6ff;
+      border-radius: 8px;
+      padding: 18px 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 8px rgba(72,55,255,0.06);
+    }
+    #summary ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    #summary li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      color: #4837ff;
+    }
+    #summary li strong {
+      color: #6e7aff;
+    }
+    button {
+      box-shadow: 0 2px 8px rgba(72,55,255,0.08);
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+    button:active {
+      box-shadow: 0 1px 4px rgba(72,55,255,0.12);
+    }
+    .content {
+      animation: fadeIn 0.4s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(16px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <main class="main">
+    <section class="sidebar">
+      <nav>
+        <a href="#" class="step">
+          <span class="circle filled">1</span>
+          <span class="step-text">
+            <div>Step 1</div>
+            <div>Your info</div>
+          </span>
+        </a>
+        <a href="#" class="step">
+          <span class="circle outlined">2</span>
+          <span class="step-text">
+            <div>Step 2</div>
+            <div>Select plan</div>
+          </span>
+        </a>
+        <a href="#" class="step">
+          <span class="circle outlined">3</span>
+          <span class="step-text">
+            <div>Step 3</div>
+            <div>Add-ons</div>
+          </span>
+        </a>
+        <a href="#" class="step">
+          <span class="circle outlined">4</span>
+          <span class="step-text">
+            <div>Step 4</div>
+            <div>Summary</div>
+          </span>
+        </a>
+      </nav>
+      <div class="images">
+        <img src="https://storage.googleapis.com/a1aa/image/7e3883a5-57fc-4b59-e42c-679a288d989c.jpg" class="circle-img" alt="Shape">
+        <img src="https://storage.googleapis.com/a1aa/image/0fc8cc70-ebf6-4324-2e17-e656629527b0.jpg" class="polygon-img" alt="Shape">
+      </div>
+    </section>
+    <section class="content">
+    </section>
+  </main>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const steps = document.querySelectorAll(".step");
+      const contentSection = document.querySelector(".content");
+      let currentStep = 0;
+
+      const stepContents = [
+        {
+          title: "Personal info",
+          description: "Please provide your name, email address, and phone number.",
+          html: `
+            <form id="step1">
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="e.g. Stephen King" required>
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="e.g. stephenking@lorem.com" required>
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" placeholder="e.g. +1 234 567 890" required>
+              <div class="form-actions">
+                <button type="button" id="back0" disabled>Go Back</button>
+                <button type="submit">Next Step</button>
+              </div>
+            </form>
+          `
+        },
+        {
+          title: "Select plan",
+          description: "Choose your plan.",
+          html: `
+            <form id="step2">
+              <label>
+                <input type="radio" name="plan" value="Basic" required> Basic
+              </label>
+              <label>
+                <input type="radio" name="plan" value="Premium"> Premium
+              </label>
+              <div class="form-actions">
+                <button type="button" id="back1">Go Back</button>
+                <button type="submit">Next Step</button>
+              </div>
+            </form>
+          `
+        },
+        {
+          title: "Add-ons",
+          description: "Pick add-ons.",
+          html: `
+            <form id="step3">
+              <label>
+                <input type="checkbox" name="addon1"> Extra Storage
+              </label>
+              <label>
+                <input type="checkbox" name="addon2"> Priority Support
+              </label>
+              <div class="form-actions">
+                <button type="button" id="back2">Go Back</button>
+                <button type="submit">Next Step</button>
+              </div>
+            </form>
+          `
+        },
+        {
+          title: "Summary",
+          description: "Review your choices.",
+          html: `
+            <div id="summary"></div>
+            <div class="form-actions">
+              <button type="button" id="back3">Go Back</button>
+              <button type="button" id="confirm">Confirm</button>
+            </div>
+          `
+        }
+      ];
+
+      const formData = {};
+
+      function updateSidebar() {
+        steps.forEach((step, idx) => {
+          step.querySelector(".circle").className = "circle " + (idx === currentStep ? "filled" : "outlined");
+        });
+      }
+
+      function renderStep() {
+        const step = stepContents[currentStep];
+        contentSection.innerHTML = `
+          <h1>${step.title}</h1>
+          <p>${step.description}</p>
+          ${step.html}
+        `;
+        updateSidebar();
+
+        if (currentStep === 0) {
+          document.getElementById("back0").onclick = function () {
+          };
+          document.getElementById("step1").onsubmit = function (e) {
+            e.preventDefault();
+            formData.name = document.getElementById("name").value;
+            formData.email = document.getElementById("email").value;
+            formData.phone = document.getElementById("phone").value;
+            currentStep++;
+            renderStep();
+          };
+        }
+        if (currentStep === 1) {
+          document.getElementById("back1").onclick = function () {
+            currentStep--;
+            renderStep();
+          };
+          document.getElementById("step2").onsubmit = function (e) {
+            e.preventDefault();
+            formData.plan = document.querySelector('input[name="plan"]:checked').value;
+            currentStep++;
+            renderStep();
+          };
+        }
+        if (currentStep === 2) {
+          document.getElementById("back2").onclick = function () {
+            currentStep--;
+            renderStep();
+          };
+          document.getElementById("step3").onsubmit = function (e) {
+            e.preventDefault();
+            formData.addon1 = document.querySelector('input[name="addon1"]').checked;
+            formData.addon2 = document.querySelector('input[name="addon2"]').checked;
+            currentStep++;
+            renderStep();
+          };
+        }
+        if (currentStep === 3) {
+          document.getElementById("back3").onclick = function () {
+            currentStep--;
+            renderStep();
+          };
+          document.getElementById("confirm").onclick = function () {
+            alert("Form submitted!\n" + JSON.stringify(formData, null, 2));
+            currentStep = 0;
+            renderStep();
+          };
+          document.getElementById("summary").innerHTML = `
+            <ul>
+              <li><strong>Name:</strong> ${formData.name}</li>
+              <li><strong>Email:</strong> ${formData.email}</li>
+              <li><strong>Phone:</strong> ${formData.phone}</li>
+              <li><strong>Plan:</strong> ${formData.plan}</li>
+              <li><strong>Add-ons:</strong> ${formData.addon1 ? "Extra Storage" : ""} ${formData.addon2 ? "Priority Support" : ""}</li>
+            </ul>
+          `;
+        }
+      }
+
+      renderStep();
+    });
+  </script>
+</body>
+</html>

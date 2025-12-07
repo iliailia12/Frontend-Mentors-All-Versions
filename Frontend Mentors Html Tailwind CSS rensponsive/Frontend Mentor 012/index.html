@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coming Soon - Base Apparel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
+  <div class="container max-w-screen-lg w-full bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row">
+    
+    <div class="left relative flex-1 p-6 md:p-16 bg-gradient-to-br from-pink-100 via-white to-white">
+      <div class="top-left-circle absolute top-6 left-6 w-6 h-6 border-2 border-pink-300 rounded-full"></div>
+      <div class="logo mb-12 flex items-center gap-2">
+        <div class="logo-circle w-5 h-5 border-2 border-pink-300 rounded-full"></div>
+        <span class="logo-text text-sm font-semibold tracking-wide text-gray-600">BASE<br />APPAREL</span>
+      </div>
+      <h1 class="text-4xl font-bold text-gray-800 max-w-xs md:max-w-md mb-4">
+        <span class="text-pink-400 font-light tracking-wider">WE'RE</span> COMING<br />SOON
+      </h1>
+      <p class="description text-sm text-gray-400 max-w-xs md:max-w-md"> Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.
+      </p>
+      <form class="email-form flex mt-6 max-w-xs w-full">
+        <input  type="email"  name="email"  placeholder="Email Address"  required  aria-label="Email Address"  class="flex-grow border border-gray-300 rounded-full p-3 text-gray-500 text-sm focus:outline-none focus:ring-2 focus:ring-pink-300"/>
+        <button type="submit" aria-label="Submit email" class="ml-2 bg-gradient-to-r from-pink-300 to-pink-200 rounded-full px-4 py-3 text-white text-lg flex items-center justify-center hover:brightness-110">
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </form>
+      
+      
+      <div class="top-left-dots hidden md:block absolute top-6 left-24 space-y-1">
+        <div class="flex gap-1">
+          <div class="w-2.5 h-2.5 rounded-full bg-pink-300"></div>
+          <div class="w-2.5 h-2.5 rounded-full bg-pink-300"></div>
+          <div class="w-2.5 h-2.5 rounded-full bg-pink-300"></div>
+        </div>
+        <div class="flex gap-1">
+          <div class="w-2.5 h-2.5 rounded-full bg-pink-300"></div>
+          <div class="w-2.5 h-2.5 rounded-full bg-pink-300"></div>
+          <div class="w-2.5 h-2.5 rounded-full bg-pink-300"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="right flex-1">
+      <img   src="images/hero-desktop.jpg"   class="w-full h-full object-cover"   alt="Fashion Store Coming Soon"/>
+    </div>
+
+    <div class="bottom-right-braces hidden md:block absolute bottom-6 right-6 text-6xl text-gray-300 select-none pointer-events-none">{'{}'}</div>
+    <div class="bottom-left-zigzag hidden md:block absolute bottom-6 left-6 w-16 h-6 border-b-2 border-pink-300 border-l-transparent rotate-45"></div>
+  </div>
+</body>
+</html>

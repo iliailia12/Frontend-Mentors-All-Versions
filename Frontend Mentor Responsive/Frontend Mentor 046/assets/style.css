@@ -1,0 +1,423 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap");
+.attendant--name {
+  background: linear-gradient(120deg, hsl(7, 86%, 67%) 25%, hsl(0, 0%, 100%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.details {
+  color: hsl(252, 6%, 83%);
+}
+
+.email {
+  color: hsl(7, 88%, 67%);
+}
+
+.ticket--wrapper {
+  background-image: url("./images/pattern-ticket.svg");
+  background-repeat: no-repeat;
+  padding: 1rem;
+  background-size: contain; /* Ensure the background scales properly */
+  background-position: center; /* Center the background image */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 160px;
+  position: relative;
+  max-width: 343px;
+  margin: auto;
+}
+.ticket--wrapper .ticket--id {
+  writing-mode: vertical-lr;
+  text-orientation: sideways-right;
+  position: absolute;
+  right: 1rem;
+  top: 0;
+  color: hsl(245, 15%, 58%);
+  font-size: 1.5rem;
+  height: 100%;
+  text-align: center;
+  font-weight: 500;
+}
+
+.ticket--header {
+  display: flex;
+  gap: 1rem;
+  align-items: start;
+}
+.ticket--header h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+.ticket--header img {
+  width: 29px;
+  height: 29px;
+}
+
+.ticket--date {
+  padding-left: 2.75rem;
+  font-size: 14px;
+  margin: 0;
+  color: hsl(252, 6%, 83%);
+}
+
+.ticket--footer {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+.ticket--footer .ticket--avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 0.75rem;
+}
+.ticket--footer .ticket--avatar--details {
+  display: flex;
+  flex-direction: column;
+}
+.ticket--footer .ticket--avatar--details h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 500;
+}
+.ticket--footer .ticket--avatar--details div {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.ticket--footer .ticket--avatar--details div span {
+  color: hsl(252, 6%, 83%);
+}
+
+@media screen and (min-width: 768px) {
+  header p {
+    max-width: 514px;
+    margin: auto;
+  }
+  .ticket--wrapper {
+    margin: auto;
+    margin-top: 5rem;
+    max-width: 600px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+  }
+  .ticket--wrapper .ticket--id {
+    right: 2.25rem;
+    font-size: 30px;
+  }
+  .ticket--wrapper h2 {
+    font-size: 2.5rem;
+  }
+  .ticket--wrapper .ticket--date {
+    font-size: 1.25rem;
+    padding-left: 3.5rem;
+  }
+  .ticket--wrapper .ticket--logo {
+    width: 40px;
+    height: 40px;
+  }
+  .ticket--wrapper .ticket--avatar {
+    width: 80px;
+    height: 80px;
+  }
+  #ticketName {
+    font-size: 30px;
+  }
+  .github--logo {
+    width: 17px;
+    height: 17px;
+  }
+  #githubUsername {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .ticket--avatar--details {
+    gap: 0.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .ticket--wrapper {
+    margin-top: 111px;
+  }
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  line-height: 110%;
+  letter-spacing: -1px;
+}
+
+.sr-only {
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  clip: rect(0, 0, 0, 0);
+  border-width: 0;
+  white-space: nowrap;
+}
+
+body {
+  font-family: "Inconsolata", serif;
+  background: url("./images/pattern-lines.svg"), url("./images/pattern-circle.svg"), url("./images/pattern-circle.svg"), url("./images/pattern-squiggly-line-top.svg"), url("./images/pattern-squiggly-line-bottom.svg"), url("./images/background-mobile.png");
+  background-repeat: no-repeat;
+  background-position: 0, -30px -30px, 110% 50%, 100% 24px, bottom left;
+  background-size: cover, 100px, 100px, 100px, 300px, cover;
+  margin: 0;
+  padding: 2rem 1rem;
+  padding-bottom: 114px;
+  color: white;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+header h1 {
+  font-size: 30px;
+}
+header p {
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  font-size: 1.25rem;
+}
+
+#image-drop {
+  width: 100%;
+  height: 126px;
+  border-radius: 1rem;
+  border: 2px dashed hsl(245, 15%, 58%);
+  margin-top: 1rem;
+  background-color: rgba(135, 132, 164, 0.08);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: 150ms ease-in-out;
+}
+#image-drop:hover {
+  background-color: rgba(135, 132, 164, 0.2);
+  cursor: pointer;
+}
+#image-drop:hover .preview--container {
+  border: 1px solid hsl(245, 15%, 58%);
+}
+#image-drop .drop--label {
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 0;
+  cursor: pointer;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.info--wrapper {
+  font-size: 12px;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  letter-spacing: -0.2px;
+}
+
+.error .info--text,
+.error #info--text {
+  color: hsl(7, 71%, 60%);
+}
+.error .error--red {
+  stroke: hsl(7, 71%, 60%);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+input {
+  font-size: 18px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 0;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: 1px solid hsl(252, 6%, 83%);
+  color: hsl(0, 0%, 100%);
+}
+input::-moz-placeholder {
+  color: hsl(252, 6%, 83%);
+  font-family: "Inconsolata", serif;
+}
+input::placeholder {
+  color: hsl(252, 6%, 83%);
+  font-family: "Inconsolata", serif;
+}
+input:focus {
+  border: 1px solid hsl(245, 19%, 35%);
+  outline: 3px solid hsl(245, 19%, 35%);
+  outline-offset: 3px;
+}
+input:hover {
+  background-color: rgba(135, 132, 164, 0.2);
+  cursor: pointer;
+}
+
+.info--wrapper {
+  display: none;
+}
+
+#image--upload--label {
+  display: flex;
+}
+
+input:user-invalid {
+  border: 1px solid hsl(7, 71%, 60%);
+}
+input:user-invalid + .info--wrapper {
+  display: flex;
+}
+input:user-invalid + .info--wrapper .info--text {
+  color: hsl(7, 71%, 60%);
+}
+input:user-invalid + .info--wrapper .error--red {
+  stroke: hsl(7, 71%, 60%);
+}
+input:user-invalid + .error--text {
+  display: block;
+}
+
+.error--text {
+  margin-top: 0.5rem;
+  color: hsl(7, 71%, 60%);
+  display: none;
+}
+
+button {
+  background-color: hsl(7, 88%, 67%);
+  width: 54px;
+  padding: 17px 0;
+  text-align: center;
+  width: 100%;
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: "Inconsolata", serif;
+  border-radius: 12px;
+  border: none;
+  color: hsl(248, 70%, 10%);
+  transition: all 150ms ease-in-out;
+}
+button:hover {
+  background-color: hsl(7, 71%, 60%);
+  cursor: pointer;
+}
+
+#imagePreview {
+  width: 100%;
+  height: 100%;
+}
+
+.preview--container {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  border: 1px solid hsl(245, 19%, 35%);
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  box-shadow: 0 0 5px black;
+}
+
+.active--image--btns {
+  display: none;
+  gap: 0.5rem;
+  max-width: 80%;
+  margin: 10px auto;
+}
+.active--image--btns button {
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 16px;
+  display: block;
+}
+.active--image--btns button:first-child {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding: 2.5rem 2rem;
+    background: url("./images/pattern-lines.svg"), url("./images/pattern-circle.svg"), url("./images/pattern-circle.svg"), url("./images/pattern-squiggly-line-top.svg"), url("./images/pattern-squiggly-line-bottom.svg"), url("./images/background-mobile.png");
+    background-repeat: no-repeat;
+    background-position: 0, -27px -87px, 120% 50%, 100% 88px, bottom left;
+    background-size: cover, 217px, 217px, 232px, 396px, cover;
+    padding-bottom: 114px;
+    color: white;
+    min-height: 100vh;
+  }
+  header h1 {
+    margin-top: 3.75rem;
+    font-size: 3.75rem;
+  }
+  header p {
+    font-size: 1.5rem;
+  }
+  form {
+    max-width: 522px;
+    margin: auto;
+  }
+}
+.attribution {
+  text-align: center;
+  font-size: 12px;
+  color: hsl(252, 6%, 83%);
+  top: 2rem;
+  position: relative;
+}
+.attribution a:visited,
+.attribution a {
+  color: hsl(7, 88%, 67%);
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    padding: 2.5rem 2rem;
+    background: url("./images/pattern-lines.svg"), url("./images/pattern-circle.svg"), url("./images/pattern-circle.svg"), url("./images/pattern-squiggly-line-top.svg"), url("./images/pattern-squiggly-line-bottom-desktop.svg"), url("./images/background-desktop.png");
+    background-repeat: no-repeat;
+    background-position: 0, 44px -85px, 938px 50%, 100% 88px, bottom left, 0;
+    background-size: cover, 217px, 217px, 446px, 825px, cover;
+    padding-bottom: 114px;
+    color: white;
+    min-height: 100vh;
+  }
+  header {
+    max-width: 891px;
+    margin: auto;
+    margin-bottom: 3.5rem;
+  }
+  header p {
+    max-width: -moz-max-content;
+    max-width: max-content;
+  }
+  form {
+    max-width: 460px;
+  }
+}/*# sourceMappingURL=style.css.map */

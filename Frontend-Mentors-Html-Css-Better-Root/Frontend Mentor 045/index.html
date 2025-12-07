@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Contact form</title>
+</head>
+<body>
+  <section class="form_container">
+    <form class="form">
+      <h1 class="form_title">Contact Us</h1>
+      <div class="form_inputs_fl_container">
+          <div class="form_input_label">
+            <label for="first_name">First Name <span class="asterisk">*</span></label>
+            <input type="text" id="first_name" name="first_name" >
+            <span class="error_message">This field is required</span>
+          </div>
+          <div class="form_input_label">
+            <label for="last_name">Last Name <span class="asterisk">*</span></label>
+            <input type="text" id="last_name" name="last_name" >
+            <span class="error_message">This field is required</span>
+          </div>
+      </div>
+      <div class="form_input_S_container">
+        <div class="form_input_label">
+          <label for="email">Email Address <span class="asterisk">*</span></label>
+          <input type="email" id="email" name="email" >
+          <span class="error_message">Please enter a valid email address</span>
+        </div>
+      </div>
+      <div class="form_input_fl_container">
+        <div class="form_query_type_title">
+          <p>Query Type <span class="asterisk">*</span></p>
+        </div>
+        <div class="query_type_container">
+          <div class="query_type_options">
+            <input type="radio" id="query_type_0" name="query_type" value="0" >
+            <label for="query_type_0">General Enquiry</label>
+          </div>
+          <div class="query_type_options">
+            <input type="radio" id="query_type_1" name="query_type" value="1" >
+            <label for="query_type_1">Support Enquiry</label>
+          </div>
+        </div>
+          <span class="error_message" id="span_error_radio">Please select a query type</span>
+      </div>
+      <div class="form_input_label_message">
+        <label for="message">Message <span class="asterisk">*</span></label>
+        <textarea id="message" name="message" rows="3" ></textarea>
+        <span class="error_message">This field is required</span>
+      </div>
+
+      <div class="form_input_label">
+        <div class="consent_container">
+          <input type="checkbox" id="consent" name="consent" >
+          <label for="consent">
+            I consent to being contacted by the team <span class="asterisk">*</span>
+          </label>
+        </div>
+        <div> 
+          <span class="error_message">To submit this form, please consent to being contacted</span>
+        </div>
+      </div>
+      <button id="submit_button" class="submit_button" type="submit">Submit</button>
+    </form>
+  </section>
+</body>
+</html>

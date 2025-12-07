@@ -1,0 +1,281 @@
+/* --------------------------- */
+/* RESET + GLOBAL STYLES      */
+/* --------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  font-weight: var(--fw-regular);
+}
+
+body {
+  background-color: var(--green-100);
+  color: var(--gray-900);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* --------------------------- */
+/* ROOT VARIABLES (optimized)  */
+/* --------------------------- */
+
+:root {
+  /* Colors */
+  --green-100: hsl(148, 38%, 91%);
+  --green-600: hsl(169, 82%, 27%);
+  --red-500: hsl(0, 66%, 54%);
+  --white: hsl(0, 0%, 100%);
+  --gray-500: hsl(186, 15%, 59%);
+  --gray-900: hsl(187, 24%, 22%);
+
+  /* Typography */
+  --font-family: 'Karla', sans-serif;
+  --fs-body: 16px;
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  /* Layout */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --shadow-soft: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  /* Spacing */
+  --spacing-xs: 0.4rem;
+  --spacing-sm: 0.6rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+
+  /* Transition */
+  --transition: 0.25s ease;
+}
+
+/* --------------------------- */
+/* CONTAINER + FORM            */
+/* --------------------------- */
+
+section {
+  width: 100%;
+  max-width: 300px;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+}
+
+/* --------------------------- */
+/* INPUT GROUPS                */
+/* --------------------------- */
+
+.form_inputs_fl_container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.form_input_label,
+.form_input_label_message {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.form_title {
+  font-size: 1.5rem;
+  font-weight: var(--fw-bold);
+}
+
+input,
+textarea {
+  border: 1px solid var(--gray-500);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-sm);
+  font-size: var(--fs-body);
+  color: var(--gray-900);
+  transition: var(--transition);
+}
+
+input:hover,
+textarea:hover {
+  border-color: var(--green-600);
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--green-600);
+  outline: none;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+/* --------------------------- */
+/* RADIO GROUP                 */
+/* --------------------------- */
+
+.query_type_container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.query_type_title {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-bold);
+}
+
+.query_type_options {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid var(--gray-500);
+  border-radius: var(--radius-md);
+  padding: 0.7rem;
+  background: var(--white);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.query_type_options:hover {
+  background-color: var(--green-100);
+  border-color: var(--green-600);
+}
+
+.query_type_options input[type="radio"] {
+  display: none;
+}
+
+.query_type_options label {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+}
+
+/* Radio button circle */
+.query_type_options label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--gray-500);
+  border-radius: 50%;
+  background: var(--white);
+}
+
+.query_type_options input[type="radio"]:checked + label::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--green-600);
+}
+
+/* --------------------------- */
+/* CHECKBOX                    */
+/* --------------------------- */
+
+.consent_container {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.consent_container input[type="checkbox"] {
+  display: none;
+}
+
+.consent_container label {
+  cursor: pointer;
+  position: relative;
+  padding-left: 28px;
+}
+
+.consent_container label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--gray-500);
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  transform: translateY(-50%);
+}
+
+/* (optional) if you want tick: add ::after */
+
+/* --------------------------- */
+/* SUBMIT BUTTON               */
+/* --------------------------- */
+
+.submit_button {
+  width: 100%;
+  padding: var(--spacing-sm);
+  background: var(--green-600);
+  color: var(--white);
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-bold);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.submit_button:hover {
+  background: hsl(169, 82%, 22%);
+}
+
+/* --------------------------- */
+/* ERROR MESSAGE               */
+/* --------------------------- */
+
+.error_message {
+  display: none;
+  font-size: 0.875rem;
+  color: var(--red-500);
+}
+
+/* --------------------------- */
+/* RESPONSIVE                  */
+/* --------------------------- */
+
+@media (min-width: 500px) {
+  section {
+    max-width: 700px;
+  }
+
+  form {
+    padding: var(--spacing-xl);
+    gap: var(--spacing-lg);
+  }
+
+  .form_inputs_fl_container {
+    flex-direction: row;
+  }
+
+  .query_type_container {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}

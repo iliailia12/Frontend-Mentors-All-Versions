@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* სენსიტიური ფონი, ისევე როგორც ორიგინალში */
+    body {
+      background-image: url('./images/pattern-bg.svg'), url('./images/pattern-quotes.svg'), url('./images/pattern-curve.svg');
+      background-repeat: no-repeat;
+      background-position: 92% 0%, 30% 25%, bottom left;
+    }
+    @media (max-width: 768px) {
+      body {
+        background-size: 80%, 20%, 80%;
+        background-position: 62% 18%, 45% 58%, bottom left;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen grid place-items-center font-inter text-[32px] bg-no-repeat">
+  <div class="container max-w-[80vw]">
+    <!-- Tanya Section -->
+    <section class="flex justify-center items-center flex-wrap md:flex-nowrap gap-8 md:gap-16">
+      <div class="max-w-xl">
+        <p class="text-[1.4rem] font-light text-[#394264] leading-8 mb-8 md:text-lg">
+          “ I’ve been interested in coding for a while but never taken the jump, until now. 
+          I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
+          excited about the future. ”
+        </p>
+        <div class="flex flex-col items-start md:items-start">
+          <span class="text-[1.2rem] font-medium text-[#394264] md:text-lg">Tanya Sinclair</span>
+          <span class="text-[1.3rem] font-light text-[#9da6b5] md:text-base">UX Engineer</span>
+        </div>
+      </div>
+      <div class="relative">
+        <img
+          src="./images/image-tanya.jpg"
+          alt="Tanya Sinclair"
+          class="w-[500px] h-[500px] rounded-lg object-cover md:w-[250px] md:h-[250px]"
+        />
+      </div>
+    </section>
+
+    <!-- John Section -->
+    <section class="flex justify-center items-center flex-wrap md:flex-nowrap gap-8 md:gap-16 mt-20">
+      <div class="max-w-xl">
+        <p class="text-[1.4rem] font-light text-[#394264] leading-8 mb-8 md:text-lg">
+          “ If you want to lay the best foundation possible I’d recommend taking this course. 
+          The depth the instructors go into is incredible. I now feel so confident about 
+          starting up as a professional developer. ”
+        </p>
+        <div class="flex flex-col items-start md:items-start">
+          <span class="text-[1.2rem] font-medium text-[#394264] md:text-lg">John Tarkpor</span>
+          <span class="text-[1.3rem] font-light text-[#9da6b5] md:text-base">Junior Front-end Developer</span>
+        </div>
+      </div>
+      <div class="relative">
+        <img
+          src="./images/image-john.jpg"
+          alt="John Tarkpor"
+          class="w-[500px] h-[500px] rounded-lg object-cover md:w-[250px] md:h-[250px]"
+        />
+    </section>
+  </div>
+</body>
+</html>

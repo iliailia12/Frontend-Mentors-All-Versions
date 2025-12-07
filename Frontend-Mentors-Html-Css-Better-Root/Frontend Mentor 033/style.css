@@ -1,0 +1,139 @@
+:root {
+  /* 🎨 Primary */
+  --orange-500: #fb7413;
+
+  /* 🧊 Neutrals */
+  --white: #ffffff;
+  --white-alpha-10: #ffffff0a;
+
+  /* 🩶 Greys */
+  --grey-500: #959eac;
+  --grey-600: #222b34;
+  --grey-700: #181f27;
+  --grey-900: #252d37;
+  --grey-950: #121417;
+  --grey-970: #111419;
+
+  /* 📏 Layout / Radius */
+  --radius-card: 20px;
+  --radius-circle: 50%;
+}
+
+body {
+  background-color: var(--grey-950);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: "Overpass", sans-serif;
+}
+
+.card {
+  background: linear-gradient(var(--grey-600), var(--grey-700));
+  max-width: 350px;
+  min-height: 370px;
+  padding: 1.8rem;
+  margin: 1rem;
+  border-radius: var(--radius-card);
+  box-shadow: 0 2px 2px var(--grey-970);
+}
+
+.hide {
+  display: none;
+}
+
+.feedback {
+  text-align: center;
+}
+
+.feedback img {
+  display: block;
+  margin: 0.8rem auto 1.8rem auto;
+}
+
+.selectionMessage {
+  display: inline-block;
+  background-color: var(--white-alpha-10);
+  color: var(--orange-500);
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.selectionMessage div {
+  display: inline-block;
+}
+
+.star {
+  background-color: var(--white-alpha-10);
+  padding: 15px;
+  display: inline-flex;
+  border-radius: var(--radius-circle);
+}
+
+h1 {
+  color: var(--white);
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+p {
+  color: var(--grey-500);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  font-size: 0.9375rem;
+  margin-bottom: 1.5rem;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+span {
+  color: var(--grey-500);
+  background-color: var(--white-alpha-10);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  border-radius: var(--radius-circle);
+  cursor: pointer;
+}
+
+button {
+  background-color: var(--orange-500);
+  color: var(--grey-950);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  border-radius: 30px;
+  padding: 1rem 0;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--white);
+}
+
+span:hover {
+  background-color: var(--orange-500);
+  color: var(--grey-950);
+}
+
+.ratingActive {
+  background-color: var(--white);
+  color: var(--grey-950);
+}

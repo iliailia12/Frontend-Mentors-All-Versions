@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Frontend Mentor | Article Preview Component</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+</head>
+<body class="bg-[#edf2f8] flex items-center justify-center min-h-screen p-4 font-inter">
+
+  <div class="card flex flex-col md:flex-row bg-white rounded-lg shadow-lg overflow-hidden w-full max-w-3xl">
+    
+    <!-- Image Section -->
+    <img src="images/drawers.jpg" alt="Drawers"
+      class="w-full md:w-[280px] h-[200px] md:h-auto object-cover" />
+
+    <!-- Text Content -->
+    <div class="flex flex-col justify-between p-6 md:p-8 w-full">
+      
+      <div>
+        <h2 class="text-[#2f3e53] font-semibold text-lg leading-6 mb-3">
+          Shift the overall look and feel by adding these wonderful touches to furniture in your home
+        </h2>
+        <p class="text-[#7b8794] text-sm leading-5">
+          Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I've got some simple tips to help you make any room feel complete.
+        </p>
+      </div>
+
+      <!-- Footer -->
+      <div class="flex items-center justify-between mt-6">
+        <!-- Author Info -->
+        <div class="flex items-center gap-3">
+          <img src="images/avatar-michelle.jpg" alt="Michelle Appleton"
+            class="w-10 h-10 rounded-full object-cover" />
+          <div class="text-[#7b8794] text-xs leading-4">
+            <p class="text-[#2f3e53] font-semibold">Michelle Appleton</p>
+            <p>28 Jun 2020</p>
+          </div>
+        </div>
+
+        <!-- Share Button -->
+        <button aria-label="Share"
+          class="w-8 h-8 bg-[#f0f4f8] rounded-full flex items-center justify-center text-[#7b8794] hover:text-[#2f3e53] transition-colors duration-300">
+          <i class="fas fa-share"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

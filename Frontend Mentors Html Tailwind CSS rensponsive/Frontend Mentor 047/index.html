@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gradient-to-b from-[#EBF2FC] to-[#EEF8F9] dark:from-[#040918] dark:to-[#091540] text-neutral-900 dark:text-white transition-colors duration-300">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Extension Manager</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen">
+  <div class="max-w-4xl mx-auto px-4 py-6">
+    <!-- Header -->
+    <header class="flex justify-between items-center bg-neutral-100 dark:bg-neutral-800 rounded-lg p-3 mb-6">
+      <button id="themeToggle" class="bg-neutral-100 dark:bg-neutral-800 border border-neutral-300 rounded-full w-8 h-8 flex items-center justify-center hover:border-red-700"></button>
+    </header>
+
+    <!-- Filter Buttons -->
+    <section class="text-center mb-6">
+      <h1 class="text-2xl font-bold mb-4">Extension List</h1>
+      <div class="flex justify-center gap-4 flex-wrap">
+        <button class="filter-btn px-4 py-1 border-2 border-neutral-300 bg-neutral-100 dark:bg-neutral-800 rounded-full hover:border-red-700 highlight" value="all">All</button>
+        <button class="filter-btn px-4 py-1 border-2 border-neutral-300 bg-neutral-100 dark:bg-neutral-800 rounded-full hover:border-red-700" value="active">Active</button>
+        <button class="filter-btn px-4 py-1 border-2 border-neutral-300 bg-neutral-100 dark:bg-neutral-800 rounded-full hover:border-red-700" value="inactive">Inactive</button>
+      </div>
+    </section>
+
+    <!-- Extensions -->
+    <section class="extensions">
+      <div class="extension-container flex flex-col gap-6"></div>
+    </section>
+  </div>
+
+  <script src="scrypt.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fylo Data Storage Component</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[hsl(229,57%,11%)] min-h-screen bg-no-repeat bg-bottom bg-fixed" style="background-image: url('./images/bg-desktop.png'); font-family: 'Raleway', sans-serif;">
+
+  <main class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 px-6 py-10 md:py-0 min-h-screen">
+    
+    <!-- Left Card -->
+    <section class="bg-[hsl(228,56%,26%)] rounded-tr-[100px] rounded-br-[10px] rounded-l-md w-full max-w-sm md:w-[340px] h-[210px] flex flex-col">
+      <img src="./images/logo.svg" alt="Fylo logo" class="w-[150px] mt-[35px] ml-[30px]" />
+      <div class="flex gap-[20px] mt-auto mb-[35px] ml-[30px]">
+        <img src="./images/icon-document.svg" alt="Document icon" class="w-[40px] h-[40px] bg-[hsl(229,57%,11%)] p-[11px] rounded-md cursor-pointer" />
+        <img src="./images/icon-folder.svg" alt="Folder icon" class="w-[40px] h-[40px] bg-[hsl(229,57%,11%)] p-[11px] rounded-md cursor-pointer" />
+        <img src="./images/icon-upload.svg" alt="Upload icon" class="w-[40px] h-[40px] bg-[hsl(229,57%,11%)] p-[11px] rounded-md cursor-pointer" />
+      </div>
+    </section>
+
+    <!-- Right Card -->
+    <section class="relative bg-[hsl(228,56%,26%)] rounded-md w-full max-w-xl px-6 py-8">
+      <p class="text-[hsl(229,7%,55%)] text-sm mb-2">
+        You’ve used <span class="text-[hsl(243,100%,93%)] font-bold">815 GB</span> of your storage
+      </p>
+
+      <!-- Bubble -->
+      <div class="absolute top-[-60px] right-6 md:right-auto md:left-[35px] bg-white text-[hsl(229,57%,11%)] px-5 py-3 rounded-md rounded-br-none text-center font-semibold text-sm shadow-lg">
+        <span class="text-3xl font-bold">185</span> GB Left
+        <div class="absolute bottom-[-20px] right-0 w-0 h-0 border-t-[25px] border-l-[20px] border-t-white border-l-transparent"></div>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="mt-8 relative">
+        <div class="w-full h-[17px] rounded-[15px] bg-[hsl(229,57%,11%)]"></div>
+        <div class="absolute top-0 left-0 w-[75%] h-[17px] rounded-[15px] bg-gradient-to-r from-[hsl(6,100%,80%)] to-[hsl(335,100%,65%)]"></div>
+        <div class="absolute top-[1px] left-[calc(75%-8px)] w-[15px] h-[15px] rounded-full bg-white cursor-pointer"></div>
+      </div>
+
+      <div class="flex justify-between text-[hsl(243,100%,93%)] mt-4 text-sm">
+        <p>0 GB</p>
+        <p>1000 GB</p>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-white: #FFFFFF;
+    --bg-green: #2AB3B1;
+    --bg-button: #C0DF33;
+    --bg-light-green: #9AA7BE;
+}
+
+body {
+    background-color: hsl(194, 54%, 92%);
+    font-family: 'Karla',sans-serif;
+    font-size: 1rem;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+   width: 635px;
+   margin: 0rem 1rem;
+}
+
+.card-overview {
+    background-color: var(--bg-white);
+    display: grid;
+    grid-template: 259px 259px / 1fr 1fr;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+.header {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 15px 40px;
+}
+
+.header h1 {
+    color: var(--bg-green);
+    font-weight: 700;
+}
+
+p.refund-text {
+    color: var(--bg-button);
+    font-size: 18px;
+}
+
+p.gain-access-text {
+    color: var(--bg-light-green);
+    line-height: 26px;
+}
+
+
+.month-section {
+    background-color: var(--bg-green);
+    color: var(--bg-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 30px 40px;
+}
+
+.month-section h2 {
+    font-size: 22px;
+}
+
+
+.price-container {
+    display: flex;
+    align-items: center;
+}
+
+.sub-price {
+    font-size: 32px;
+    font-weight: 700;
+    padding-right: 11px;
+}
+
+.sub-time {
+    color: hsl(165, 53%, 65%);
+}
+
+
+.signup-btn {
+    background-color: var(--bg-button);
+    color: var(--bg-white);
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    padding: 15px 0;
+    box-shadow: 3px 7px 9px hsl(166, 32%, 45%);
+    transition: background-color 0.4s ease;
+}
+
+.signup-btn:hover {
+    background-color: hsl(165, 53%, 65%);
+    cursor: pointer;
+}
+
+
+.whyus-section {
+    background-color: var(--bg-light-green);
+    color: var(--bg-white);
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.whyus-section h2 {
+    font-size: 18px;
+    font-weight: 700;
+    padding-bottom: px;
+}
+
+
+.whyus-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.whyus-list li {
+    color: hsl(165, 90%, 81%);
+    transition: background-color 0.4s ease, 
+    color 0.4s ease,
+    padding 0.4s ease;
+}
+
+.whyus-list li:hover {
+    background-color: var(--bg-green);
+    color: var(--bg-white);
+    border-radius: 5px;
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+
+.name a {
+    text-decoration: none;
+    color: blue;
+}
+
+.attribution img {
+    width: 14px;
+}
+
+.attribution a {
+    text-decoration: none;
+    color: blue;
+}
+
+.attribution a:hover {
+    color: hsl(212, 7%, 52%);
+}

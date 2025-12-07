@@ -1,0 +1,551 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Barlow:wght@100;300&family=Fraunces:opsz@9..144&family=Josefin+Sans:wght@300&family=Montserrat&display=swap');
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --Dar-Gray: hsl(0, 0%, 55%);
+    --Very-Dark-Gray: hsl(0, 0%, 41%);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav{
+    background-color: transparent;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: auto;
+}
+.main{
+    display: flex;
+    list-style: none;
+    margin: 30px;
+    margin-right: 5rem; 
+}
+.main li a{
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 1.2rem;
+    position: relative;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.main li a:hover::after{
+    position: absolute;
+    content: '';
+    height: 5px;
+    bottom: -1px;
+    width: 40%;
+    display: block;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 0 15%;
+}
+nav .hamburger{
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+}
+.main-top{
+    display: none;
+}
+.main-logo{
+    display: none;
+}
+nav .main .closemenu{
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+.logo{
+    margin: 30px 5rem;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#hero{
+    background-image: url(.//images/desktop/image-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+}
+.hero{
+    margin: 0 auto;
+    padding: 0 50px;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.hero-body{
+    text-transform: uppercase;
+    width: 700px;
+    padding: 45px 40px;
+    height: 300px;
+    color: white;
+    border: 2px solid white;
+    font-size: 3rem;
+    letter-spacing: .2rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 100;
+    margin-left: 2rem;
+    margin-top: 5rem;
+}
+.container{
+    min-height: 100vh;
+    width: 88%;
+    margin: auto;
+}
+/* VR section */
+.vr{
+    width: 88%;
+    margin: 8rem auto;
+    display: flex;
+    position: relative;
+}
+
+.vr-text{
+    background-color: var(--White);
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 100;
+    height: 60vh;
+    width: auto;
+    padding-left: 60px;
+    position: absolute;
+    left: 36rem;
+    bottom: 0rem;
+    
+}
+.vr-text h1{
+    text-align: start;
+    text-transform: uppercase;
+    font-size: 2rem;
+    width: 90%;
+    margin-top: 4rem;
+    letter-spacing: .6rem;
+    line-height: 3rem; 
+}
+.vr-text p{
+    text-align: start;
+    font-size: 1.2rem;
+    line-height: 3rem;
+    margin-top: 4rem; 
+    color: var(--Very-Dark-Gray);
+    font-weight: 300;
+}
+.creation-tittle{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+}
+.creation-tittle h1{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+button{
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1px solid var(--Black);
+    height: 30px;
+    width: 120px;
+    letter-spacing: .2rem;
+    color: var(--black);
+}
+button:hover{
+    background-color: var(--Black);
+    color: var(--White);
+}
+.creation-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.3rem;
+    margin-top: 3rem;
+}
+.grid{
+    text-transform: uppercase;
+    height: 70vh;
+    position: relative;
+    cursor: pointer;
+}
+.grid:hover{
+    opacity: .2;
+}
+.grid h2{
+    position: absolute;
+    width: 60%;
+    bottom: 2rem;
+    left: 3rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 100;
+    text-align: start;
+    font-size: 2rem;
+    color: var(--White);
+}
+.grid h2:hover{
+    color: var(--Black);
+}
+.one{
+    background-image: url(.//images/desktop/image-deep-earth.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.two{
+    background-image: url(.//images/desktop/image-night-arcade.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.three{
+    background-image: url(.//images/desktop/image-soccer-team.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.four{
+    background-image: url(.//images/desktop/image-grid.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.four h2{
+    width: 30%;
+}
+.five{
+    background-image: url(.//images/desktop/image-from-above.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.six{
+    background-image: url(.//images/desktop/image-pocket-borealis.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.seven{
+    background-image: url(.//images/desktop/image-curiosity.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.eight{
+    background-image: url(.//images/desktop/image-fisheye.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.footer{
+    height: 40vh;
+    width: 100%;
+    margin-top: 6rem;
+    background-color: var(--Black);
+}
+.footer-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-icons ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    float: right;
+    margin-right: 5rem;  
+    cursor: pointer; 
+}
+.footer-icons ul li a{
+    position: relative;
+}
+.footer-icons ul li a:hover::after{
+    position: absolute;
+    content: '';
+    height: 5px;
+    bottom: -10px;
+    width: 70%;
+    display: block;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 0 15%;  
+}
+.footer-main{
+    display: flex;
+    list-style: none;
+    margin: 30px;
+    margin-left: 4.4rem;
+}
+.footer-main li a{
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 1.2rem;
+    position: relative;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.footer-main li a:hover::after{
+    position: absolute;
+    content: '';
+    height: 5px;
+    bottom: -1px;
+    width: 40%;
+    display: block;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 0 15%;
+}
+.copyrights{
+    color: var(--White);
+    margin-right: 4.5rem;
+    margin-top: 4rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 100;
+    font-size: 1rem;
+}
+.attribution { 
+    font-size: 1rem; 
+    text-align: center; 
+    color: var(--White);
+    font-family: 'Josefin Sans', sans-serif;
+}
+.attribution a { 
+    color: var(--White );
+    text-decoration: none;
+}
+.attribution a:hover{
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1024px){
+  .vr{
+        margin: 5rem auto;
+        flex-direction: column;
+        width: 90vw;
+    }
+    .vr-image img{
+        width: 100%;
+    }
+    .vr-text{
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: auto;
+        margin-top: 10px;
+        padding-left: 0;
+        width: 90%;
+    }
+    .vr-text h1{
+        width: 100%;
+        letter-spacing: .2rem;
+        text-align: center;
+        margin: 2rem 1rem;
+    }
+    .vr-text p{
+        width: 100%;
+        text-align: center;
+        height: auto;
+        margin: auto 1rem;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .main{
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin: auto 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        background: #000;
+        transition: left .4s ease;
+        display: none;
+    }
+    .logo{
+        margin-left: 2rem;
+    }
+    .main-top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .main-logo{
+        display: block;
+        position: absolute;
+        top: 30px;
+        left: 2rem;
+    }
+    nav .main .closemenu{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 40px;
+    }
+    nav .hamburger{
+        display: block;
+        margin-right: 2rem;
+    }
+    nav .main li a{
+        text-transform: uppercase;
+        text-align: start;
+        margin-left: 2rem;
+        line-height: 3rem;
+    }
+    #hero{
+        background-image: url(.//images/mobile/image-hero.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .hero-body{
+        width: 320px;
+        height: auto;
+        padding-left: 15px;
+        margin-left: -20px;
+        font-size: 1.7rem;
+        letter-spacing: 0rem;
+        line-height: 3rem;
+    }
+    .vr{
+        margin: 5rem auto;
+        flex-direction: column;
+        width: 90vw;
+    }
+    .vr-image img{
+        width: 100%;
+    }
+    .vr-text{
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: auto;
+        margin-top: 10px;
+        padding-left: 0;
+        width: 90%;
+    }
+    .vr-text h1{
+        width: 100%;
+        letter-spacing: .2rem;
+        text-align: center;
+        margin: 2rem 1rem;
+    }
+    .vr-text p{
+        width: 100%;
+        text-align: center;
+        height: auto;
+        margin: auto 1rem;
+    }
+    .creation-tittle{
+        flex-direction: column;
+        position: relative;
+    }
+    button{
+        position: absolute;
+        top: 81rem;
+    }
+    
+    .creation-grid{
+        display: inline-block;
+        width: 100%;
+    }
+    .grid{
+        height: 150px;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .one{
+        background-image: url(.//images/mobile/image-deep-earth.jpg);
+    }
+    .two{
+        background-image: url(.//images/mobile/image-night-arcade.jpg);
+    }
+    .three{
+        background-image: url(.//images/mobile/image-soccer-team.jpg);
+    }
+    .four{
+        background-image: url(.//images/mobile/image-grid.jpg);
+    }
+    
+    .five{
+        background-image: url(.//images/mobile/image-from-above.jpg);
+    }
+    .six{
+        background-image: url(.//images/mobile/image-pocket-borealis.jpg);
+    }
+    .seven{
+        background-image: url(.//images/mobile/image-curiosity.jpg);
+    }
+    .eight{
+        background-image: url(.//images/mobile/image-fisheye.jpg);
+    }
+    .grid h2{
+        top: 3.5rem;
+        left: 1rem;
+        font-size: 1.7rem;
+        width: 45%;
+        height: 70px;
+        bottom: 0;
+    }
+    .four h2{
+        width: 30% !important;
+    }
+    .footer{
+        width: 100vw;
+        height: 700px;
+    }
+    .footer-flex{
+        flex-direction: column;
+        position: relative;
+    }
+    .footer-main{
+        text-align: center;
+        display: inline-block;
+        margin-left: 6rem;
+        margin-top: 10px;
+        height: 300px;
+        width: 50%;
+        line-height: 2rem;
+    }
+    .footer-left{
+        width: 100%;
+    }
+    .footer-left .logo{
+        margin-top: 3rem;
+        margin-left: 4rem;
+    }
+    .footer-left .logo img{
+        width: 250px;
+    }
+    .footer-icons{
+        margin-left:  7rem;
+        margin-top: -1rem;
+        width: 60%;
+    }
+    
+    .copyrights{
+        margin-left: 3rem;
+        width: 80%;
+    }
+    .attribution{
+        margin-top: 30px;
+    }
+
+}

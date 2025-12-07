@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frontend Mentor | FAQ accordion</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-[url('images/background-pattern-mobile.svg')] md:bg-[url('images/background-pattern-desktop.svg')] bg-no-repeat bg-contain bg-purple-100 flex items-center justify-center font-sans">
+
+  <article class="bg-white w-11/12 max-w-md rounded-lg p-6 md:p-8 shadow-md">
+    
+    <!-- Header -->
+    <section class="flex items-center gap-4 mb-4">
+      <img src="images/icon-star.svg" alt="star icon" class="w-6 h-6 md:w-8 md:h-8" />
+      <h1 class="text-2xl md:text-4xl font-bold text-purple-950">FAQs</h1>
+    </section>
+
+    <!-- FAQ 1 -->
+    <section class="border-b border-purple-100 py-3">
+      <input type="radio" name="accordion" id="faq1" class="peer hidden" />
+      <label for="faq1" class="flex justify-between items-center cursor-pointer">
+        <h2 class="text-sm md:text-base font-semibold text-purple-950">What is Frontend Mentor, and how will it help me?</h2>
+        <span class="ml-4">
+          <img src="images/icon-plus.svg" alt="plus" class="block peer-checked:hidden" />
+          <img src="images/icon-minus.svg" alt="minus" class="hidden peer-checked:block" />
+        </span>
+      </label>
+      <p class="text-sm text-purple-600 max-h-0 overflow-hidden transition-all duration-300 peer-checked:max-h-40 peer-checked:py-2">
+        Frontend Mentor offers realistic coding challenges to help developers improve their
+        frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for
+        all levels and ideal for portfolio building.
+      </p>
+    </section>
+
+    <!-- FAQ 2 -->
+    <section class="border-b border-purple-100 py-3">
+      <input type="radio" name="accordion" id="faq2" class="peer hidden" />
+      <label for="faq2" class="flex justify-between items-center cursor-pointer">
+        <h2 class="text-sm md:text-base font-semibold text-purple-950">Is Frontend Mentor free?</h2>
+        <span class="ml-4">
+          <img src="images/icon-plus.svg" alt="plus" class="block peer-checked:hidden" />
+          <img src="images/icon-minus.svg" alt="minus" class="hidden peer-checked:block" />
+        </span>
+      </label>
+      <p class="text-sm text-purple-600 max-h-0 overflow-hidden transition-all duration-300 peer-checked:max-h-40 peer-checked:py-2">
+        Yes, Frontend Mentor offers both free and premium coding challenges, with the free
+        option providing access to a range of projects suitable for all skill levels.
+      </p>
+    </section>
+
+    <!-- FAQ 3 -->
+    <section class="border-b border-purple-100 py-3">
+      <input type="radio" name="accordion" id="faq3" class="peer hidden" />
+      <label for="faq3" class="flex justify-between items-center cursor-pointer">
+        <h2 class="text-sm md:text-base font-semibold text-purple-950">Can I use Frontend Mentor projects in my portfolio?</h2>
+        <span class="ml-4">
+          <img src="images/icon-plus.svg" alt="plus" class="block peer-checked:hidden" />
+          <img src="images/icon-minus.svg" alt="minus" class="hidden peer-checked:block" />
+        </span>
+      </label>
+      <p class="text-sm text-purple-600 max-h-0 overflow-hidden transition-all duration-300 peer-checked:max-h-40 peer-checked:py-2">
+        Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
+        way to showcase your skills to potential employers!
+      </p>
+    </section>
+
+    <!-- FAQ 4 -->
+    <section class="py-3">
+      <input type="radio" name="accordion" id="faq4" class="peer hidden" />
+      <label for="faq4" class="flex justify-between items-center cursor-pointer">
+        <h2 class="text-sm md:text-base font-semibold text-purple-950">How can I get help if I'm stuck on a Frontend Mentor challenge?</h2>
+        <span class="ml-4">
+          <img src="images/icon-plus.svg" alt="plus" class="block peer-checked:hidden" />
+          <img src="images/icon-minus.svg" alt="minus" class="hidden peer-checked:block" />
+        </span>
+      </label>
+      <p class="text-sm text-purple-600 max-h-0 overflow-hidden transition-all duration-300 peer-checked:max-h-40 peer-checked:py-2">
+        The best place to get help is inside Frontend Mentor's Discord community. There's a help
+        channel where you can ask questions and seek support from other community members.
+      </p>
+    </section>
+  </article>
+</body>
+</html>

@@ -1,0 +1,52 @@
+ p{
+      font-size: 18px;;
+      margin-left: 20px;
+    }
+    body{
+      background-color: hsl(217, 54%, 11%);
+    }
+    .card{
+      background-color: hsl(216, 50%, 16%);
+    }
+    p{
+      color: hsl(215, 32%, 27%);
+      margin-left: 20px;
+    }
+    h2{
+      color: hsl(178, 100%, 50%);
+    }
+    .myp{
+      font-size: 20px;
+      margin-left: 20px;
+    }
+    h1{
+      color: white;
+      margin-left: 20px;
+    }
+    span{
+      color: white;
+    }
+    .card{
+      height: 700px;
+      width: 400px;
+      margin-top: 50px;
+      margin-left: 750px;
+    }
+    img{
+      width: 300px;
+      height: 300px;
+      margin-left: 50px;
+      margin-top: 50px;
+    }
+    h2{
+      margin-left: 20px;
+    }
+    .myimg{
+      border-radius: 100px;
+      width: 40px;
+      height: 40px;
+      float: left;
+      margin-top: 0;
+      margin-left: 20px;
+      margin-right: 19px;
+    }
