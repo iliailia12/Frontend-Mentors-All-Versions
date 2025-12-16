@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Multi-Step Form</title>
+</head>
+<body>
+  <main class="main">
+    <section class="sidebar">
+      <nav>
+        <a href="#" class="step">
+          <span class="circle filled">1</span>
+          <span class="step-text">
+            <div style="font-weight: 400; font-size: 9px;">Step 1</div>
+            <div>Your info</div>
+          </span>
+        </a>
+        <a href="#" class="step">
+          <span class="circle outlined">2</span>
+          <span class="step-text">
+            <div style="font-weight: 400; font-size: 9px;">Step 2</div>
+            <div>Select plan</div>
+          </span>
+        </a>
+        <a href="#" class="step">
+          <span class="circle outlined">3</span>
+          <span class="step-text">
+            <div style="font-weight: 400; font-size: 9px;">Step 3</div>
+            <div>Add-ons</div>
+          </span>
+        </a>
+        <a href="#" class="step">
+          <span class="circle outlined">4</span>
+          <span class="step-text">
+            <div style="font-weight: 400; font-size: 9px;">Step 4</div>
+            <div>Summary</div>
+          </span>
+        </a>
+      </nav>
+      <div class="images">
+        <img src="https://storage.googleapis.com/a1aa/image/7e3883a5-57fc-4b59-e42c-679a288d989c.jpg" class="circle-img" alt="Shape">
+        <img src="https://storage.googleapis.com/a1aa/image/0fc8cc70-ebf6-4324-2e17-e656629527b0.jpg" class="polygon-img" alt="Shape">
+      </div>
+    </section>
+    <section class="content">
+      <h1>Personal info</h1>
+      <p>Please provide your name, email address, and phone number.</p>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="e.g. Stephen King">
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="e.g. stephenking@lorem.com">
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="e.g. +1 234 567 890">
+
+        <div class="form-actions">
+          <button type="submit">Next Step</button>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link  rel="icon"  type="image/png"  sizes="32x32"  href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="scrypt.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  </head>
+  <body>
+    <main>
+      <div id="game" data-mode="">
+        <div class="banner">
+          <img src="./images/logo.svg" alt="" />
+          <div class="banner__score">
+            <p>SCORE</p>
+            <p id="score"></p>
+          </div>
+        </div>
+        <div class="board">
+ 
+          <button class="gesture-button" data-gesture="paper">
+            <img src="./images/icon-paper.svg" alt="" />
+          </button>
+          <button class="gesture-button" data-gesture="scissors">
+            <img src="./images/icon-scissors.svg" alt="" />
+          </button>
+          <button class="gesture-button" data-gesture="rock">
+            <img src="./images/icon-rock.svg" alt="" />
+          </button>
+          <button class="gesture-button" data-gesture="spock">
+            <img src="./images/icon-spock.svg" alt="" />
+          </button>
+          <button class="gesture-button" data-gesture="lizard">
+            <img src="./images/icon-lizard.svg" alt="" />
+          </button>
+        </div>
+        <div class="result" hidden>
+          <div class="result__show player">
+            <h3>YOU PICKED</h3>
+            <p class="visually-hidden"></p>
+            <button class="gesture-button" data-gesture="" data-win="" disabled>
+              <img src="" alt="" />
+            </button>
+          </div>
+          <div class="result__show house">
+            <h3>THE HOUSE PICKED</h3>
+            <p class="visually-hidden"></p>
+            <button class="gesture-button" data-gesture="" data-win="" disabled>
+              <img src="" alt="" />
+            </button>
+          </div>
+          <div class="result__report">
+            <h2></h2>
+            <button>PLAY AGAIN</button>
+          </div>
+        </div>
+        <div class="bottom-buttons">
+          <button class="mode-button">BONUS MODE</button>
+          <button class="rules-button">RULES</button>
+        </div>
+        <dialog id="rules-dialog" class="rules">
+          <div class="rules__wrapper">
+            <div>
+              <h2>RULES</h2>
+              <form method="dialog">
+                <button><img src="./images/icon-close.svg" alt="" /></button>
+              </form>
+            </div>
+            <div class="rules__img-wrapper"></div>
+          </div>
+        </dialog>
+      </div>
+    </main>
+  </body>
+</html>

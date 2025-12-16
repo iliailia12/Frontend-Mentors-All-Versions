@@ -1,0 +1,558 @@
+:root {
+  --color-bg-main: #1c2230;
+  --color-bg-section: #181f2b;
+  --color-bg-footer: #0c1524;
+  --color-text-main: #9ca5b4;
+  --color-text-light: #aaaeb6;
+  --color-text-muted: #989fa9;
+  --color-white: #ffffff;
+
+  --color-accent: #528c8e;
+  --color-btn-gradient-start: #4ec6d4;
+  --color-btn-gradient-end: #41afd0;
+  --color-btn-hover-start: #8cdae4;
+  --color-btn-hover-end: #88dce4;
+
+  --font-main: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+              'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  --radius-btn: 25px;
+  --transition-main: 0.3s;
+}
+
+/* --- Base Styles --- */
+html {
+  scroll-behavior: smooth;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-main); /* Apply main font globally */
+}
+
+body {
+  background-color: var(--color-bg-main);
+}
+
+/* --- Utility Classes --- */
+.container {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px; /* Add some default horizontal padding */
+}
+
+/* --- Navbar --- */
+.navbar {
+  background-color: var(--color-bg-main);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-nav {
+  display: flex;
+  padding: 1.5rem 0;
+  justify-content: space-between;
+}
+
+.nav-items {
+  display: flex;
+  gap: 50px;
+  font-size: 25px;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: var(--color-text-muted);
+  transition: var(--transition-main);
+}
+
+.nav-items a:hover {
+  color: var(--color-white);
+  border-bottom: 2px solid var(--color-white);
+}
+
+/* --- Hero Section --- */
+.hero {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: auto; /* Changed from fixed 1200px */
+  padding-bottom: 50px;
+}
+
+.hero-intro {
+  padding-top: 20px;
+  text-align: center;
+  max-width: 800px; /* Constrain the text/button area */
+}
+
+.hero-intro img {
+  /* Style for the main hero image */
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.hero .img2 {
+  /* This is likely the curvy background image */
+  position: relative; /* Changed from absolute to flow with content on large screens */
+  width: 100%;
+  max-width: 1900px;
+  height: auto;
+  top: 0;
+  z-index: -1;
+  margin-top: -150px; /* Pull it up to overlap previous section */
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 30px;
+}
+
+.about h2 {
+  margin-top: 30px;
+  font-size: 42px;
+  font-weight: 600;
+  color: var(--color-white);
+}
+
+.about p {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-text-light);
+  max-width: 800px; /* constrain paragraph width */
+}
+
+.about button {
+  width: 300px;
+  height: 55px;
+  border-radius: var(--radius-btn);
+  border: none;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: var(--color-white);
+  background: linear-gradient(
+    to right,
+    var(--color-btn-gradient-start),
+    var(--color-btn-gradient-end)
+  );
+  transition: var(--transition-main);
+  cursor: pointer;
+}
+
+.about button:hover {
+  background: linear-gradient(
+    to right,
+    var(--color-btn-hover-start),
+    var(--color-btn-hover-end)
+  );
+}
+
+/* --- Main Content Section --- */
+.main {
+  background-color: var(--color-bg-section);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0; /* Add vertical padding */
+  height: auto; /* Changed from fixed 1900px */
+}
+
+.features {
+  width: 100%;
+  max-width: 1500px;
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  justify-content: center;
+  gap: 100px; /* Reduced gap for better mobile/tablet fit */
+  margin-top: -150px; /* Pull features up into the curve */
+  padding: 0 20px;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Allows content to stack */
+  max-width: 350px;
+  text-align: center;
+  padding: 20px;
+}
+
+.about1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.about1 img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.about1 h2 {
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--color-white);
+}
+
+.about1 p {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-text-muted); /* Using a variable */
+}
+
+.idk {
+  margin-top: 100px;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  max-width: 1600px;
+  padding: 0 20px;
+}
+
+.idk img {
+  max-width: 50%;
+  height: auto;
+}
+
+.about2 {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 50%;
+}
+
+.about2 h2 {
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.about2 p {
+  color: var(--color-text-light);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.about2 .pp {
+  color: var(--color-accent);
+  font-size: 20px;
+  font-weight: 600;
+  border-bottom: 2px solid var(--color-accent);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: var(--transition-main);
+  cursor: pointer;
+}
+
+.about2 .pp:hover {
+  color: var(--color-white);
+  border-bottom: 2px solid var(--color-white);
+}
+
+/* --- Testimonial Cards --- */
+.cards {
+  margin-left: 0; /* Remove fixed margin */
+  margin-top: 150px;
+  display: flex;
+  gap: 50px;
+  z-index: 1; /* Keep cards above other elements */
+  max-width: 1600px;
+  width: 100%;
+  padding: 0 20px;
+  flex-wrap: wrap; /* Allow wrapping */
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 465px; /* Use max-width for better responsiveness */
+  height: auto;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #21293c; /* Hardcoded background, consider a variable */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+  font-size: 20px;
+  color: var(--color-text-main);
+  line-height: 1.5;
+}
+
+.for-image {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.for-image img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.for-image div {
+  /* Container for name and title */
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.for-image h5 {
+  color: var(--color-white);
+  font-weight: bold;
+}
+
+.for-image p {
+  font-size: 14px;
+  color: var(--color-text-light);
+  font-weight: 400;
+}
+
+.jinni-img {
+  display: none; /* Often a decorative element, hide on small screens or use relative positioning */
+}
+
+/* --- Access/CTA Section --- */
+.access {
+  margin-top: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-bg-main);
+  padding: 50px 0;
+}
+
+.access-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  flex-direction: column;
+  gap: 40px;
+  background-color: var(--color-bg-section); /* Added background for visibility */
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  margin: 0 20px; /* Add margin for spacing on smaller screens */
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+}
+
+.title h2 {
+  font-size: 35px;
+  font-weight: 600;
+  color: var(--color-white);
+}
+
+.title p {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+
+.check-input {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  justify-content: center;
+}
+
+.check-input input {
+  width: 450px;
+  height: 50px;
+  padding-left: 32px;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+}
+
+.check-input button {
+  width: 200px;
+  height: 50px;
+  border-radius: 30px;
+  border: none;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: var(--color-white);
+  background: linear-gradient(
+    to right,
+    var(--color-btn-gradient-start),
+    var(--color-btn-gradient-end)
+  );
+  transition: var(--transition-main);
+  cursor: pointer;
+}
+
+.check-input button:hover {
+  background: linear-gradient(
+    to right,
+    var(--color-btn-hover-start),
+    var(--color-btn-hover-end)
+  );
+}
+
+.incorrect {
+  /* Position relative to parent 'access-about' if possible */
+  position: absolute; /* This might need adjustment based on HTML structure */
+  margin-top: 60px;
+  margin-left: 30px;
+  color: red;
+  font-size: 13px;
+  /* Consider making the input's parent position: relative */
+}
+
+/* --- Footer --- */
+.footers {
+  padding: 16rem 0; /* Adjust vertical padding */
+  background-color: var(--color-bg-footer);
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap; /* Allow wrapping */
+}
+
+.footer-main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.about4 {
+  margin-top: 0; /* Adjusted */
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.location, .telephone, .email {
+  display: flex;
+  gap: 20px;
+  color: var(--color-text-main);
+  align-items: flex-start;
+}
+
+.location img {
+  width: 20px;
+  height: 20px;
+  margin-top: 5px; /* Adjust icon alignment */
+}
+
+.location p {
+  color: var(--color-text-main);
+  transition: var(--transition-main);
+  max-width: 280px; /* Constrain location text */
+}
+
+.telephone p, .email p {
+  color: var(--color-text-main);
+  transition: var(--transition-main);
+}
+
+.location p:hover, .telephone p:hover, .email p:hover, .footer-list li:hover {
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.footer-lists {
+  margin-top: 0;
+  display: flex;
+  gap: 70px;
+  flex-wrap: wrap;
+}
+
+.footer-list {
+  list-style: none;
+  color: var(--color-text-main);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Social Icons (Kept as is, using fill: white for dark background visibility) */
+.social-icons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-left: 10px;
+  margin-top: 30px;
+}
+
+.social-icons .icon {
+  display: inline-grid;
+  place-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%; /* Changed to 50% for circular icons */
+  background: transparent;
+  border: 1px solid var(--color-text-main); /* Added border for visibility */
+  transition: var(--transition-main);
+  text-decoration: none;
+}
+
+.social-icons .icon svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--color-text-main); /* Changed fill to a variable */
+  transition: var(--transition-main);
+}
+
+.social-icons .icon:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--color-accent);
+}
+
+.social-icons .icon[aria-label="Facebook"]:hover svg,
+.social-icons .icon[aria-label="Twitter"]:hover svg,
+.social-icons .icon[aria-label="Instagram"]:hover svg {
+  fill: var(--color-accent); /* Use accent color on hover */
+}
+
+.social-icons .icon:focus {
+  outline: 3px solid rgba(255, 255, 255, 0.12);
+  outline-offset: 2px;
+}
+

@@ -1,0 +1,140 @@
+:root {
+  --white: hsl(0, 100%, 100%);
+  --purple-100: hsl(275, 100%, 97%);
+  --purple-600: hsl(292, 16%, 49%);
+  --purple-950: hsl(292, 42%, 14%);
+  --main-font: 'Work Sans', Arial, sans-serif;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('./assets/fonts/WorkSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Work Sans';
+  src: url('./assets/fonts/WorkSans-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--main-font);
+  font-size: 0.8rem;
+  background-color: var(--purple-100);
+  background-image: url("./assets/images/background-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.faq-container {
+  width: 85%;
+  max-width: 420px;
+  padding: 1.2rem;
+  padding-bottom: 0;
+  background-color: var(--white);
+  border-radius: 6px;
+}
+
+.faq-header {
+  margin: 0.4rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.faq-header-title {
+  font-size: 1.6rem;
+}
+
+.faq-icon-start {
+  width: 20px;
+  height: 20px;
+}
+
+.question-container {
+  width: 100%;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--purple-100);
+}
+
+.question-container:last-child {
+  border-bottom: none;
+}
+
+.faq-label {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.faq-toggle {
+  display: none;
+}
+
+.question-title {
+  margin: 0.6rem 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  color: var(--purple-600);
+}
+
+.faq-icon-minus {
+  display: none;
+}
+
+.faq-toggle:checked ~ .answer {
+  max-height: 200px;
+  padding: 1em 0;
+}
+
+.faq-toggle:checked ~ .faq-label .faq-icon-minus {
+  display: block;
+}
+
+.faq-toggle:checked ~ .faq-label .faq-icon-plus {
+  display: none;
+}
+
+@media screen and (min-width: 48rem) {
+  body {
+    background-image: url("./assets/images/background-pattern-desktop.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .faq-header-title {
+    font-size: 3rem;
+  }
+
+  .faq-icon-start {
+    width: 30px;
+    height: 30px;
+  }
+
+  .faq-label:hover {
+    cursor: pointer;
+  }
+
+}
